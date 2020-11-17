@@ -19,7 +19,7 @@
         </button>
         <div class="header-menu__wrapper header-menu__wrapper--no-js">
           <ul class="header-menu__list site-list">
-            <li class="site-list__item site-list__item">
+            <li class="site-list__item">
               <a class="site-list__link site-list__link--active">о сервисе</a>
             </li>
             <li class="site-list__item">
@@ -34,10 +34,10 @@
               <a class="header-actions__link" href="">авторизация</a>
             </li>
             <li class="header-actions__item">
-              <a class="header-actions__link link-tel" href="tel:+78005558628">8 800 555-86-28</a>
+              <a class="header-actions__link" href="tel:+78005558628">8 800 555-86-28</a>
             </li>
             <li class="header-actions__item">
-              <a class="header-actions__link link-mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              <a class="header-actions__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
           </ul>
           <ul class="header-menu__social social-menu">
@@ -57,14 +57,14 @@
   </header>
 
   <main class="main">
-    <h1 class="main__title visually-hidden">Страница подбора попутчиков путешествия - Погнали?</h1>
-
-    <section class="header-bottom">
-      <h2 class="header-bottom__title page-title">Попутчики</h2>
-      <a href="index.html" class="header-bottom__link-main-page">На главную</a>
-    </section>
+    <h1 class="visually-hidden">Страница подбора попутчиков путешествия - Погнали?</h1>
 
     <section class="filter">
+      <div class="page-title">
+        <h2 class="filter__title page-title__text">Попутчики</h2>
+        <a href="index.html" class="page-title__link-main-page">На главную</a>
+      </div>
+
       <form action="https://echo.htmlacademy.ru" method="POST">
         <div class="filter__container">
 
@@ -77,11 +77,11 @@
                 <li class="filter-country__continent">Америка</li>
                 <li class="filter-country__continent">Острова</li>
               </ul>
-              <a href="" class="filter-country__btn btn-filter-country">
+              <button class="filter-country__btn btn-filter-country">
                 <p class="btn-filter-country__show">показать все</p>
                 <p class="btn-filter-country__close ">свернуть</p>
                 <div class="btn-filter-country__icon">x</div>
-              </a>
+              </button>
             </div>
 
             <div class="filter-country__list-wrapper">
@@ -375,7 +375,7 @@
                   </ul>
                 </li>
               </ul>
-              <a href="" class="filter-country__btn-close-countrylist">сверунть</a>
+              <button class="filter-country__btn-close-countrylist">сверунть</button>
             </div>
           </div>
 
@@ -448,6 +448,7 @@
           </div>
 
           <ul class="filter__companions companions">
+            <!-- Таня Фирсова  -->
             <li class="companions__card card-companion">
               <div class="card-companion__avatar">
                 <img src="img/" alt="" width="70" height="70" />
@@ -515,16 +516,259 @@
                 </li>
               </ul>
             </li>
+
+            <!-- Петя Демин -->
+            <li class="companions__card card-companion">
+              <div class="card-companion__avatar">
+                <img src="img/" alt="" width="70" height="70" />
+              </div>
+              <p class="card-companion__name card-companion__name--offline">Петя Демин</p>
+              <ul class="card-companion__tags-list tags-list">
+                <li class="tags-list__item">
+                  <p class="tags-list__item-text">#бургер</p>
+                </li>
+                <li class="tags-list__item">
+                  <p class="tags-list__item-text">#бар</p>
+                </li>
+                <li class="tags-list__item">
+                  <p class="tags-list__item-text">#футбол</p>
+                </li>
+                <li class="tags-list__item">
+                  <p class="tags-list__item-text">#концерт</p>
+                </li>
+                <li class="tags-list__item">
+                  <p class="tags-list__item-text">#крафт</p>
+                </li>
+              </ul>
+              <div class="card-companion__wish companion-wish">
+                <p class="companion-wish__title">хочет посетить:</p>
+                <ul class="companion-wish__list">
+                  <li class="companion-wish__country">
+                    <img class="companion-wish__country-flag" width="35" height="24" alt="">
+                    <p class="companion-wish__coutry-name">Бельгия</p>
+                  </li>
+                  <li class="companion-wish__country">
+                    <img class="companion-wish__country-flag" width="35" height="24" alt="">
+                    <p class="companion-wish__coutry-name">Чехия</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-companion__likes companion-likes companion-likes--active">
+                <span class="companion-likes__value">1500</span>
+              </div>
+              <div class="card-companion__level-wrapper level-wrapper">
+                <div class="level-wrapper__progress-bar"></div>
+                <span class="level-wrapper__level-value">80</span>
+                <span class="level-wrapper__text">level</span>
+              </div>
+              <ul class="card-companion__travelmode-list travelmode-list">
+                <li class="travelmode-list__item travelmode-list__item--active">
+                  <svg class="travelmode-list__icon" aria-label="travelbyplane"></svg>
+                </li>
+                <li class="travelmode-list__item travelmode-list__item--active">
+                  <svg class="travelmode-list__icon" aria-label="travelbyauto"></svg>
+                </li>
+                <li class="travelmode-list__item">
+                  <svg class="travelmode-list__icon" aria-label="travelbybike"></svg>
+                </li>
+                <li class="travelmode-list__item travelmode-list__item--active">
+                  <svg class="travelmode-list__icon" aria-label="travelbyfoot"></svg>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Марк Смолов -->
+            <li class="companions__card card-companion">
+              <div class="card-companion__avatar">
+                <img src="img/" alt="" width="70" height="70" />
+              </div>
+              <p class="card-companion__name card-companion__name--offline">Марк Смолов</p>
+              <ul class="card-companion__tags-list tags-list">
+                <li class="tags-list__item">
+                  <p class="tags-list__item-text">#рэп</p>
+                </li>
+                <li class="tags-list__item">
+                  <p class="tags-list__item-text">#тату</p>
+                </li>
+                <li class="tags-list__item">
+                  <p class="tags-list__item-text">#хайпбист</p>
+                </li>
+                <li class="tags-list__item">
+                  <p class="tags-list__item-text">#кроссовки</p>
+                </li>
+                <li class="tags-list__item">
+                  <p class="tags-list__item-text">#суприм</p>
+                </li>
+              </ul>
+              <div class="card-companion__wish companion-wish">
+                <p class="companion-wish__title">хочет посетить:</p>
+                <ul class="companion-wish__list">
+                  <li class="companion-wish__country">
+                    <img class="companion-wish__country-flag" width="35" height="24" alt="">
+                    <p class="companion-wish__coutry-name">США</p>
+                  </li>
+                  <li class="companion-wish__country">
+                    <img class="companion-wish__country-flag" width="35" height="24" alt="">
+                    <p class="companion-wish__coutry-name">Австралия</p>
+                  </li>
+                  <li class="companion-wish__country">
+                    <img class="companion-wish__country-flag" width="35" height="24" alt="">
+                    <p class="companion-wish__coutry-name">Доминикана</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-companion__likes companion-likes companion-likes--active">
+                <span class="companion-likes__value">170</span>
+              </div>
+              <div class="card-companion__level-wrapper level-wrapper">
+                <div class="level-wrapper__progress-bar"></div>
+                <span class="level-wrapper__level-value">25</span>
+                <span class="level-wrapper__text">level</span>
+              </div>
+              <ul class="card-companion__travelmode-list travelmode-list">
+                <li class="travelmode-list__item travelmode-list__item--active">
+                  <svg class="travelmode-list__icon" aria-label="travelbyplane"></svg>
+                </li>
+                <li class="travelmode-list__item">
+                  <svg class="travelmode-list__icon" aria-label="travelbyauto"></svg>
+                </li>
+                <li class="travelmode-list__item travelmode-list__item--active">
+                  <svg class="travelmode-list__icon" aria-label="travelbybike"></svg>
+                </li>
+                <li class="travelmode-list__item">
+                  <svg class="travelmode-list__icon" aria-label="travelbyfoot"></svg>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Лариса Роговая -->
+            <li class="companions__card card-companion">
+              <div class="card-companion__avatar">
+                <img src="img/" alt="" width="70" height="70" />
+              </div>
+              <p class="card-companion__name card-companion__name--offline">Лариса Роговая</p>
+              <ul class="card-companion__tags-list tags-list">
+                <li class="tags-list__item">
+                  <p class="tags-list__item-text">#образование</p>
+                </li>
+                <li class="tags-list__item">
+                  <p class="tags-list__item-text">#карьера</p>
+                </li>
+                <li class="tags-list__item">
+                  <p class="tags-list__item-text">#учеба</p>
+                </li>
+                <li class="tags-list__item">
+                  <p class="tags-list__item-text">#линкедин</p>
+                </li>
+              </ul>
+              <div class="card-companion__wish companion-wish">
+                <p class="companion-wish__title">хочет посетить:</p>
+                <ul class="companion-wish__list">
+                  <li class="companion-wish__country">
+                    <img class="companion-wish__country-flag" width="35" height="24" alt="">
+                    <p class="companion-wish__coutry-name">Великобритания</p>
+                  </li>
+                  <li class="companion-wish__country">
+                    <img class="companion-wish__country-flag" width="35" height="24" alt="">
+                    <p class="companion-wish__coutry-name">Германия</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-companion__likes companion-likes companion-likes--active">
+                <span class="companion-likes__value">23</span>
+              </div>
+              <div class="card-companion__level-wrapper level-wrapper">
+                <div class="level-wrapper__progress-bar"></div>
+                <span class="level-wrapper__level-value">25</span>
+                <span class="level-wrapper__text">level</span>
+              </div>
+              <ul class="card-companion__travelmode-list travelmode-list">
+                <li class="travelmode-list__item travelmode-list__item--active">
+                  <svg class="travelmode-list__icon" aria-label="travelbyplane"></svg>
+                </li>
+                <li class="travelmode-list__item travelmode-list__item--active">
+                  <svg class="travelmode-list__icon" aria-label="travelbyauto"></svg>
+                </li>
+                <li class="travelmode-list__item">
+                  <svg class="travelmode-list__icon" aria-label="travelbybike"></svg>
+                </li>
+                <li class="travelmode-list__item">
+                  <svg class="travelmode-list__icon" aria-label="travelbyfoot"></svg>
+                </li>
+              </ul>
+            </li>
           </ul>
 
+          <button class="filter__companions-show-more">показать еще</button>
+
+          <div class="filter__pagination filter-pagination">
+            <ul class="filter-pagination__list">
+              <li class="filter-pagination__item">
+                <a class="filter-pagination__link filter-pagination__link--active">1</a>
+              </li>
+              <li class="filter-pagination__item">
+                <a class="filter-pagination__link" href="#">2</a>
+              </li>
+              <li class="filter-pagination__item">
+                <a class="filter-pagination__link" href="#">3</a>
+              </li>
+              <li class="filter-pagination__item">
+                <a class="filter-pagination__link" href="#">4</a>
+              </li>
+            </ul>
+            <button class="filter-pagination__btn filter-pagination__btn--prev"
+              aria-label="предыдущая страница попутчиков"></button>
+            <button class="filter-pagination__btn filter-pagination__btn--next"
+              aria-label="следующая страница попутчиков"></button>
+          </div>
 
         </div>
       </form>
-
     </section>
 
   </main>
 
+  <footer class="footer">
+    <div class="footer__container container">
+      <a href="index.html" class="footer__logo main-logo">
+        <svg width="96" height="15" role="img" aria-label="ссылка на главную страницу">
+          <use xlink:href="#"></use>
+        </svg>
+      </a>
+      <ul class="footer__social">
+        <li class="footer__social-item">
+          <a href="" class="footer__social-link footer__social-link--fb" aria-label="facebook">
+            <svg width="11" height="21">
+              <use xlink:href="#icon-fb"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a href="" class="footer__social-link footer__social-link--vk" aria-label="Vkontakte">
+            <svg width="23" height="12">
+              <use xlink:href="#icon-vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-item">
+          <a href="" class="footer__social-link footer__social-link--inst" aria-label="instagram">
+            <svg width="18" height="18">
+              <use xlink:href="#icon-inst"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="footer__copy">
+        <p class="footer__copy-text">Разработано</p>
+        <a class="footer__academy-logo" href="https://htmlacademy.ru/intensive/adaptive"
+          aria-label="ссылка HTMLAcademy">
+          <svg width="27" height="34">
+            <use xlink:href="#icon-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

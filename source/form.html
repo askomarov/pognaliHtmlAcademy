@@ -35,10 +35,10 @@
               <a class="header-actions__link" href="">авторизация</a>
             </li>
             <li class="header-actions__item">
-              <a class="header-actions__link link-tel" href="tel:+78005558628">8 800 555-86-28</a>
+              <a class="header-actions__link" href="tel:+78005558628">8 800 555-86-28</a>
             </li>
             <li class="header-actions__item">
-              <a class="header-actions__link link-mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              <a class="header-actions__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
           </ul>
           <ul class="header-menu__social social-menu">
@@ -58,42 +58,44 @@
   </header>
 
   <main class="main">
-    <h1 class="main__title visually-hidden">Страница выбора напрвления путешествия - Погнали?</h1>
+    <h1 class="visually-hidden">Страница выбора напрвления путешествия - Погнали?</h1>
 
-    <section class="userinfo">
-      <div class="userinfo__container container">
-        <h2 class="userinfo__title page-title">Направления</h2>
+    <section class="user-info">
+      <div class="user-info__container container">
+        <div class="page-title">
+          <h2 class="user-info__title page-title__text">Направления</h2>
+        </div>
         <!-- будет грид контейнер -->
-        <div class="userinfo__wrapper">
+        <div class="user-info__wrapper">
           <!-- один грид элемент -->
-          <div class="userinfo__level-wrapper level-wrapper">
+          <div class="user-info__level-wrapper level-wrapper">
             <div class="level-wrapper__progress-bar"></div>
             <span class="level-wrapper__level-value">80</span>
             <span class="level-wrapper__text">level</span>
           </div>
 
           <!-- еще грид элемент -->
-          <div class="userinfo__img-wrapper">
+          <div class="user-info__img-wrapper">
             <img src="img/" alt="" width="100" height="100" />
           </div>
 
           <!-- еще грид элемент -->
-          <label class="userinfo__img-btn" for="change-img">
+          <label class="user-info__img-btn" for="change-img">
             <input class="visually-hidden" type="file" name="change-img" id="change-img">
             Сменить фото
           </label>
 
           <!-- еще грид элемент -->
-          <div class="userinfo__tags-wrapper">
-            <p class="userinfo__tags-heading userinfo-heading">тэги</p>
-            <textarea class="userinfo__tags-list" name="" id="" cols="30"
+          <div class="user-info__tags-wrapper">
+            <p class="user-info__tags-heading user-info-heading">тэги</p>
+            <textarea class="user-info__tags-list" name="" id="" cols="30"
               rows="10">#бургер #бар #футбол #концерт #крафт</textarea>
           </div>
 
           <!-- еще грид элемент -->
-          <div class="userinfo__travelmode-wrapper">
-            <p class="userinfo__travelmode-heading userinfo-heading">транспорт</p>
-            <ul class="userinfo__travelmode-list travelmode-list">
+          <div class="user-info__travelmode-wrapper">
+            <p class="user-info__travelmode-heading user-info-heading">транспорт</p>
+            <ul class="user-info__travelmode-list travelmode-list">
               <li class="travelmode-list__item travelmode-list__item--active">
                 <button aria-label="travelbyplane"><svg class="travelmode-list__icon"></svg></button>
               </li>
@@ -159,10 +161,12 @@
                 <p class="step-item__setting-text">ищу попутчиков:</p>
                 <p class="step-item__setting-subtext">чел.</p>
                 <div class="step-item__input-body companions-settings">
-                  <button type="button" class="step-item__btn-minus">-</button>
+                  <button type="button" class="step-item__btn-minus"
+                    aria-label="убавить количество попутчиков">-</button>
                   <input class="step-item__input-companions" type="number" name="companions-number"
                     id="companions-number" value="2" min="0">
-                  <button type="button" class="step-item__btn-plus">+</button>
+                  <button type="button" class="step-item__btn-plus"
+                    aria-label="прибавить количество попутчиков">+</button>
                 </div>
               </div>
 
@@ -183,9 +187,9 @@
                 <!-- календарь ё-моё -->
                 <div class="calendar__wrapper">
                   <div class="calendar__top">
-                    <button class="calendar__mth-btn calendar__mth-btn--prev" aria-label="previous month"></button>
+                    <button class="calendar__mth-btn calendar__mth-btn--prev" aria-label="предыдущий месяц"></button>
                     <p class="calendar__month">март <span class="calendar__month-year">2019</span></p>
-                    <button class="calendar__mth-btn calendar__mth-btn--next" aria-label="next month"></button>
+                    <button class="calendar__mth-btn calendar__mth-btn--next" aria-label="следующий месяц"></button>
                   </div>
                   <ul class="calendar__days-row">
                     <li class="calendar__day">Пн</li>
@@ -241,7 +245,7 @@
                 </div>
 
               </div>
-              <a href="#step2" class="step-item__next-step next-step-link">Следующий шаг</a>
+              <a href="#step2" class="step-item__next-step ">Следующий шаг</a>
             </li>
             <!-- шаг 2 -->
             <li class="steps-list__item step-item">
@@ -270,7 +274,7 @@
                         <img src="img/" alt="" width="70" height="47" />
                       </div>
                     </div>
-                    <button class="choose-country__del-choosen" aria-label="delete choosen country">x</button>
+                    <button class="choose-country__del-choosen" aria-label="удалить страну">x</button>
                   </a>
                 </li>
                 <li>
@@ -329,8 +333,8 @@
                   <a href="" class="choose-country__add-new">Добавить страну</a>
                 </li>
               </ul>
-              <a href="#step3" class="step-item__next-step next-step-link">Следующий шаг</a>
-              <a href="#step1" class="step-item__prev-step prev-step-link">на шаг назад</a>
+              <a href="#step3" class="step-item__next-step">Следующий шаг</a>
+              <a href="#step1" class="step-item__prev-step">на шаг назад</a>
             </li>
             <!-- шаг 3 -->
             <li class="steps-list__item step-item">
@@ -358,8 +362,8 @@
               </ul>
             </li>
           </ul>
-          <button type="submit" class="step-item__next-step next-step-link">Отправить</button>
-          <a href="#step2" class="step-item__prev-step prev-step-link">на шаг назад</a>
+          <button type="submit" class="step-item__next-step ">Отправить</button>
+          <a href="#step2" class="step-item__prev-step ">на шаг назад</a>
         </div>
       </form>
     </section>
@@ -368,8 +372,8 @@
 
   <footer class="footer">
     <div class="footer__container container">
-      <a class="footer__logo main-logo">
-        <svg width="96" height="15" role="img" aria-label="логотип Погнали">
+      <a href="index.html" class="footer__logo main-logo">
+        <svg width="96" height="15" role="img" aria-label="ссылка на главную страницу">
           <use xlink:href="#"></use>
         </svg>
       </a>

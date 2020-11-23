@@ -1,0 +1,32 @@
+.action-desc-list {
+}
+.action-desc-list__item {
+}
+.action-desc-list__item-country-name {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: #1d2e5b;
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+.action-desc-list__item-country-flag {
+}
+.action-desc-list__textarea {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #444444;
+  resize: none;
+  width: 100%;
+  @media (min-width: $width-tablet+px) {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  &::placeholder {
+    color: rgba($color: #444444, $alpha: 0.3);
+  }
+}

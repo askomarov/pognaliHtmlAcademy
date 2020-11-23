@@ -1,0 +1,26 @@
+.steps-guide {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  background: #ff8d30;
+  list-style: none;
+  counter-reset: li;
+}
+
+.steps-guide__item {
+  color: #ffffff;
+
+  &::before {
+    counter-increment: li;
+    content: "item" counter(li) ". ";
+  }
+}
+
+.steps-guide__item-text {
+  color: #161c35;
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,29 @@
+.submenu-country {
+}
+.submenu-country__letters {
+}
+.submenu-country__letter {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #1d2e5b;
+  @media (min-width: $width-tablet+px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+.submenu-country__letter--current {
+}
+.submenu-country__country-list {
+}
+.submenu-country__country-item {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #444444;
+  @media (min-width: $width-tablet+px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

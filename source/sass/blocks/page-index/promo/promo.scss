@@ -1,0 +1,30 @@
+.promo {
+  background: $bgcolor;
+}
+.promo__main-heading {
+}
+
+.promo__container {
+}
+
+.promo__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 40px;
+  color: #ffffff;
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+.promo__blockquote {
+}
+.promo__blockquote-text {
+}
+
+.promo__blockquote-author {
+}
+.promo__steps-guide {
+}

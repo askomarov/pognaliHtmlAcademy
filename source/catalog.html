@@ -3,10 +3,12 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали - страница каталога</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="page page-catalog">
   <svg style="display: none"></svg>
 
   <header class="header">
@@ -20,13 +22,13 @@
         <div class="header-menu__wrapper header-menu__wrapper--no-js">
           <ul class="header-menu__list site-list">
             <li class="site-list__item">
-              <a class="site-list__link site-list__link--active">о сервисе</a>
+              <a class="site-list__link" href="index.html">о сервисе</a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link" href="form.html">напрвления</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link">попутчики</a>
+              <a class="site-list__link site-list__link--active">попутчики</a>
             </li>
           </ul>
           <ul class="header-menu__actions header-actions">
@@ -58,12 +60,12 @@
 
   <main class="main">
     <h1 class="visually-hidden">Страница подбора попутчиков путешествия - Погнали?</h1>
+    <div class="page-title-wrapper">
+      <h2 class="page-title-wrapper__text">Попутчики</h2>
+      <a href="index.html" class="page-title-wrapper__link-main-page">На главную</a>
+    </div>
 
     <section class="filter">
-      <div class="page-title">
-        <h2 class="filter__title page-title__text">Попутчики</h2>
-        <a href="index.html" class="page-title__link-main-page">На главную</a>
-      </div>
 
       <form action="https://echo.htmlacademy.ru" method="POST">
         <div class="filter__container">
@@ -422,17 +424,15 @@
             <div class="filter-sets__row sets-row">
               <p class="sets-row__name">транспорт</p>
               <div class="sets-row__group sets-row__group--travelmode">
-                <input class="sets-row__input visually-hidden" type="checkbox" name="travelbyplane" id="travelbyplane"
+                <input class="sets-row__input visually-hidden" type="checkbox" name="самолет" id="самолет" checked>
+                <label class="sets-row__label" for="самолет"></label>
+                <input class="sets-row__input visually-hidden" type="checkbox" name="автомобиль" id="автомобиль"
                   checked>
-                <label class="sets-row__label" for="travelbyplane"></label>
-                <input class="sets-row__input visually-hidden" type="checkbox" name="travelbyauto" id="travelbyauto"
-                  checked>
-                <label class="sets-row__label" for="travelbyauto"></label>
-                <input class="sets-row__input visually-hidden" type="checkbox" name="travelbybike" id="travelbybike">
-                <label class="sets-row__label" for="travelbybike"></label>
-                <input class="sets-row__input visually-hidden" type="checkbox" name="travelbyfoot" id="travelbyfoot"
-                  checked>
-                <label class="sets-row__label" for="travelbyfoot"></label>
+                <label class="sets-row__label" for="автомобиль"></label>
+                <input class="sets-row__input visually-hidden" type="checkbox" name="велосипед" id="велосипед">
+                <label class="sets-row__label" for="велосипед"></label>
+                <input class="sets-row__input visually-hidden" type="checkbox" name="пешком" id="пешком" checked>
+                <label class="sets-row__label" for="пешком"></label>
               </div>
             </div>
             <!-- level -->
@@ -503,16 +503,16 @@
               </div>
               <ul class="card-companion__travelmode-list travelmode-list">
                 <li class="travelmode-list__item travelmode-list__item--active">
-                  <svg class="travelmode-list__icon" aria-label="travelbyplane"></svg>
+                  <svg class="travelmode-list__icon" aria-label="самолет"></svg>
                 </li>
                 <li class="travelmode-list__item">
-                  <svg class="travelmode-list__icon" aria-label="travelbyauto"></svg>
+                  <svg class="travelmode-list__icon" aria-label="автомобиль"></svg>
                 </li>
                 <li class="travelmode-list__item">
-                  <svg class="travelmode-list__icon" aria-label="travelbybike"></svg>
+                  <svg class="travelmode-list__icon" aria-label="велосипед"></svg>
                 </li>
                 <li class="travelmode-list__item">
-                  <svg class="travelmode-list__icon" aria-label="travelbyfoot"></svg>
+                  <svg class="travelmode-list__icon" aria-label="пешком"></svg>
                 </li>
               </ul>
             </li>
@@ -563,16 +563,16 @@
               </div>
               <ul class="card-companion__travelmode-list travelmode-list">
                 <li class="travelmode-list__item travelmode-list__item--active">
-                  <svg class="travelmode-list__icon" aria-label="travelbyplane"></svg>
+                  <svg class="travelmode-list__icon" aria-label="самолет"></svg>
                 </li>
                 <li class="travelmode-list__item travelmode-list__item--active">
-                  <svg class="travelmode-list__icon" aria-label="travelbyauto"></svg>
+                  <svg class="travelmode-list__icon" aria-label="автомобиль"></svg>
                 </li>
                 <li class="travelmode-list__item">
-                  <svg class="travelmode-list__icon" aria-label="travelbybike"></svg>
+                  <svg class="travelmode-list__icon" aria-label="велосипед"></svg>
                 </li>
                 <li class="travelmode-list__item travelmode-list__item--active">
-                  <svg class="travelmode-list__icon" aria-label="travelbyfoot"></svg>
+                  <svg class="travelmode-list__icon" aria-label="пешком"></svg>
                 </li>
               </ul>
             </li>
@@ -627,16 +627,16 @@
               </div>
               <ul class="card-companion__travelmode-list travelmode-list">
                 <li class="travelmode-list__item travelmode-list__item--active">
-                  <svg class="travelmode-list__icon" aria-label="travelbyplane"></svg>
+                  <svg class="travelmode-list__icon" aria-label="самолет"></svg>
                 </li>
                 <li class="travelmode-list__item">
-                  <svg class="travelmode-list__icon" aria-label="travelbyauto"></svg>
+                  <svg class="travelmode-list__icon" aria-label="автомобиль"></svg>
                 </li>
                 <li class="travelmode-list__item travelmode-list__item--active">
-                  <svg class="travelmode-list__icon" aria-label="travelbybike"></svg>
+                  <svg class="travelmode-list__icon" aria-label="велосипед"></svg>
                 </li>
                 <li class="travelmode-list__item">
-                  <svg class="travelmode-list__icon" aria-label="travelbyfoot"></svg>
+                  <svg class="travelmode-list__icon" aria-label="пешком"></svg>
                 </li>
               </ul>
             </li>
@@ -684,16 +684,16 @@
               </div>
               <ul class="card-companion__travelmode-list travelmode-list">
                 <li class="travelmode-list__item travelmode-list__item--active">
-                  <svg class="travelmode-list__icon" aria-label="travelbyplane"></svg>
+                  <svg class="travelmode-list__icon" aria-label="самолет"></svg>
                 </li>
                 <li class="travelmode-list__item travelmode-list__item--active">
-                  <svg class="travelmode-list__icon" aria-label="travelbyauto"></svg>
+                  <svg class="travelmode-list__icon" aria-label="автомобиль"></svg>
                 </li>
                 <li class="travelmode-list__item">
-                  <svg class="travelmode-list__icon" aria-label="travelbybike"></svg>
+                  <svg class="travelmode-list__icon" aria-label="велосипед"></svg>
                 </li>
                 <li class="travelmode-list__item">
-                  <svg class="travelmode-list__icon" aria-label="travelbyfoot"></svg>
+                  <svg class="travelmode-list__icon" aria-label="пешком"></svg>
                 </li>
               </ul>
             </li>

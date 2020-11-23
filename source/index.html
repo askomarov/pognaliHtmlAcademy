@@ -6,13 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Вы найдете своё лучшее путешествие и попутчиков">
   <title>HTML Academy: Погнали</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-  <svg style="display: none"></svg>
+<body class="page page-index">
+  <svg style="display: none">
+    <symbol id="htmlacademy" viewBox="0 0 60 60">
+      <path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1
+        10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2
+        1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2
+        17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" />
+    </symbol>
+  </svg>
 
   <header class="header">
-    <div class="header__body">
+    <div class="header__body container">
       <a class="header__logo main-logo">svg</a>
 
       <nav class="header__menu header-menu">
@@ -25,14 +33,14 @@
               <a class="site-list__link site-list__link--active">о сервисе</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="">напрвления</a>
+              <a class="site-list__link" href="form.html">напрвления</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="">попутчики</a>
+              <a class="site-list__link" href="catalog.html">попутчики</a>
             </li>
           </ul>
           <ul class="header-menu__actions header-actions">
-            <li class="header-actions__item">
+            <li class="header-actions__item header-actions__item--authr">
               <a class="header-actions__link" href="">авторизация</a>
             </li>
             <li class="header-actions__item">
@@ -49,7 +57,7 @@
             <li class="social-menu__item">
               <a class="social-menu__link" href="" aria-label="vkontakte"><svg></svg></a>
             </li>
-            <li class="header-social__item">
+            <li class="social-menu__item">
               <a class="social-menu__link" href="" aria-label="instagram"><svg></svg></a>
             </li>
           </ul>
@@ -66,7 +74,7 @@
         <p class="promo__title">В путешествие с крутыми попутчиками!</p>
         <blockquote class="promo__blockquote">
           <p class="promo__blockquote-text main-text">«Лучшее приложение, что я видел в жизни!»</p>
-          <cite class="promo__blockquote-author main-text--bold">Мурат Эльтазин <br>главный редактор газеты
+          <cite class="promo__blockquote-author main-text main-text--bold">Мурат Эльтазин <br>главный редактор газеты
             «гаджетлайф»</cite>
         </blockquote>
         <ol class="promo__steps-guide steps-guide">
@@ -91,7 +99,8 @@
         <h2 class="about__title main-title">О сервисе</h2>
         <p class="about__text main-text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой!
           Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-        <p class="about__text-bottom main-text--bold">А если найдете кого-то близкого по духу — зовите в совместный
+        <p class="about__text-bottom main-text main-text--bold">А если найдете кого-то близкого по духу — зовите в
+          совместный
           трип!</p>
         <a class="about__btn main-btn" href="#">Подробнее</a>
       </div>
@@ -100,7 +109,8 @@
     <section class="directions">
       <div class="directions__container container">
         <h2 class="directions__title main-title">Направления</h2>
-        <p class="directions__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели
+        <p class="directions__text main-text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах,
+          куда хотели
           бы отправиться и чем можно там заняться.</p>
         <ul class="directions__list directions-list">
           <li class="directions-list__item directions-item">
@@ -144,10 +154,10 @@
     <section class="companions">
       <div class="companions__container container">
         <div class="companions__text-wrapper">
-          <h2 class="companions__title main-title">Направления</h2>
+          <h2 class="companions__title main-title">Попутчики</h2>
           <p class="companions__text main-text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному
             нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-          <p class="companions__text-bottom main-text--bold">Теперь можно легко найти единомышленников!</p>
+          <p class="companions__text-bottom main-text main-text--bold">Теперь можно легко найти единомышленников!</p>
         </div>
 
         <ul class="companions__list companions-list">
@@ -190,16 +200,16 @@
               </ul>
               <ul class="companions-item__travelmode-list travelmode-list">
                 <li class="travelmode-list__item travelmode-list__item--active">
-                  <svg class="travelmode-list__icon" aria-label="travelbyplane"></svg>
+                  <svg class="travelmode-list__icon" aria-label="самолет"></svg>
                 </li>
                 <li class="travelmode-list__item">
-                  <svg class="travelmode-list__icon" aria-label="travelbyauto"></svg>
+                  <svg class="travelmode-list__icon" aria-label="автомобиль"></svg>
                 </li>
                 <li class="travelmode-list__item">
-                  <svg class="travelmode-list__icon" aria-label="travelbybike"></svg>
+                  <svg class="travelmode-list__icon" aria-label="велосипед"></svg>
                 </li>
                 <li class="travelmode-list__item">
-                  <svg class="travelmode-list__icon" aria-label="travelbyfoot"></svg>
+                  <svg class="travelmode-list__icon" aria-label="пешком"></svg>
                 </li>
               </ul>
             </div>
@@ -243,16 +253,16 @@
               </ul>
               <ul class="companions-item__travelmode-list travelmode-list">
                 <li class="travelmode-list__item travelmode-list__item--active">
-                  <svg class="travelmode-list__icon" aria-label="travelbyplane"></svg>
+                  <svg class="travelmode-list__icon" aria-label="самолет"></svg>
                 </li>
                 <li class="travelmode-list__item travelmode-list__item--active">
-                  <svg class="travelmode-list__icon" aria-label="travelbyauto"></svg>
+                  <svg class="travelmode-list__icon" aria-label="автомобиль"></svg>
                 </li>
                 <li class="travelmode-list__item">
-                  <svg class="travelmode-list__icon" aria-label="travelbybike"></svg>
+                  <svg class="travelmode-list__icon" aria-label="велосипед"></svg>
                 </li>
                 <li class="travelmode-list__item travelmode-list__item--active">
-                  <svg class="travelmode-list__icon" aria-label="travelbyfoot"></svg>
+                  <svg class="travelmode-list__icon" aria-label="пешком"></svg>
                 </li>
               </ul>
             </div>
@@ -293,7 +303,6 @@
     <section class="popup business-tarif">
       <div class="business-tarif__wrapper">
         <h2 class="business-tarif__title main-title">Бизнес-тарифы</h2>
-        <div class="business-tarif__decor">не понятная иконка</div>
         <dl class="business-tarif__list">
           <div class="business-tarif__item">
             <dt class="business-tarif__item-name">Реклама у блоггера</dt>
@@ -324,7 +333,9 @@
         </p>
         <form class="feedback__mail-form" action="https://echo.htmlacademy.ru" method="POST">
           <input class="feedback__mail-input" type="email" name="feedback-user-email" required placeholder="E-mail">
-          <button type="submit" class="feedback__btn-submit" aria-label="отправить форму"></button>
+          <button type="submit" class="feedback__btn-submit" aria-label="отправить форму">
+            <span class="feedback__btn-submit-text">Регистрация</span>
+          </button>
         </form>
         <p class="feedback__text-bottom main-text">
           Остались вопросы? Мы с радостью на них ответим!
@@ -335,9 +346,11 @@
     </section>
 
     <section class="contact">
-      <div class="contact__container container">
-        <h2 class="contact__title">ул. Большая Конюшенная, 19/8</h2>
-        <a class="contact__map-link" href="#">Проложить маршрут</a>
+      <div class="contact__text-wrapper">
+        <div class="contact__container container">
+          <h2 class="contact__title">ул. Большая Конюшенная, 19/8</h2>
+          <a class="contact__map-link" href="#">Проложить маршрут</a>
+        </div>
       </div>
       <div class="contacts__map-wrapper">
         <iframe class="contacts__map-frame" src="" width="320" height="424"></iframe>
@@ -383,7 +396,7 @@
         <a class="footer__academy-logo" href="https://htmlacademy.ru/intensive/adaptive"
           aria-label="ссылка HTMLAcademy">
           <svg width="27" height="34">
-            <use xlink:href="#icon-htmlacademy"></use>
+            <use xlink:href="#htmlacademy"></use>
           </svg>
         </a>
       </div>

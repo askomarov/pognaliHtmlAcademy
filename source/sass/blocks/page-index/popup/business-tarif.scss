@@ -1,0 +1,37 @@
+.business-tarif {
+}
+.business-tarif__wrapper {
+  background: #ffffff;
+  box-shadow: 0px 2px 8px rgba(29, 46, 91, 0.14);
+  border-radius: 20px;
+}
+.business-tarif__title {
+}
+.business-tarif__list {
+}
+.business-tarif__item {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: #444444;
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+.business-tarif__item-name {
+}
+.business-tarif__item-price {
+}
+.business-tarif__close-popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #1d2e5b;
+  background: #f3f4f8;
+}

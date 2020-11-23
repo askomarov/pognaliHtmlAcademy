@@ -1,0 +1,49 @@
+.calendar {
+}
+.calendar__wrapper {
+}
+.calendar__top {
+}
+.calendar__mth-btn {
+}
+.calendar__mth-btn--prev {
+}
+.calendar__month {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  color: #1d2e5b;
+  @media (min-width: $width-tablet+px) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+.calendar__month-year {
+}
+.calendar__mth-btn--next {
+}
+.calendar__days-row {
+}
+.calendar__day {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+  @media (min-width: $width-tablet+px) {
+    font-size: 18px;
+  }
+}
+.calendar__day--weekend {
+  color: #ff5c23;
+}
+.calendar__nums {
+}
+.calendar__number {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba($color: #444444, $alpha: 0.3);
+  @media (min-width: $width-tablet+px) {
+    font-size: 18px;
+  }
+}

@@ -1,1 +1,88 @@
-// Начните писать стили здесь
+// Основные файлы стилей
+@import "fonts.scss";
+@import "var.scss";
+@import "null.scss";
+@import "container.scss";
+@import "main.scss";
+// @import "";
+// @import "";
+// Файлы стилей общих блоков
+@import "blocks/main-logo.scss";
+@import "blocks/main-text.scss";
+@import "blocks/main-title.scss";
+@import "blocks/main-btn.scss";
+@import "blocks/form-btn.scss";
+@import "blocks/social-menu.scss";
+@import "blocks/footer.scss";
+@import "blocks/page-title-wrapper.scss";
+// @import "blocks/.scss";
+// @import "blocks/.scss";
+// @import "blocks/.scss";
+
+// Стили блоков HEADER
+@import "blocks/header/header.scss";
+@import "blocks/header/header-actions.scss";
+@import "blocks/header/header-menu.scss";
+@import "blocks/header/site-list.scss";
+
+/////////////////// ГЛАВНАЯ СТРАНИЦА /////////////////////////////
+// Стили блоков PROMO
+@import "blocks/page-index/promo/promo.scss";
+@import "blocks/page-index/promo/steps-guide.scss";
+// Стили блоков ABOUT
+@import "blocks/page-index/about/about.scss";
+// Стили блоков directions
+@import "blocks/page-index/directions/directions.scss";
+@import "blocks/page-index/directions/directions-list.scss";
+@import "blocks/page-index/directions/directions-item.scss";
+// Стили блоков companions
+@import "blocks/page-index/companions/companions.scss";
+@import "blocks/page-index/companions/companions-list.scss";
+@import "blocks/page-index/companions/companions-item.scss";
+@import "blocks/page-index/companions/country-list.scss";
+@import "blocks/page-index/companions/level-wrapper.scss";
+@import "blocks/page-index/companions/tags-list.scss";
+@import "blocks/page-index/companions/travelmode-list.scss";
+// Стили блоков pricing
+@import "blocks/page-index/pricing/pricing.scss";
+// Стили блоков popup
+@import "blocks/page-index/popup/business-tarif.scss";
+// Стили блоков feedback
+@import "blocks/page-index/feedback/feedback.scss";
+// Стили блоков contact
+@import "blocks/page-index/contact/contact.scss";
+
+// ///////////////// ГЛАВНАЯ НАПРАВЛЕНИЯ ФОРМЫ /////////////////////////////
+// Стили блоков user-info
+@import "blocks/page-form/user-info.scss";
+@import "blocks/page-form/plans.scss";
+@import "blocks/page-form/item-plans.scss";
+
+// Стили блоков addplan
+@import "blocks/page-form/addplan/addplan.scss";
+@import "blocks/page-form/addplan/step-list-item.scss";
+@import "blocks/page-form/addplan/calendar.scss";
+@import "blocks/page-form/addplan/choose-country.scss";
+@import "blocks/page-form/addplan/submenu-country.scss";
+@import "blocks/page-form/addplan/action-desc-list.scss";
+@import "blocks/page-form/addplan/plan-points.scss";
+
+// Стили блоков
+// @import "blocks/.scss";
+// @import "blocks/.scss";
+
+// @import "blocks/.scss";
+// @import "blocks/.scss";
+// @import "blocks/.scss";
+// @import "blocks/.scss";
+// @import "blocks/.scss";
+// @import "blocks/.scss";
+// @import "blocks/.scss";
+// @import "blocks/.scss";
+// @import "blocks/.scss";
+// @import "blocks/.scss";
+// @import "blocks/.scss";
+// @import "blocks/.scss";
+// @import "blocks/.scss";
+// @import "blocks/.scss";
+// @import "blocks/.scss";

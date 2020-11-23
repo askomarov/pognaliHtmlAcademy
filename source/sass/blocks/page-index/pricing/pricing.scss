@@ -1,0 +1,51 @@
+.pricing {
+  background: #e6e8f1;
+}
+
+.pricing__container {
+}
+
+.pricing__title {
+}
+
+.pricing__list {
+  counter-reset: dt;
+}
+.pricing__item {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 16px;
+  color: #444444;
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  &::before {
+    content: counter(dt);
+    counter-increment: dt;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    background: #ff8d30;
+  }
+}
+.pricing__item-name {
+}
+.pricing__item-price {
+}
+.pricing__link-business-tarif {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  color: #132576;
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

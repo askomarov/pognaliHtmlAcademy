@@ -1,0 +1,46 @@
+.contact {
+}
+
+.contact__text-wrapper {
+  background: #ffd74b;
+}
+
+.contact__container {
+}
+
+.contact__title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #1d2e5b;
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+.contact__map-link {
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: #1d2e5b;
+  border: 3px solid #192144;
+  border-radius: 10px;
+  text-align: left;
+  
+  @media (min-width: $width-tablet+px) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.contacts__map-wrapper {
+}
+
+.contacts__map-frame {
+}
+
+.contacts__map-img {
+}

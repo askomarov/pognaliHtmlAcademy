@@ -3,10 +3,12 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Погнали</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="page page-form">
 
   <svg style="display: none"></svg>
 
@@ -21,10 +23,10 @@
         <div class="header-menu__wrapper header-menu__wrapper--no-js">
           <ul class="header-menu__list site-list">
             <li class="site-list__item site-list__item">
-              <a class="site-list__link site-list__link--active">о сервисе</a>
+              <a class="site-list__link" href="index.html">о сервисе</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link">напрвления</a>
+              <a class="site-list__link site-list__link--active">напрвления</a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link" href="catalog.html">попутчики</a>
@@ -59,12 +61,12 @@
 
   <main class="main">
     <h1 class="visually-hidden">Страница выбора напрвления путешествия - Погнали?</h1>
+    <div class="page-title-wrapper">
+      <h2 class="page-title-wrapper__text">Направления</h2>
+    </div>
 
     <section class="user-info">
       <div class="user-info__container container">
-        <div class="page-title">
-          <h2 class="user-info__title page-title__text">Направления</h2>
-        </div>
         <!-- будет грид контейнер -->
         <div class="user-info__wrapper">
           <!-- один грид элемент -->
@@ -86,27 +88,27 @@
           </label>
 
           <!-- еще грид элемент -->
-          <div class="user-info__tags-wrapper">
-            <p class="user-info__tags-heading user-info-heading">тэги</p>
+          <div class="user-info__tags-wrapper user-info__heading-wrapper">
+            <p class="user-info__tags-heading user-info__heading-text">тэги</p>
             <textarea class="user-info__tags-list" name="" id="" cols="30"
               rows="10">#бургер #бар #футбол #концерт #крафт</textarea>
           </div>
 
           <!-- еще грид элемент -->
-          <div class="user-info__travelmode-wrapper">
-            <p class="user-info__travelmode-heading user-info-heading">транспорт</p>
+          <div class="user-info__travelmode-wrapper user-info__heading-wrapper">
+            <p class="user-info__travelmode-heading user-info__heading-text">транспорт</p>
             <ul class="user-info__travelmode-list travelmode-list">
               <li class="travelmode-list__item travelmode-list__item--active">
-                <button aria-label="travelbyplane"><svg class="travelmode-list__icon"></svg></button>
+                <button aria-label="самолет"><svg class="travelmode-list__icon"></svg></button>
               </li>
               <li class="travelmode-list__item travelmode-list__item--active">
-                <button aria-label="travelbyauto"><svg class="travelmode-list__icon"></svg></button>
+                <button aria-label="автомобиль"><svg class="travelmode-list__icon"></svg></button>
               </li>
               <li class="travelmode-list__item">
-                <button aria-label="travelbybike"><svg class="travelmode-list__icon"></svg></button>
+                <button aria-label="велосипед"><svg class="travelmode-list__icon"></svg></button>
               </li>
               <li class="travelmode-list__item travelmode-list__item--active">
-                <button aria-label="travelbyfoot"><svg class="travelmode-list__icon"></svg></button>
+                <button aria-label="пешком"><svg class="travelmode-list__icon"></svg></button>
               </li>
             </ul>
           </div>
@@ -144,9 +146,9 @@
           <h3 class="addplan__title heading-text">Добавить план:</h3>
 
           <ul class="addplan__points plan-points">
-            <li class="plan-points__item plan-points__item--active"></li>
-            <li class="plan-points__item"></li>
-            <li class="plan-points__item"></li>
+            <li class="plan-points__item plan-points__item--active" aria-label="даты">даты</li>
+            <li class="plan-points__item" aria-label="маршрут">маршрут</li>
+            <li class="plan-points__item" aria-label="Развлечения">Развлечения</li>
           </ul>
 
           <ul class="addplan__steps steps-list">
@@ -163,7 +165,7 @@
                 <div class="step-item__input-body companions-settings">
                   <button type="button" class="step-item__btn-minus"
                     aria-label="убавить количество попутчиков">-</button>
-                  <input class="step-item__input-companions" type="number" name="companions-number"
+                  <input class="step-item__input step-item__input-companions" type="number" name="companions-number"
                     id="companions-number" value="2" min="0">
                   <button type="button" class="step-item__btn-plus"
                     aria-label="прибавить количество попутчиков">+</button>
@@ -175,8 +177,8 @@
                 <p class="step-item__setting-subtext">дн.</p>
                 <div class="step-item__input-body traveldays-settings">
                   <button type="button" class="step-item__btn-minus">-</button>
-                  <input class="step-item__input-days" type="number" name="traveldays-number" id="traveldays-number"
-                    value="3" min="1">
+                  <input class="step-item__input step-item__input-days" type="number" name="traveldays-number"
+                    id="traveldays-number" value="3" min="1">
                   <button type="button" class="step-item__btn-plus">+</button>
                 </div>
               </div>
@@ -245,7 +247,7 @@
                 </div>
 
               </div>
-              <a href="#step2" class="step-item__next-step ">Следующий шаг</a>
+              <a href="#step2" class="step-item__next-step form-btn">Следующий шаг</a>
             </li>
             <!-- шаг 2 -->
             <li class="steps-list__item step-item">
@@ -333,7 +335,7 @@
                   <a href="" class="choose-country__add-new">Добавить страну</a>
                 </li>
               </ul>
-              <a href="#step3" class="step-item__next-step">Следующий шаг</a>
+              <a href="#step3" class="step-item__next-step form-btn">Следующий шаг</a>
               <a href="#step1" class="step-item__prev-step">на шаг назад</a>
             </li>
             <!-- шаг 3 -->
@@ -362,8 +364,10 @@
               </ul>
             </li>
           </ul>
-          <button type="submit" class="step-item__next-step ">Отправить</button>
+
+          <button type="submit" class="step-item__btn-submit form-btn">Отправить</button>
           <a href="#step2" class="step-item__prev-step ">на шаг назад</a>
+
         </div>
       </form>
     </section>

@@ -1,0 +1,74 @@
+.filter {
+  background: #edeff6;
+}
+.filter__container {
+}
+.filter__country {
+}
+.filter__sets {
+}
+.filter__btn-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 41px;
+  background: #ffffff;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #161c35;
+  @media (min-width: $width-tablet+px) {
+    min-height: 50px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+.filter__companions {
+}
+.filter__companions-show-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  margin: 0 auto;
+  color: #1d2e5b;
+  text-transform: uppercase;
+  background: transparent;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  min-height: 40px;
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -33px;
+    width: 18px;
+    height: 2px;
+    background: #1d2e5b;
+    border-radius: 2px;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 20px;
+    line-height: 20px;
+    min-height: 50px;
+    &::after,
+    &::before {
+      width: 26px;
+      left: -51px;
+    }
+  }
+}
+.filter__pagination {
+}

@@ -25,7 +25,7 @@
 @import "blocks/header/header-menu.scss";
 @import "blocks/header/site-list.scss";
 
-/////////////////// ГЛАВНАЯ СТРАНИЦА /////////////////////////////
+////////////////////// ГЛАВНАЯ СТРАНИЦА /////////////////////////////
 // Стили блоков PROMO
 @import "blocks/page-index/promo/promo.scss";
 @import "blocks/page-index/promo/steps-guide.scss";
@@ -52,8 +52,7 @@
 // Стили блоков contact
 @import "blocks/page-index/contact/contact.scss";
 
-// ///////////////// ГЛАВНАЯ НАПРАВЛЕНИЯ ФОРМЫ /////////////////////////////
-// Стили блоков user-info
+///////////////////////// СТРАНИЦА ФОРМЫ ////////////////////////////////////////
 @import "blocks/page-form/user-info.scss";
 @import "blocks/page-form/plans.scss";
 @import "blocks/page-form/item-plans.scss";
@@ -67,10 +66,21 @@
 @import "blocks/page-form/addplan/action-desc-list.scss";
 @import "blocks/page-form/addplan/plan-points.scss";
 
+// ///////////////// СТРАНИЦА КАТАЛОГА /////////////////////////////
 // Стили блоков
-// @import "blocks/.scss";
-// @import "blocks/.scss";
+@import "blocks/page-catalog/filter.scss";
+@import "blocks/page-catalog/filter-country.scss";
+@import "blocks/page-catalog/filter-pagination.scss";
+@import "blocks/page-catalog/filter-sets.scss";
+@import "blocks/page-catalog/btn-filter-country.scss";
+@import "blocks/page-catalog/card-companion.scss";
+@import "blocks/page-catalog/companion-likes.scss";
+@import "blocks/page-catalog/wish-list.scss";
+@import "blocks/page-catalog/companions.scss";
+@import "blocks/page-catalog/sets-row.scss";
+@import "blocks/page-catalog/slider-group.scss";
 
+// @import "blocks/.scss";
 // @import "blocks/.scss";
 // @import "blocks/.scss";
 // @import "blocks/.scss";

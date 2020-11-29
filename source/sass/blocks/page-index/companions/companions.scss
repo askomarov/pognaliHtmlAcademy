@@ -1,6 +1,8 @@
 .companions {
   background: $bgcolor;
-  
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding-bottom: 31px;
 }
 
 .companions__container {
@@ -18,6 +20,7 @@
 }
 
 .companions__list {
+  
 }
 
 .companions__btn {

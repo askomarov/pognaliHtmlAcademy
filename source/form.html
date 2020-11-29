@@ -26,7 +26,7 @@
               <a class="site-list__link" href="index.html">о сервисе</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link site-list__link--active">напрвления</a>
+              <a class="site-list__link site-list__link--active">направления</a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link" href="catalog.html">попутчики</a>
@@ -60,7 +60,7 @@
   </header>
 
   <main class="main">
-    <h1 class="visually-hidden">Страница выбора напрвления путешествия - Погнали?</h1>
+    <h1 class="visually-hidden">Страница выбора направления путешествия - Погнали?</h1>
     <div class="page-title-wrapper">
       <h2 class="page-title-wrapper__text">Направления</h2>
     </div>
@@ -71,9 +71,15 @@
         <div class="user-info__wrapper">
           <!-- один грид элемент -->
           <div class="user-info__level-wrapper level-wrapper">
-            <div class="level-wrapper__progress-bar"></div>
-            <span class="level-wrapper__level-value">80</span>
-            <span class="level-wrapper__text">level</span>
+            <svg class="level-wrapper__svg-prorgess-bar" viewbox="0 0 200 200">
+              <circle class="svg-circle svg-circle--underline" r="91" cx="100" cy="100" />
+              <circle class="svg-circle svg-circle--progress" r="91" cx="100" cy="100"
+                style="--level-value: 8; stroke-dashoffset: calc(var(--circle-line-width) - (var(--circle-line-width) * var(--level-value)) / 10);" />
+            </svg>
+            <div class="level-wrapper__content">
+              <span class="level-wrapper__level-value">80</span>
+              <span class="level-wrapper__text">level</span>
+            </div>
           </div>
 
           <!-- еще грид элемент -->

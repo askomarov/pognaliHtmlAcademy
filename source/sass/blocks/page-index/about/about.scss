@@ -3,6 +3,12 @@
 }
 
 .about__container {
+  @media (min-width: $width-tablet+px) {
+    padding: 0 73px;
+  }
+  @media (min-width: $width-desktop+px) {
+    padding: 0 130px;
+  }
 }
 
 .about__title {

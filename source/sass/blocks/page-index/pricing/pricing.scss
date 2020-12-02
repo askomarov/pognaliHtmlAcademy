@@ -11,7 +11,6 @@
   grid-template-columns: 1fr 1fr;
   row-gap: 31px;
   align-items: center;
- 
 }
 
 .pricing__title {
@@ -23,6 +22,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
+
   &::after {
     font-weight: normal;
     font-size: 20px;
@@ -46,6 +46,7 @@
   counter-reset: dt;
   grid-column: span 2;
 }
+
 .pricing__item {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -56,7 +57,6 @@
   line-height: 16px;
   color: #444444;
 
-  // padding: 13px 0;
   &:first-child {
   }
 
@@ -89,15 +89,17 @@
     line-height: 28px;
   }
 }
+
 .pricing__item-name {
   padding-top: 13px;
   border-top: 1px solid #e1e3e9;
 }
+
 .pricing__item-price {
   padding-bottom: 13px;
   border-bottom: 1px solid #e1e3e9;
-  // order: 3;
 }
+
 .pricing__link-business-tarif {
   font-weight: bold;
   font-size: 16px;

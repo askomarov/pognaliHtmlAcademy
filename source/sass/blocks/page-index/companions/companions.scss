@@ -2,7 +2,16 @@
   background: $bgcolor;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  padding-top: 68px;
   padding-bottom: 31px;
+  @media (min-width: $width-tablet+px) {
+    padding-top: 141px;
+    padding-bottom: 87px;
+  }
+  @media (min-width: $width-desktop+px) {
+    padding-top: 130px;
+    padding-bottom: 134px;
+  }
 }
 
 .companions__container {
@@ -10,17 +19,26 @@
 
 .companions__text-wrapper {
 }
+
 .companions__title {
+  padding-bottom: 19px;
+  @media (min-width: $width-tablet+px) {
+    padding-bottom: 55px;
+  }
 }
 
 .companions__text {
+  padding-bottom: 25px;
+  @media (min-width: $width-tablet+px) {
+    margin-bottom: 39px;
+  }
 }
 
 .companions__text-bottom {
+  margin-bottom: 54px;
 }
 
 .companions__list {
-  
 }
 
 .companions__btn {

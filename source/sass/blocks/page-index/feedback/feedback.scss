@@ -162,7 +162,7 @@
 .feedback__action-link-wrapper {
   display: flex;
   flex-wrap: wrap;
-
+  text-align: left;
   @media (min-width: $width-desktop+px) {
     justify-content: space-around;
     width: 100%;

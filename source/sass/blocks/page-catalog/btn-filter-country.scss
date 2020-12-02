@@ -1,0 +1,56 @@
+.btn-filter-country {
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  @media (min-width: $width-tablet+px) {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #192144;
+  }
+}
+.btn-filter-country__show {
+}
+.btn-filter-country__close {
+}
+.btn-filter-country__icon {
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #192144;
+  position: relative;
+  &::after,
+  &::before {
+    content: "";
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #192144;
+    position: absolute;
+    top: 0;
+  }
+  &::after {
+    left: 7px;
+  }
+  &::before {
+    left: 14px;
+  }
+  @media (min-width: $width-tablet+px) {
+    width: 6px;
+    height: 6px;
+    &::after,
+    &::before {
+      width: 6px;
+      height: 6px;
+    }
+    &::after {
+      left: 12px;
+    }
+    &::before {
+      left: 24px;
+    }
+  }
+}

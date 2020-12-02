@@ -1,0 +1,27 @@
+.main-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    line-height: 32px;
+  }
+}
+
+.main-text--bold {
+  font-weight: bold;
+  @media (min-width: $width-tablet+px) {
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    line-height: 24px;
+  }
+}

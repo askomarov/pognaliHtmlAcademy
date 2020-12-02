@@ -1,0 +1,31 @@
+.site-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-list__item {
+}
+
+.site-list__link {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  text-transform: uppercase;
+  color: #192144;
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 60px;
+    line-height: 71px;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    font-size: 20px;
+    line-height: 20px;
+    color: #ffffff;
+  }
+}
+
+.site-list__link--active {
+}

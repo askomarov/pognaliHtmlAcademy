@@ -1,0 +1,11 @@
+.main-title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ff8d30;
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 45px;
+    line-height: 45px;
+  }
+}

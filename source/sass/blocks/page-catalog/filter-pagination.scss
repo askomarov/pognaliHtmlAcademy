@@ -1,0 +1,73 @@
+.filter-pagination {
+  background: #ffffff;
+  border-radius: 20px;
+  display: grid;
+  @media (min-width: $width-tablet+px) {
+    padding: 25px 28px;
+    grid-template-columns: 1fr 100px;
+  }
+}
+.filter-pagination__list {
+  display: none;
+  @media (min-width: $width-tablet+px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.filter-pagination__item {
+}
+.filter-pagination__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  color: #1d2e5b;
+}
+.filter-pagination__link--active {
+  background: #ffd74b;
+}
+.filter-pagination__btns-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  min-height: 51px;
+  overflow: hidden;
+  @media (min-width: $width-tablet+px) {
+    gap: 10px;
+  }
+}
+.filter-pagination__btn {
+  flex: 0 1 50%;
+  min-height: 100%;
+  position: relative;
+  background: transparent;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 10px;
+    height: 18px;
+    background: transparent;
+    border-bottom: 9px solid transparent;
+    border-top: 9px solid transparent;
+  }
+}
+.filter-pagination__btn--prev {
+  &::after {
+    border-right: 10px solid #1d2e5b;
+  }
+}
+.filter-pagination__btn--next {
+  &::after {
+    border-left: 10px solid #1d2e5b;
+  }
+}

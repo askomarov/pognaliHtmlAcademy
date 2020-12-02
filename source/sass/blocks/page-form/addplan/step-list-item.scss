@@ -1,0 +1,130 @@
+.steps-list {
+}
+.steps-list__item {
+}
+.step-item {
+}
+.step-item__title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  color: #1d2e5b;
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+.step-item__text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #444444;
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.step-item__settings {
+}
+.step-item__setting-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #1d2e5b;
+  @media (min-width: $width-tablet+px) {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+  }
+}
+.step-item__setting-subtext {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba($color: #1d2e5b, $alpha: 0.3);
+  @media (min-width: $width-tablet+px) {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.08em;
+  }
+  @media (min-width: $width-desktop+px) {
+    color: #1d2e5b;
+  }
+}
+.step-item__input-body {
+}
+.traveldays-settings {
+}
+.companions-settings {
+}
+.step-item__btn-minus {
+}
+.step-item__btn-plus {
+}
+.step-item__input {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #1d2e5b;
+  @media (min-width: $width-tablet+px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  @media (min-width: $width-desktop+px) {
+    line-height: 18px;
+  }
+}
+.step-item__input-companions {
+}
+.step-item__input-days {
+}
+.step-item__child-cheks {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+  color: #1d2e5b;
+  @media (min-width: $width-tablet+px) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}
+.step-item__calendar {
+}
+.step-item__next-step {
+}
+.step-item__choose-country {
+}
+.step-item__prev-step {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1d2e5b;
+  @media (min-width: $width-tablet+px) {
+    font-size: 24px;
+    line-height: 22px;
+    text-transform: none;
+  }
+}
+.step-item__btn-submit {
+  width: 100%;
+  @media (min-width: $width-tablet+px) {
+    width: 284px;
+  }
+  @media (min-width: $width-desktop+px) {
+    width: 286px;
+  }
+}
+.step-item__action-desc {
+}

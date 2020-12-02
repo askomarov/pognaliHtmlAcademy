@@ -1,0 +1,39 @@
+.plan-points {
+  display: flex;
+  gap: 16px;
+}
+
+.plan-points__item {
+  font-size: 0;
+
+  &:after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba($color: #1d2e5b, $alpha: 0.3);
+  }
+
+  @media (min-width: $width-desktop+px) {
+    color: rgba($color: #000000, $alpha: 0.6);
+    font-weight: normal;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 24px;
+
+    &:after {
+      width: 6px;
+      height: 6px;
+    }
+  }
+}
+
+.plan-points__item--active {
+  color: #000000;
+
+  &:after {
+    background: #1d2e5b;
+  }
+}

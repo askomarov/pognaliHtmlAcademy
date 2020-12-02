@@ -1,0 +1,30 @@
+.choose-country {
+}
+.choose-country__item {
+}
+.choose-country__header {
+}
+.choose-country__option {
+}
+.choose-country__option--current {
+}
+.choose-country__flag-wrapper {
+}
+.choose-country__del-choosen {
+}
+.choose-country__submenu {
+}
+.choose-country__add-new {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1d2e5b;
+  font-weight: 500;
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.09em;
+  }
+}

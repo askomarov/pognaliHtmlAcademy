@@ -1,0 +1,23 @@
+.plans {
+  background: #dfe3f0;
+}
+.plans__container {
+}
+
+.plans__title {
+}
+.plans__list {
+  counter-reset: li;
+}
+.plans__item {
+  &::before {
+    content: counter(li) ". ";
+    counter-increment: li;
+  }
+}
+.heading-text {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  color: #1d2e5b;
+}

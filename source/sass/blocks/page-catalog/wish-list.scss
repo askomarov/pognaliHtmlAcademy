@@ -1,0 +1,18 @@
+.wish-list {
+}
+
+.wish-list__country {
+}
+.wish-list__country-flag {
+}
+.wish-list__coutry-name {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #1d2e5b;
+  @media (min-width: $width-tablet+px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

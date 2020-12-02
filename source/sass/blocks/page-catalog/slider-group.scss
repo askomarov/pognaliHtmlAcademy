@@ -1,0 +1,24 @@
+.slider-group {
+}
+
+.slider-group__input {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 13px;
+  letter-spacing: 0.04em;
+  color: #1d2e5b;
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.slider-group__input--start {
+}
+
+.slider-group__input--end {
+}
+
+.slider-group__slider {
+}

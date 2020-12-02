@@ -1,0 +1,33 @@
+.header-actions {
+}
+
+.header-actions__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  background: #ffd74b;
+  height: 50px;
+  &:not(.header-actions__item--authr) {
+    font-size: 16px;
+    line-height: 18px;
+    background: transparent;
+  }
+}
+
+.header-actions__link {
+  color: #161c35;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.header-actions__item--authr {
+  font-size: 17px;
+  line-height: 30px;
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

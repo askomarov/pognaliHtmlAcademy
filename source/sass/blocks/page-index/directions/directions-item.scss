@@ -84,6 +84,19 @@
 }
 
 .directions-item__flag {
+  width: 35px;
+  height: 24px;
+  background: tomato;
+  position: absolute;
+  left: 25px;
+  top: -13px;
+  @media (min-width: $width-tablet+px) {
+    width: 70px;
+    height: 47px;
+    left: initial;
+    right: -35px;
+    top: 17px;
+  }
 }
 
 .directions-item__img-wrapper {

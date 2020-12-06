@@ -1,0 +1,14 @@
+.country-flag-list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  border: 1px solid #000;
+  justify-content: center;
+  gap: 20px;
+  margin-top: -11px;
+}
+
+.country-flag-list__item {
+  width: 35px;
+  height: 25px;
+}

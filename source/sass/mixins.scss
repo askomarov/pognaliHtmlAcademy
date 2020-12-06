@@ -1,0 +1,16 @@
+// чтобы подключить к блоку прописать строку ниже
+//  @include sectionRadiusBackground;
+@mixin sectionRadiusBackground {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: var(--main-border-radius);
+    bottom: 100%;
+    left: 0;
+    background: inherit;
+    z-index: -1;
+  }
+}

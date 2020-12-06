@@ -3,6 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (min-width: $width-tablet+px) {
+    align-items: flex-start;
+  }
 }
 
 .site-list__item {

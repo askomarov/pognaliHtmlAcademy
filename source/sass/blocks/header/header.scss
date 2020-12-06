@@ -1,12 +1,35 @@
 .header {
   background: #161c36;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  background: tomato;
 }
 
 .header__body {
+  display: flex;
+  justify-content: space-between;
 }
 
 .header__logo {
+  background: black;
+  width: 100px;
+  height: 15px;
+  position: relative;
+  z-index: 20;
+  @media (min-width:$width-tablet+px){
+    width: 164px;
+    height: 42px;
+  }
 }
 
 .header__menu {
+  background: blue;
+  min-height: 20px;
+  min-width: 20px;
+  @media (min-width:$width-tablet+px){
+    flex:1 0 auto;
+
+  }
+  @media (min-width:$width-desktop+px){
+  }
 }

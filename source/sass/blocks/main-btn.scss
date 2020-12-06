@@ -8,8 +8,20 @@
   height: 60px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 23px;
   @media (min-width: $width-tablet+px) {
     height: 80px;
+    padding: 0 33px;
+    border-radius: 20px;
+  }
+  &:after {
+    opacity: 1;
+    visibility: visible;
+    content: "";
+    display: inline-block;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 14px solid #1d2e5b;
   }
 }

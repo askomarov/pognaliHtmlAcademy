@@ -2,8 +2,13 @@
   background: #edeff6;
   padding-top: 71px;
   padding-bottom: 34px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: var(--main-border-radius);
+  border-bottom-right-radius: var(--main-border-radius);
+  @include sectionRadiusBackground;
+  @media (min-width: $width-desktop+px) {
+    padding-top: 161px;
+    padding-bottom: 138px;
+  }
 }
 
 .directions__container {
@@ -40,6 +45,25 @@
   grid-column: 1/2;
   grid-row: 1/-1;
   margin-bottom: 25px;
+  @media (min-width: $width-tablet+px) {
+    position: relative;
+    z-index: 1;
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 140px;
+      height: 140px;
+      background: #e2e5f2;
+      border-radius: 20px;
+      top: -48px;
+      left: -36px;
+      @media (min-width: $width-desktop+px) {
+        top: -70px;
+        left: -70px;
+      }
+    }
+  }
   @media (min-width: $width-desktop+px) {
     margin-bottom: 0;
   }

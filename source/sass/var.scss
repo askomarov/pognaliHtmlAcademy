@@ -14,5 +14,12 @@ $color_1: #ff8d30;
 $color_2: #ffbd30;
 $color_3: #ffd74b;
 
-$section-mobile-border-radius: 30px;
-$section-tablet-border-radius: 60px;
+$main-mobile-border-radius: 30px;
+$main-tablet-border-radius: 60px;
+
+:root {
+  --main-border-radius: 30px;
+  @media (min-width: $width-tablet+px) {
+    --main-border-radius: 60px;
+  }
+}

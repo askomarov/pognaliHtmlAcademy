@@ -10,8 +10,6 @@
   box-sizing: border-box;
 }
 
-aside,
-nav,
 footer,
 header,
 section {
@@ -36,9 +34,6 @@ textarea {
   font-family: $fontfamily;
 }
 
-input::-ms-clear {
-  display: none;
-}
 
 button {
   cursor: pointer;

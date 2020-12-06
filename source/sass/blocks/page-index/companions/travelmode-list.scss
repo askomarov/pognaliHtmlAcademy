@@ -1,4 +1,13 @@
 .travelmode-list {
+  border: 1px solid #000;
+  height: 20px;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  @media (min-width: $width-tablet+px) {
+    height: 25px;
+  }
 }
 
 .travelmode-list__item {

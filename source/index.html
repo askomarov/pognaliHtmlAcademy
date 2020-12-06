@@ -24,9 +24,8 @@
       <a class="header__logo main-logo">svg</a>
 
       <nav class="header__menu header-menu">
-        <button type="button" class="header-menu__toggle header-menu__toggle--no-js">
-          <span class="visually-hidden">Открыть/закрыть меню</span>
-        </button>
+        <button type="button" class="header-menu__toggle header-menu__toggle--no-js" aria-label="открыть меню"
+          aria-expanded="false"></button>
         <div class="header-menu__wrapper header-menu__wrapper--no-js">
           <ul class="header-menu__list site-list">
             <li class="site-list__item site-list__item">
@@ -40,9 +39,6 @@
             </li>
           </ul>
           <ul class="header-menu__actions header-actions">
-            <li class="header-actions__item header-actions__item--authr">
-              <a class="header-actions__link" href="">авторизация</a>
-            </li>
             <li class="header-actions__item">
               <a class="header-actions__link" href="tel:+78005558628">8 800 555-86-28</a>
             </li>
@@ -61,6 +57,7 @@
               <a class="social-menu__link" href="" aria-label="instagram"><svg></svg></a>
             </li>
           </ul>
+          <a class="header-menu__authr-btn" href="">авторизация</a>
         </div>
       </nav>
     </div>
@@ -99,7 +96,8 @@
         <h2 class="about__title main-title">О сервисе</h2>
         <p class="about__text main-text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой!
           Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-        <p class="about__text-bottom main-text main-text--bold">А если найдете кого-то близкого по духу — скорее зовите в
+        <p class="about__text-bottom main-text main-text--bold">А если найдете кого-то близкого по духу — скорее зовите
+          в
           совместный
           трип!</p>
         <a class="about__btn main-btn" href="#">Подробнее</a>
@@ -157,7 +155,8 @@
           <h2 class="companions__title main-title">Попутчики</h2>
           <p class="companions__text main-text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному
             нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-          <p class="companions__text-bottom main-text main-text--bold">Теперь можно легко найти единомышленников!</p>
+          <p class="companions__text-bottom main-text main-text--bold">Теперь можно легко<br> найти единомышленников!
+          </p>
         </div>
 
         <ul class="companions__list companions-list">
@@ -166,14 +165,14 @@
               <img src="img/" alt="" width="270" height="270" />
             </div>
             <div class="companions-item__desc">
-              <ul class="companions-item__country-list country-list">
-                <li class="country-list__item">
+              <ul class="companions-item__country-flag-list country-flag-list">
+                <li class="country-flag-list__item">
                   <img src="../img/" alt="" width="35" height="25" />
                 </li>
-                <li class="country-list__item">
+                <li class="country-flag-list__item">
                   <img src="../img/" alt="" width="35" height="25" />
                 </li>
-                <li class="country-list__item">
+                <li class="country-flag-list__item">
                   <img src="../img/" alt="" width="35" height="25" />
                 </li>
               </ul>
@@ -232,11 +231,11 @@
               <img src="img/" alt="" width="270" height="270" />
             </div>
             <div class="companions-item__desc">
-              <ul class="companions-item__country-list country-list">
-                <li class="country-list__item">
+              <ul class="companions-item__country-flag-list country-flag-list">
+                <li class="country-flag-list__item">
                   <img src="../img/" alt="" width="35" height="25" />
                 </li>
-                <li class="country-list__item">
+                <li class="country-flag-list__item">
                   <img src="../img/" alt="" width="35" height="25" />
                 </li>
               </ul>
@@ -365,8 +364,8 @@
     </section>
 
     <section class="contact">
-      <div class="contact__container container">
-        <div class="contact__text-wrapper">
+      <div class="contact__text-wrapper">
+        <div class="contact__container container">
           <h2 class="contact__title">ул. Большая Конюшенная, 19/8</h2>
           <a class="contact__map-link" href="#">Проложить маршрут</a>
         </div>

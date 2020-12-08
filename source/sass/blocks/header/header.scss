@@ -3,11 +3,18 @@
   padding-top: 28px;
   padding-bottom: 28px;
   background: tomato;
+  @media (min-width: $width-tablet+px) {
+    padding-top: 40px;
+  }
+  @media (min-width: $width-desktop+px) {
+    padding-top: 46px;
+  }
 }
 
 .header__body {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header__logo {
@@ -16,9 +23,23 @@
   height: 15px;
   position: relative;
   z-index: 20;
-  @media (min-width:$width-tablet+px){
+  @media (min-width: $width-tablet+px) {
     width: 164px;
     height: 42px;
+  }
+  @media (min-width: $width-desktop+px) {
+    width: 200px;
+    height: 52px;
+    margin-right: 145px;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -100px;
+      width: 60px;
+      height: 2px;
+      background: #ffffff;
+    }
   }
 }
 
@@ -26,10 +47,9 @@
   background: blue;
   min-height: 20px;
   min-width: 20px;
-  @media (min-width:$width-tablet+px){
-    flex:1 0 auto;
-
+  @media (min-width: $width-tablet+px) {
+    flex: 1 0 auto;
   }
-  @media (min-width:$width-desktop+px){
+  @media (min-width: $width-desktop+px) {
   }
 }

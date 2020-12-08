@@ -1,14 +1,20 @@
 .pricing {
   background: #e6e8f1;
   font-family: $fontfamily;
-  padding-bottom: 38px;
   padding-top: 37px;
+  padding-bottom: 38px;
   border-bottom-left-radius: var(--main-border-radius);
   border-bottom-right-radius: var(--main-border-radius);
   @include sectionRadiusBackground;
 
   @media (min-width: $width-tablet+px) {
     background: #edeff6;
+    padding-top: 74px;
+    padding-bottom: 45px;
+  }
+  @media (min-width: $width-desktop+px) {
+    padding-top: 107px;
+    padding-bottom: 165px;
   }
 }
 
@@ -39,7 +45,7 @@
     margin-bottom: 73px;
     grid-row: 1/2;
   }
-  @media (min-width:$width-desktop+px){
+  @media (min-width: $width-desktop+px) {
     margin-bottom: 131px;
   }
 }

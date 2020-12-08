@@ -180,21 +180,3 @@
     display: none;
   }
 }
-.header-menu__authr-btn-doble {
-  display: none;
-  @media (min-width: $width-tablet+px) {
-    color: #161c35;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 20px;
-    border-radius: 25px;
-    background: #ffd74b;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 188px;
-  }
-}

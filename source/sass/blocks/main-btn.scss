@@ -16,9 +16,8 @@
     border-radius: 20px;
   }
   &:after {
-    opacity: 1;
-    visibility: visible;
     content: "";
+    vertical-align: middle;
     display: inline-block;
     border-top: 7px solid transparent;
     border-bottom: 7px solid transparent;

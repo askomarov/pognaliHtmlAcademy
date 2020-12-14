@@ -109,6 +109,7 @@
     right: initial;
     top: initial;
     padding: 0;
+    overflow-y: hidden;
   }
   &--shown {
     display: grid;

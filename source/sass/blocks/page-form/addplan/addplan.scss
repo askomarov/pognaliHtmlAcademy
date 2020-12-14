@@ -1,18 +1,60 @@
 .addplan {
   background: #d4d9eb;
+  padding-top: 30px;
+  padding-bottom: 73px;
+  @include sectionTopRadius;
+  &::after {
+    background: #dfe3f0;
+  }
+  @media (min-width: $width-tablet+px) {
+    padding-top: 57px;
+    padding-bottom: 93px;
+  }
+  @media (min-width: $width-desktop+px) {
+    padding-top: 55px;
+    padding-bottom: 100px;
+  }
 }
 
 .addplan__form {
 }
 
 .addplan__container {
+  position: relative;
+  @media (min-width: $width-tablet+px) {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+  @media (min-width:$width-desktop+px){
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 .addplan__title {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 36px;
+  margin-bottom: 29px;
+  @media (min-width: $width-tablet+px) {
+    margin-bottom: 56px;
+  }
+  @media (min-width:$width-desktop+px){
+    margin-left: 69px;
+  }
 }
 
 .addplan__points {
+  vertical-align: middle;
+  margin: 0 auto 29px;
+  @media (min-width: $width-tablet+px) {
+    position: absolute;
+    right: 75px;
+    top: 18px;
+  }
 }
-
-.addplan__steps {
+.addplan__points.plan-points {
+  @media (min-width: $width-desktop+px) {
+    display: none;
+  }
 }

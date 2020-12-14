@@ -26,7 +26,6 @@ function toggleMenu() {
   });
 };
 
-
 let tarifPopupSection = document.querySelector('.business-tarif');
 let showTarifPopupBtn = document.querySelector('.pricing__link-business-tarif');
 let closetarifPopupBtn = document.querySelector('.business-tarif__close-popup');
@@ -37,6 +36,7 @@ function showPopup(btn, section, classToShow) {
     section.classList.add(classToShow);
   })
 };
+
 function closePopup(btn, section, classToShow) {
   btn.addEventListener('click', function (e) {
     e.preventDefault();
@@ -49,15 +49,10 @@ function closePopup(btn, section, classToShow) {
   });
 };
 
-
 document.addEventListener('DOMContentLoaded', function () {
   toggleMenu();
-  showPopup(showTarifPopupBtn, tarifPopupSection, 'business-tarif--show-popup');
-  closePopup(closetarifPopupBtn, tarifPopupSection, 'business-tarif--show-popup');
+  if (tarifPopupSection) {
+    showPopup(showTarifPopupBtn, tarifPopupSection, 'business-tarif--show-popup');
+    closePopup(closetarifPopupBtn, tarifPopupSection, 'business-tarif--show-popup');
+  };
 });
-
-
-// document.addEventListener('keyup', function (event) {
-//   console.log('Key: ', event.key);
-//   console.log('keyCode: ', event.keyCode);
-// });

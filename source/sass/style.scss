@@ -61,15 +61,17 @@
 @import "blocks/page-form/user-info.scss";
 @import "blocks/page-form/plans.scss";
 @import "blocks/page-form/item-plans.scss";
+@import "blocks/page-form/heading-text.scss";
 
 // Стили блоков addplan
 @import "blocks/page-form/addplan/addplan.scss";
+@import "blocks/page-form/addplan/plan-points.scss";
 @import "blocks/page-form/addplan/step-list-item.scss";
 @import "blocks/page-form/addplan/calendar.scss";
 @import "blocks/page-form/addplan/choose-country.scss";
 @import "blocks/page-form/addplan/submenu-country.scss";
 @import "blocks/page-form/addplan/action-desc-list.scss";
-@import "blocks/page-form/addplan/plan-points.scss";
+@import "blocks/page-form/addplan/step-item-first.scss";
 
 // ///////////////// СТРАНИЦА КАТАЛОГА /////////////////////////////
 // Стили блоков

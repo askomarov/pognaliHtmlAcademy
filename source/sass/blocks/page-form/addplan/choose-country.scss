@@ -1,16 +1,42 @@
 .choose-country {
 }
 .choose-country__item {
+  position: relative;
+  min-height: 42px;
 }
 .choose-country__header {
+  display: flex;
+  height: 100%;
 }
 .choose-country__option {
+  flex: 1 0 auto;
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #1d2e5b;
+  line-height: 18px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  line-height: 42px;
+  padding-left: 11px;
 }
 .choose-country__option--current {
 }
 .choose-country__flag-wrapper {
+  border: 1px solid #cbced9;
+  border-left: 0;
+  border-radius: 4px;
+  padding: 9px;
 }
 .choose-country__del-choosen {
+  cursor: pointer;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
 }
 .choose-country__submenu {
 }
@@ -21,6 +47,9 @@
   text-transform: uppercase;
   color: #1d2e5b;
   font-weight: 500;
+
+  background: #edeff6;
+  border-radius: 4px;
 
   @media (min-width: $width-tablet+px) {
     font-size: 20px;

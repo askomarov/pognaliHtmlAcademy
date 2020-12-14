@@ -3,7 +3,7 @@
 @mixin sectionRadiusBackground {
   position: relative;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -11,6 +11,21 @@
     bottom: 100%;
     left: 0;
     background: inherit;
+    z-index: -1;
+  }
+}
+
+@mixin sectionTopRadius {
+  position: relative;
+  border-top-left-radius: var(--main-border-top-radius);
+  border-top-right-radius: var(--main-border-top-radius);
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: var(--main-border-top-radius);
+    top: 0;
+    left: 0;
     z-index: -1;
   }
 }

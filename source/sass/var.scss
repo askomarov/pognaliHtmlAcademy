@@ -22,4 +22,9 @@ $main-tablet-border-radius: 60px;
   @media (min-width: $width-tablet+px) {
     --main-border-radius: 60px;
   }
+
+  --main-border-top-radius: 30px;
+  @media (min-width: $width-desktop+px) {
+    --main-border-top-radius: 60px;
+  }
 }

@@ -4,7 +4,8 @@
   @media (min-width: $width-tablet+px) {
     padding-bottom: 96px;
   }
-  @media (min-width:$width-desktop+px){
+  @media (min-width: $width-desktop+px) {
+    padding-top: 99px;
     padding-bottom: 123px;
   }
 }
@@ -53,6 +54,7 @@
   @media (min-width: $width-desktop+px) {
     grid-column: -1/-2;
     margin-bottom: 0;
+    padding-left: 0;
   }
 }
 .promo__blockquote-text {
@@ -61,6 +63,9 @@
   max-width: 161px;
   @media (min-width: $width-tablet+px) {
     max-width: 264px;
+  }
+  @media (min-width: $width-desktop+px) {
+    margin-bottom: 45px;
   }
 }
 

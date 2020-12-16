@@ -14,3 +14,20 @@ $color_1: #ff8d30;
 $color_2: #ffbd30;
 $color_3: #ffd74b;
 
+$main-mobile-border-radius: 30px;
+$main-tablet-border-radius: 60px;
+
+:root {
+  --main-border-radius: 30px;
+  @media (min-width: $width-tablet+px) {
+    --main-border-radius: 60px;
+  }
+
+  --main-border-top-radius: 30px;
+  @media (min-width: $width-desktop+px) {
+    --main-border-top-radius: 60px;
+  }
+
+  --flag-shadow: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 10%, rgba(255,255,255,1) 40%);
+}
+

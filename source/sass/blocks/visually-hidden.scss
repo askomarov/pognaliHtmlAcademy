@@ -1,9 +1,3 @@
-.page {
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  font-family: $fontfamily;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;

@@ -1,6 +1,9 @@
 .plan-points {
-  display: flex;
+  display: inline-flex;
   gap: 16px;
+  @media (min-width: $width-desktop+px) {
+    row-gap: 27px;
+  }
 }
 
 .plan-points__item {
@@ -22,10 +25,15 @@
     text-transform: uppercase;
     font-size: 20px;
     line-height: 24px;
-
+    position: relative;
+    padding-left: 42px;
     &:after {
       width: 6px;
       height: 6px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
     }
   }
 }

@@ -1,6 +1,11 @@
 .footer {
+  background: tomato;
   padding-top: 37px;
   padding-bottom: 19px;
+  border-top-right-radius: var(--main-border-radius);
+  border-top-left-radius: var(--main-border-radius);
+  position: relative;
+  bottom: var(--main-border-radius);
   @media (min-width: $width-tablet+px) {
     padding-top: 46px;
     padding-bottom: 32px;
@@ -38,6 +43,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (min-width: $width-tablet+px) {
+    justify-content: flex-end;
+    gap: 24px;
+  }
 }
 .footer__copy-text {
   font-weight: normal;
@@ -46,4 +55,6 @@
   color: #444444;
 }
 .footer__academy-logo {
+  width: 27px;
+  height: 34px;
 }

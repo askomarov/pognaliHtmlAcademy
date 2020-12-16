@@ -1,10 +1,23 @@
 .about {
   background: $bgcolor;
+  padding-top: 33px;
+  padding-bottom: 82px;
+  border-bottom-left-radius: var(--main-border-radius);
+  border-bottom-right-radius: var(--main-border-radius);
+  @include sectionRadiusBackground;
+  @media (min-width: $width-tablet+px) {
+    padding-top: 41px;
+    padding-bottom: 89px;
+  }
+  @media (min-width: $width-desktop+px) {
+    padding-top: 42px;
+    padding-bottom: 163px;
+  }
 }
 
 .about__container {
   @media (min-width: $width-tablet+px) {
-    padding: 0 73px;
+    padding: 0 74px;
   }
   @media (min-width: $width-desktop+px) {
     padding: 0 130px;
@@ -12,15 +25,43 @@
 }
 
 .about__title {
+  margin-bottom: 19px;
+  @media (min-width: $width-tablet+px) {
+    margin-bottom: 40px;
+  }
+  @media (min-width: $width-desktop+px) {
+    margin-bottom: 57px;
+  }
 }
 
 .about__text {
   color: #ffffff;
+  margin-bottom: 20px;
+  @media (min-width: $width-tablet+px) {
+    margin-bottom: 31px;
+    max-width: 300px;
+  }
+  @media (min-width: $width-desktop+px) {
+    margin-bottom: 38px;
+    max-width: 619px;
+  }
 }
 
 .about__text-bottom {
   color: #ffffff;
+  @media (min-width: $width-tablet+px) {
+    margin-bottom: 52px;
+    max-width: 265px;
+  }
+  @media (min-width: $width-desktop+px) {
+    margin-bottom: 85px;
+    max-width: 425px;
+  }
 }
 
 .about__btn {
+  @media (max-width: $width-tablet+px) {
+    display: none;
+  }
+  max-width: 285px;
 }

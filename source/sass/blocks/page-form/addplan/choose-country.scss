@@ -1,16 +1,171 @@
 .choose-country {
+  margin-bottom: 25px;
+  position: relative;
+  @media (min-width: $width-tablet+px) {
+    margin-bottom: 50px;
+    padding-top: 42px;
+    border-top: 1px solid #e1e3e9;
+  }
+  li {
+    margin-bottom: 22px;
+    position: relative;
+    &:last-child {
+      margin-bottom: 0;
+      &:after {
+        display: none;
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -16px;
+      left: 168px;
+      width: 1px;
+      height: 10px;
+      background: red;
+      @media (min-width: $width-tablet+px) {
+        display: none;
+      }
+    }
+  }
+  &:after {
+    @media (min-width: $width-tablet+px) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 394px;
+      width: 1px;
+      height: 110%;
+      background: #e1e3e9;
+      background: linear-gradient(180deg, #e1e3e9 0%, #e1e3e9 80%, #ffffff 110%);
+      z-index: 1;
+    }
+    @media (min-width: $width-desktop+px) {
+      left: initial;
+      right: 230px;
+      background: #e1e3e9;
+      height: 130%;
+    }
+  }
 }
 .choose-country__item {
+  position: relative;
+  min-height: 42px;
+  @media (min-width: $width-tablet+px) {
+    height: 70px;
+    padding-right: 44px;
+  }
+}
+.choose-country__item--current {
+  .choose-country__flag-wrapper {
+    display: none;
+  }
 }
 .choose-country__header {
+  display: flex;
+  height: 100%;
+  @media (min-width: $width-tablet+px) {
+    align-items: center;
+  }
 }
 .choose-country__option {
+  flex: 1 0 168px;
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #1d2e5b;
+  line-height: 18px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  line-height: 42px;
+  padding-left: 11px;
+  position: relative;
+  white-space: nowrap;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1d2e5b;
+    right: -4px;
+    z-index: 2;
+    @media (min-width: $width-tablet+px) {
+      width: 14px;
+      height: 14px;
+      right: -33px;
+    }
+    @media (min-width: $width-desktop+px) {
+      right: -48px;
+    }
+  }
+  @media (min-width: $width-tablet+px) {
+    line-height: 70px;
+    font-weight: 500;
+    font-size: 20px;
+    padding-left: 25px;
+    margin-right: 52px;
+    max-width: 369px;
+  }
+  @media (min-width: $width-desktop+px) {
+    max-width: 730px;
+    margin-right: 85px;
+  }
+}
+.choose-country__option-text {
+  position: absolute;
+  @media (min-width: $width-tablet+px) {
+    position: relative;
+  }
 }
 .choose-country__option--current {
+  &::before {
+    background: #ffffff;
+    border: 1px solid #cbced9;
+    right: 49px;
+    @media (min-width: $width-tablet+px) {
+      width: 14px;
+      height: 14px;
+      right: -33px;
+    }
+    @media (min-width: $width-desktop+px) {
+      right: -48px;
+    }
+  }
 }
 .choose-country__flag-wrapper {
+  border: 1px solid #cbced9;
+  border-left: 0;
+  border-radius: 4px;
+  padding: 9px;
+  width: 57px;
+  z-index: 1;
+  background: chartreuse;
+  position: relative;
+  @media (min-width: $width-tablet+px) {
+    width: 70px;
+    height: 47px;
+    border: 0;
+  }
 }
 .choose-country__del-choosen {
+  cursor: pointer;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: #edeff6;
+  z-index: 2;
+  @media (min-width: $width-tablet+px) {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
 }
 .choose-country__submenu {
 }
@@ -22,9 +177,51 @@
   color: #1d2e5b;
   font-weight: 500;
 
+  background: #edeff6;
+  border-radius: 4px;
+  height: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px 0 11px;
+
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: transparent;
+    right: 49px;
+    border: 1px solid #cbced9;
+    z-index: 2;
+    @media (min-width: $width-tablet+px) {
+      width: 14px;
+      height: 14px;
+      right: -33px;
+      background: #edeff6;
+    }
+    @media (min-width: $width-desktop+px) {
+      right: -48px;
+    }
+  }
   @media (min-width: $width-tablet+px) {
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.09em;
+    padding: 0 25px 0 26px;
+    height: 70px;
+    width: 369px;
+    background: #dfe3f0;
+  }
+  @media (min-width: $width-tablet+px) {
+    padding: 0 25px;
+  }
+  @media (min-width: $width-desktop+px) {
+    width: auto;
+    max-width: 730px;
   }
 }

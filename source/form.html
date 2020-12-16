@@ -13,12 +13,11 @@
   <svg style="display: none"></svg>
 
   <header class="header">
-    <div class="header__body">
+    <div class="header__body container">
       <a class="header__logo main-logo" href="index.html">svg</a>
 
       <nav class="header__menu header-menu">
         <button type="button" class="header-menu__toggle header-menu__toggle--no-js">
-          <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
         <div class="header-menu__wrapper header-menu__wrapper--no-js">
           <ul class="header-menu__list site-list">
@@ -33,9 +32,6 @@
             </li>
           </ul>
           <ul class="header-menu__actions header-actions">
-            <li class="header-actions__item">
-              <a class="header-actions__link" href="">авторизация</a>
-            </li>
             <li class="header-actions__item">
               <a class="header-actions__link" href="tel:+78005558628">8 800 555-86-28</a>
             </li>
@@ -54,8 +50,10 @@
               <a class="social-menu__link" href="" aria-label="instagram"><svg></svg></a>
             </li>
           </ul>
+          <a class="header-menu__authr-btn" href="">авторизация</a>
         </div>
       </nav>
+      <a class="header__authr-btn-doble" href="">авторизация</a>
     </div>
   </header>
 
@@ -66,6 +64,7 @@
     </div>
 
     <section class="user-info">
+      <h2 class="visually-hidden">Страница профиля</h2>
       <div class="user-info__container container">
         <!-- будет грид контейнер -->
         <div class="user-info__wrapper">
@@ -90,14 +89,16 @@
           <!-- еще грид элемент -->
           <label class="user-info__img-btn" for="change-img">
             <input class="visually-hidden" type="file" name="change-img" id="change-img">
-            Сменить фото
+            <span class="user-info__img-btn--text">
+              <span>Сменить</span> фото
+            </span>
           </label>
 
           <!-- еще грид элемент -->
           <div class="user-info__tags-wrapper user-info__heading-wrapper">
             <p class="user-info__tags-heading user-info__heading-text">тэги</p>
-            <textarea class="user-info__tags-list" name="" id="" cols="30"
-              rows="10">#бургер #бар #футбол #концерт #крафт</textarea>
+            <textarea class="user-info__tags-list" name="tags" id="tags" cols="30"
+              rows="5">#бургер #бар #футбол #концерт #крафт</textarea>
           </div>
 
           <!-- еще грид элемент -->
@@ -159,37 +160,40 @@
 
           <ul class="addplan__steps steps-list">
             <!-- шаг 1 -->
-            <li class="steps-list__item step-item">
+            <li class="steps-list__item step-item step-item-first">
               <h4 class="step-item__title">Шаг 1. <br>Даты пребывания</h4>
-              <a name="step1"></a>
+              <a class="step-item__anchor" id="step1"></a>
               <p class="step-item__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в
                 поездку и ее предполагаемую длительность.</p>
 
-              <div class="step-item__settings">
-                <p class="step-item__setting-text">ищу попутчиков:</p>
-                <p class="step-item__setting-subtext">чел.</p>
-                <div class="step-item__input-body companions-settings">
-                  <button type="button" class="step-item__btn-minus"
-                    aria-label="убавить количество попутчиков">-</button>
-                  <input class="step-item__input step-item__input-companions" type="number" name="companions-number"
-                    id="companions-number" value="2" min="0">
-                  <button type="button" class="step-item__btn-plus"
-                    aria-label="прибавить количество попутчиков">+</button>
+              <div class="step-item__travel-set">
+                <div class="step-item__settings step-item__settings--companions">
+                  <p class="step-item__setting-text">ищу попутчиков:</p>
+                  <p class="step-item__setting-subtext">чел.</p>
+                  <div class="step-item__input-body companions-settings">
+                    <button type="button" class="step-item__btn-minus"
+                      aria-label="убавить количество попутчиков">-</button>
+                    <input class="step-item__input step-item__input-companions" type="number" name="companions-number"
+                      id="companions-number" value="2" min="0">
+                    <button type="button" class="step-item__btn-plus"
+                      aria-label="прибавить количество попутчиков">+</button>
+                  </div>
                 </div>
-              </div>
 
-              <div class="step-item__settings">
-                <p class="step-item__setting-text">длительность:</p>
-                <p class="step-item__setting-subtext">дн.</p>
-                <div class="step-item__input-body traveldays-settings">
-                  <button type="button" class="step-item__btn-minus">-</button>
-                  <input class="step-item__input step-item__input-days" type="number" name="traveldays-number"
-                    id="traveldays-number" value="3" min="1">
-                  <button type="button" class="step-item__btn-plus">+</button>
+                <div class="step-item__settings step-item__settings--days">
+                  <p class="step-item__setting-text">длительность:</p>
+                  <p class="step-item__setting-subtext">дн.</p>
+                  <div class="step-item__input-body traveldays-settings">
+                    <button type="button" class="step-item__btn-minus">-</button>
+                    <input class="step-item__input step-item__input-days" type="number" name="traveldays-number"
+                      id="traveldays-number" value="3" min="1">
+                    <button type="button" class="step-item__btn-plus">+</button>
+                  </div>
                 </div>
+
+                <input class="visually-hidden" type="checkbox" name="children-yes" id="children-yes" checked>
+                <label class="step-item__child-cheks" for="children-yes">Можно с детьми</label>
               </div>
-              <input class="visually-hidden" type="checkbox" name="children-yes" id="children-yes" checked>
-              <label class="step-item__child-cheks" for="children-yes">Можно с детьми</label>
 
               <div class="step-item__calendar calendar">
                 <!-- календарь ё-моё -->
@@ -200,20 +204,24 @@
                     <button class="calendar__mth-btn calendar__mth-btn--next" aria-label="следующий месяц"></button>
                   </div>
                   <ul class="calendar__days-row">
-                    <li class="calendar__day">Пн</li>
-                    <li class="calendar__day">Вт</li>
-                    <li class="calendar__day">Ср</li>
-                    <li class="calendar__day">Чт</li>
-                    <li class="calendar__day">Пт</li>
-                    <li class="calendar__day calendar__day--weekend">Сб</li>
-                    <li class="calendar__day calendar__day--weekend">Вс</li>
+                    <li class="calendar__day">П<small class="calendar__day-second-letter">н</small></li>
+                    <li class="calendar__day">В<small class="calendar__day-second-letter">т</small></li>
+                    <li class="calendar__day">С<small class="calendar__day-second-letter">р</small></li>
+                    <li class="calendar__day">Ч<small class="calendar__day-second-letter">т</small></li>
+                    <li class="calendar__day">П<small class="calendar__day-second-letter">т</small></li>
+                    <li class="calendar__day calendar__day--weekend">С<small
+                        class="calendar__day-second-letter">б</small></li>
+                    <li class="calendar__day calendar__day--weekend">В<small
+                        class="calendar__day-second-letter">с</small></li>
                   </ul>
                   <ul class="calendar__nums">
+                    <li class="calendar__number">23</li>
+                    <li class="calendar__number">24</li>
                     <li class="calendar__number">25</li>
                     <li class="calendar__number">26</li>
                     <li class="calendar__number">27</li>
                     <li class="calendar__number">28</li>
-                    <li class="calendar__number">1</li>
+                    <li class="calendar__number">1 <span class="calendar__number-month">мар</span></li>
                     <li class="calendar__number">2</li>
                     <li class="calendar__number">3</li>
                     <li class="calendar__number">4</li>
@@ -238,59 +246,70 @@
                     <li class="calendar__number">23</li>
                     <li class="calendar__number">24</li>
                     <li class="calendar__number">25</li>
-                    <li class="calendar__number">26</li>
-                    <li class="calendar__number">27</li>
-                    <li class="calendar__number">28</li>
-                    <li class="calendar__number">29</li>
-                    <li class="calendar__number">30</li>
-                    <li class="calendar__number">31</li>
-                    <li class="calendar__number">1</li>
-                    <li class="calendar__number">2</li>
-                    <li class="calendar__number">3</li>
-                    <li class="calendar__number">4</li>
-                    <li class="calendar__number">5</li>
+                    <li class="calendar__number calendar__number--choosen calendar__number--current">26
+                      <span class="calendar__number-text">Заезд</span>
+                    </li>
+                    <li class="calendar__number calendar__number--choosen">27</li>
+                    <li class="calendar__number calendar__number--choosen">28<span
+                        class="calendar__number-text">Выезд</span></li>
+                    <li class="calendar__number calendar__number--future">29</li>
+                    <li class="calendar__number calendar__number--future">30</li>
+                    <li class="calendar__number calendar__number--future">31</li>
+                    <li class="calendar__number calendar__number--future">1 <span
+                        class="calendar__number-month">апр</span></li>
+                    <li class="calendar__number calendar__number--future">2</li>
+                    <li class="calendar__number calendar__number--future">3</li>
+                    <li class="calendar__number calendar__number--future">4</li>
+                    <li class="calendar__number calendar__number--future">5</li>
                   </ul>
                 </div>
 
               </div>
               <a href="#step2" class="step-item__next-step form-btn">Следующий шаг</a>
+              <ul class="step-item__plan-points plan-points">
+                <li class="plan-points__item plan-points__item--active" aria-label="даты">даты</li>
+                <li class="plan-points__item" aria-label="маршрут">маршрут</li>
+                <li class="plan-points__item" aria-label="Развлечения">Развлечения</li>
+              </ul>
             </li>
             <!-- шаг 2 -->
-            <li class="steps-list__item step-item">
+            <li class="steps-list__item step-item step-item-second">
               <h4 class="step-item__title">Шаг 2. <br>Маршрут</h4>
-              <a name="step2"></a>
+              <a class="step-item__anchor" id="step2"></a>
               <p class="step-item__text">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу
                 несколько.</p>
               <ul class="step-item__choose-country choose-country">
                 <!-- капец тут блок!! -->
                 <li>
-                  <a href="#" class="choose-country__item" aria-label="выпадющий список для выбора первой страны">
+                  <div class="choose-country__item" aria-label="выпадющий список для выбора первой страны">
                     <div class="choose-country__header">
-                      <span class="choose-country__option choose-country__option--current">Выберите страну</span>
+                      <div class="choose-country__option"><span class="choose-country__option-text">Босния и
+                          герцеговина</span></div>
                       <div class="choose-country__flag-wrapper">
-                        <img src="img/" alt="" width="70" height="47" />
+                        <img src="img/" alt="" width="35" height="24" />
                       </div>
                     </div>
                     <button class="choose-country__del-choosen" aria-label="delete choosen country">x</button>
-                  </a>
+                  </div>
                 </li>
                 <li>
-                  <a href="#" class="choose-country__item" aria-label="выпадющий список для выбора следующей страны">
+                  <div class="choose-country__item" aria-label="выпадющий список для выбора следующей страны">
                     <div class="choose-country__header">
-                      <span class="choose-country__option choose-country__option--current">Выберите страну</span>
+                      <span class="choose-country__option">Выберите страну</span>
                       <div class="choose-country__flag-wrapper">
-                        <img src="img/" alt="" width="70" height="47" />
+                        <img src="img/" alt="" width="35" height="24" />
                       </div>
                     </div>
                     <button class="choose-country__del-choosen" aria-label="удалить страну">x</button>
-                  </a>
+                  </div>
                 </li>
                 <li>
-                  <a href="#" class="choose-country__item" aria-label="выпадющий список для выбора следующей страны">
+                  <div class="choose-country__item choose-country__item--current"
+                    aria-label="выпадющий список для выбора следующей страны">
                     <div class="choose-country__header">
                       <span class="choose-country__option choose-country__option--current">Выберите страну</span>
                       <div class="choose-country__flag-wrapper">
-                        <img src="img/" alt="" width="70" height="47" />
+                        <img src="img/" alt="" width="35" height="24" />
                       </div>
                     </div>
                     <button class="choose-country__del-choosen" aria-label="delete choosen country">x</button>
@@ -335,19 +354,24 @@
                         <li class="submenu-country__country-item">Афганистан</li>
                       </ul>
                     </div>
-                  </a>
+                  </div>
                 </li>
                 <li>
-                  <a href="" class="choose-country__add-new">Добавить страну</a>
+                  <a href="" class="choose-country__add-new">Добавить страну<span>+</span></a>
                 </li>
               </ul>
               <a href="#step3" class="step-item__next-step form-btn">Следующий шаг</a>
-              <a href="#step1" class="step-item__prev-step">на шаг назад</a>
+              <a href="#step1" class="step-item__prev-step">На шаг назад</a>
+              <ul class="step-item__plan-points plan-points">
+                <li class="plan-points__item" aria-label="даты">даты</li>
+                <li class="plan-points__item plan-points__item--active" aria-label="маршрут">маршрут</li>
+                <li class="plan-points__item" aria-label="Развлечения">Развлечения</li>
+              </ul>
             </li>
             <!-- шаг 3 -->
-            <li class="steps-list__item step-item">
+            <li class="steps-list__item step-item step-item-third">
               <h4 class="step-item__title">Шаг 3. <br>Развлечения</h4>
-              <a name="step3"></a>
+              <a class="step-item__anchor" id="step3"></a>
               <p class="step-item__text">Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной
                 форме и ставить тэги.</p>
               <ul class="step-item__action-desc action-desc-list">
@@ -358,6 +382,7 @@
                   </div>
                   <textarea class="action-desc-list__textarea" name="actions-in-1-country"
                     placeholder="План действий"></textarea>
+                  <span class="action-desc-list__item-decor"></span>
                 </li>
                 <li class="action-desc-list__item">
                   <p class="action-desc-list__item-country-name">Чехия</p>
@@ -366,13 +391,20 @@
                   </div>
                   <textarea class="action-desc-list__textarea" name="actions-in-2-country"
                     placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                  <span class="action-desc-list__item-decor"></span>
                 </li>
               </ul>
+              <ul class="step-item__plan-points plan-points">
+                <li class="plan-points__item" aria-label="даты">даты</li>
+                <li class="plan-points__item" aria-label="маршрут">маршрут</li>
+                <li class="plan-points__item plan-points__item--active" aria-label="Развлечения">Развлечения</li>
+              </ul>
+              <button type="submit" class="step-item__btn-submit form-btn">Отправить</button>
+              <a href="#step2" class="step-item__prev-step ">На шаг назад</a>
             </li>
           </ul>
 
-          <button type="submit" class="step-item__btn-submit form-btn">Отправить</button>
-          <a href="#step2" class="step-item__prev-step ">на шаг назад</a>
+
 
         </div>
       </form>
@@ -421,7 +453,7 @@
       </div>
     </div>
   </footer>
-
+  <script src="js/script.js"></script>
 </body>
 
 </html>

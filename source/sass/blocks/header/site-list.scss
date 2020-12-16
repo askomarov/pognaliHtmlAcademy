@@ -3,6 +3,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (min-width: $width-tablet+px) {
+    align-items: flex-start;
+  }
+  @media (min-width: $width-desktop+px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 34px;
+    row-gap: 10px;
+  }
 }
 
 .site-list__item {

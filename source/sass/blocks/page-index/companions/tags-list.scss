@@ -1,4 +1,6 @@
 .tags-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .tags-list__item {
@@ -8,4 +10,8 @@
   font-size: 16px;
   line-height: 18px;
   color: #444444;
+  @media (min-width: $width-tablet+px) {
+    font-size: 20px;
+    line-height: 23px;
+  }
 }

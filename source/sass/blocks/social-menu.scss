@@ -1,8 +1,15 @@
 .social-menu {
+  height: 21px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .social-menu__item {
 }
 
 .social-menu__link {
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 }

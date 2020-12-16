@@ -1,14 +1,31 @@
 .steps-list {
+  display: grid;
+  gap: 10px;
+  @media (min-width: $width-tablet+px) {
+    gap: 40px;
+  }
 }
 .steps-list__item {
 }
 .step-item {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 24px 25px 23px;
+  @media (min-width: $width-tablet+px) {
+    border-radius: 30px;
+    padding: 48px 40px 56px 40px;
+  }
+  @media (min-width: $width-desktop+px) {
+    border-radius: 60px;
+    padding: 100px 160px 100px 160px;
+  }
 }
 .step-item__title {
   font-weight: bold;
   font-size: 20px;
   line-height: 20px;
   color: #1d2e5b;
+  margin-bottom: 15px;
 
   @media (min-width: $width-tablet+px) {
     font-size: 36px;
@@ -26,7 +43,58 @@
     line-height: 24px;
   }
 }
+.step-item__travel-set {
+  display: grid;
+  row-gap: 20px;
+  grid-template-areas:
+    "set-companions"
+    "set-days"
+    "set-child";
+  @media (min-width: $width-tablet+px) {
+    row-gap: 34px;
+    grid-template-areas:
+      "set-companions"
+      "set-child"
+      "set-days";
+    margin-bottom: 60px;
+  }
+  @media (min-width: $width-desktop+px) {
+    row-gap: 14px;
+    column-gap: 60px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "set-companions set-child"
+      "set-days set-child";
+    border-top: 1px solid #e1e3e9;
+    padding-top: 30px;
+    margin-bottom: 33px;
+  }
+}
 .step-item__settings {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  row-gap: 8px;
+
+  @media (min-width: $width-tablet+px) {
+    row-gap: 24px;
+    border-top: 1px solid #e1e3e9;
+    padding-top: 26px;
+  }
+  @media (min-width: $width-desktop+px) {
+    grid-template-columns: 185px 180px 1fr;
+    align-items: center;
+    column-gap: 35px;
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  &--companions {
+    grid-area: set-companions;
+  }
+
+  &--days {
+    grid-area: set-days;
+  }
 }
 .step-item__setting-text {
   font-weight: 500;
@@ -39,6 +107,9 @@
     font-size: 20px;
     line-height: 18px;
     letter-spacing: 0.1em;
+  }
+  @media (min-width: $width-desktop+px) {
+    letter-spacing: normal;
   }
 }
 .step-item__setting-subtext {
@@ -55,9 +126,21 @@
   }
   @media (min-width: $width-desktop+px) {
     color: #1d2e5b;
+    order: 2;
+    justify-self: end;
   }
 }
 .step-item__input-body {
+  grid-column: 1/-1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+  padding: 14px;
+  @media (min-width: $width-desktop+px) {
+    grid-column: initial;
+  }
 }
 .traveldays-settings {
 }
@@ -68,12 +151,14 @@
 .step-item__btn-plus {
 }
 .step-item__input {
+  width: 100%;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 14px;
   text-transform: uppercase;
   color: #1d2e5b;
+  text-align: center;
   @media (min-width: $width-tablet+px) {
     font-size: 20px;
     line-height: 20px;
@@ -82,29 +167,70 @@
     line-height: 18px;
   }
 }
+
 .step-item__input-companions {
 }
+
 .step-item__input-days {
 }
+
 .step-item__child-cheks {
+  grid-area: set-child;
   font-weight: normal;
   font-size: 15px;
   line-height: 15px;
   color: #1d2e5b;
+  position: relative;
+  padding-left: 39px;
+  margin-bottom: 28px;
+
   @media (min-width: $width-tablet+px) {
+    margin-bottom: 0;
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    font-weight: 500;
+    padding-left: 58px;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    margin-top: 17px;
+    justify-self: end;
+    align-self: start;
+    margin-right: 60px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border: 1px solid #cbced9;
+    border-radius: 4px;
+    @media (min-width: $width-tablet+px) {
+      width: 36px;
+      height: 36px;
+    }
   }
 }
 .step-item__calendar {
+  margin-bottom: 20px;
+  @media (min-width: $width-tablet+px) {
+    margin-bottom: 47px;
+  }
 }
 .step-item__next-step {
 }
 .step-item__choose-country {
 }
 .step-item__prev-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
@@ -112,19 +238,48 @@
   text-transform: uppercase;
   color: #1d2e5b;
   @media (min-width: $width-tablet+px) {
+    justify-content: space-between;
     font-size: 24px;
     line-height: 22px;
     text-transform: none;
+    justify-self: end;
+    width: 185px;
+  }
+  @media (min-width: $width-desktop+px) {
+    margin-left: 41px;
+  }
+
+  &::before {
+    @media (min-width: $width-tablet+px) {
+      content: "";
+      vertical-align: middle;
+      display: inline-block;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-right: 14px solid #1d2e5b;
+    }
   }
 }
 .step-item__btn-submit {
   width: 100%;
   @media (min-width: $width-tablet+px) {
-    width: 284px;
-  }
-  @media (min-width: $width-desktop+px) {
     width: 286px;
   }
 }
 .step-item__action-desc {
+}
+
+.step-item__plan-points {
+  display: none;
+  @media (min-width: $width-desktop+px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.step-item__anchor {
+  scroll-margin-top: 150px;
+  @media (min-width: $width-desktop+px) {
+    scroll-margin-top: 0px;
+  }
 }

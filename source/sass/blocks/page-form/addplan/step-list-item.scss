@@ -224,25 +224,13 @@
   }
 }
 .step-item__next-step {
-  display: flex;
-  align-content: center;
-  justify-content: space-evenly;
-
-  &:after {
-    @media (min-width: $width-tablet+px) {
-      content: "";
-      vertical-align: middle;
-      display: inline-block;
-      border-top: 7px solid transparent;
-      border-bottom: 7px solid transparent;
-      border-left: 14px solid #1d2e5b;
-    }
-  }
 }
 .step-item__choose-country {
 }
 .step-item__prev-step {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
@@ -250,17 +238,31 @@
   text-transform: uppercase;
   color: #1d2e5b;
   @media (min-width: $width-tablet+px) {
+    justify-content: space-between;
     font-size: 24px;
     line-height: 22px;
     text-transform: none;
+    justify-self: end;
+    width: 185px;
+  }
+  @media (min-width: $width-desktop+px) {
+    margin-left: 41px;
+  }
+
+  &::before {
+    @media (min-width: $width-tablet+px) {
+      content: "";
+      vertical-align: middle;
+      display: inline-block;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-right: 14px solid #1d2e5b;
+    }
   }
 }
 .step-item__btn-submit {
   width: 100%;
   @media (min-width: $width-tablet+px) {
-    width: 284px;
-  }
-  @media (min-width: $width-desktop+px) {
     width: 286px;
   }
 }
@@ -272,5 +274,12 @@
   @media (min-width: $width-desktop+px) {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.step-item__anchor {
+  scroll-margin-top: 150px;
+  @media (min-width: $width-desktop+px) {
+    scroll-margin-top: 0px;
   }
 }

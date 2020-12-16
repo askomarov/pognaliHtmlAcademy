@@ -19,6 +19,12 @@
 
     .step-item__title {
       grid-area: title;
+      @media (min-width: $width-desktop+px) {
+        margin-bottom: 33px;
+        br {
+          display: none;
+        }
+      }
     }
     .step-item__text {
       grid-area: text;

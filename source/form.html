@@ -162,7 +162,7 @@
             <!-- шаг 1 -->
             <li class="steps-list__item step-item step-item-first">
               <h4 class="step-item__title">Шаг 1. <br>Даты пребывания</h4>
-              <a name="step1"></a>
+              <a class="step-item__anchor" id="step1"></a>
               <p class="step-item__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в
                 поездку и ее предполагаемую длительность.</p>
 
@@ -273,9 +273,9 @@
               </ul>
             </li>
             <!-- шаг 2 -->
-            <li class="steps-list__item step-item">
+            <li class="steps-list__item step-item step-item-second">
               <h4 class="step-item__title">Шаг 2. <br>Маршрут</h4>
-              <a name="step2"></a>
+              <a class="step-item__anchor" id="step2"></a>
               <p class="step-item__text">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу
                 несколько.</p>
               <ul class="step-item__choose-country choose-country">
@@ -283,7 +283,8 @@
                 <li>
                   <div class="choose-country__item" aria-label="выпадющий список для выбора первой страны">
                     <div class="choose-country__header">
-                      <span class="choose-country__option choose-country__option--current">Выберите страну</span>
+                      <div class="choose-country__option"><span class="choose-country__option-text">Босния и
+                          герцеговина</span></div>
                       <div class="choose-country__flag-wrapper">
                         <img src="img/" alt="" width="35" height="24" />
                       </div>
@@ -294,7 +295,7 @@
                 <li>
                   <div class="choose-country__item" aria-label="выпадющий список для выбора следующей страны">
                     <div class="choose-country__header">
-                      <span class="choose-country__option choose-country__option--current">Выберите страну</span>
+                      <span class="choose-country__option">Выберите страну</span>
                       <div class="choose-country__flag-wrapper">
                         <img src="img/" alt="" width="35" height="24" />
                       </div>
@@ -303,7 +304,8 @@
                   </div>
                 </li>
                 <li>
-                  <div class="choose-country__item" aria-label="выпадющий список для выбора следующей страны">
+                  <div class="choose-country__item choose-country__item--current"
+                    aria-label="выпадющий список для выбора следующей страны">
                     <div class="choose-country__header">
                       <span class="choose-country__option choose-country__option--current">Выберите страну</span>
                       <div class="choose-country__flag-wrapper">
@@ -355,16 +357,21 @@
                   </div>
                 </li>
                 <li>
-                  <a href="" class="choose-country__add-new">Добавить страну</a>
+                  <a href="" class="choose-country__add-new">Добавить страну<span>+</span></a>
                 </li>
               </ul>
               <a href="#step3" class="step-item__next-step form-btn">Следующий шаг</a>
-              <a href="#step1" class="step-item__prev-step">на шаг назад</a>
+              <a href="#step1" class="step-item__prev-step">На шаг назад</a>
+              <ul class="step-item__plan-points plan-points">
+                <li class="plan-points__item" aria-label="даты">даты</li>
+                <li class="plan-points__item plan-points__item--active" aria-label="маршрут">маршрут</li>
+                <li class="plan-points__item" aria-label="Развлечения">Развлечения</li>
+              </ul>
             </li>
             <!-- шаг 3 -->
-            <li class="steps-list__item step-item">
+            <li class="steps-list__item step-item step-item-third">
               <h4 class="step-item__title">Шаг 3. <br>Развлечения</h4>
-              <a name="step3"></a>
+              <a class="step-item__anchor" id="step3"></a>
               <p class="step-item__text">Наконец, расскажите о своих планахвремяпровождения. Можно писать в свободной
                 форме и ставить тэги.</p>
               <ul class="step-item__action-desc action-desc-list">
@@ -375,6 +382,7 @@
                   </div>
                   <textarea class="action-desc-list__textarea" name="actions-in-1-country"
                     placeholder="План действий"></textarea>
+                  <span class="action-desc-list__item-decor"></span>
                 </li>
                 <li class="action-desc-list__item">
                   <p class="action-desc-list__item-country-name">Чехия</p>
@@ -383,13 +391,20 @@
                   </div>
                   <textarea class="action-desc-list__textarea" name="actions-in-2-country"
                     placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                  <span class="action-desc-list__item-decor"></span>
                 </li>
               </ul>
+              <ul class="step-item__plan-points plan-points">
+                <li class="plan-points__item" aria-label="даты">даты</li>
+                <li class="plan-points__item" aria-label="маршрут">маршрут</li>
+                <li class="plan-points__item plan-points__item--active" aria-label="Развлечения">Развлечения</li>
+              </ul>
+              <button type="submit" class="step-item__btn-submit form-btn">Отправить</button>
+              <a href="#step2" class="step-item__prev-step ">На шаг назад</a>
             </li>
           </ul>
 
-          <button type="submit" class="step-item__btn-submit form-btn">Отправить</button>
-          <a href="#step2" class="step-item__prev-step ">на шаг назад</a>
+
 
         </div>
       </form>

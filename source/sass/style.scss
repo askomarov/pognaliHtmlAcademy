@@ -41,7 +41,6 @@
 @import "blocks/page-index/companions/companions.scss";
 @import "blocks/page-index/companions/companions-list.scss";
 @import "blocks/page-index/companions/companions-item.scss";
-@import "blocks/page-index/companions/country-list.scss";
 @import "blocks/page-index/companions/country-flag-list.scss";
 @import "blocks/page-index/companions/level-wrapper.scss";
 @import "blocks/page-index/companions/tags-list.scss";
@@ -79,6 +78,7 @@
 // Стили блоков
 @import "blocks/page-catalog/filter.scss";
 @import "blocks/page-catalog/filter-country.scss";
+@import "blocks/page-catalog/country-list.scss";
 @import "blocks/page-catalog/filter-pagination.scss";
 @import "blocks/page-catalog/filter-sets.scss";
 @import "blocks/page-catalog/btn-filter-country.scss";

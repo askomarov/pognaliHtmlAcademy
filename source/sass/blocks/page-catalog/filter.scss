@@ -1,11 +1,31 @@
 .filter {
   background: #edeff6;
+  position: relative;
+  @include sectionRadiusBackground;
 }
 .filter__container {
+  background: #edeff6;
+  @media (min-width: $width-desktop+px) {
+    max-width: 100%;
+  }
 }
 .filter__country {
+  margin: 0 -25px;
+  padding: 0 25px;
+  position: relative;
+  @include sectionRadiusBackground;
+  @media (min-width: $width-tablet+px) {
+    margin: 0 -40px;
+  }
+  @media (min-width:$width-desktop+px){
+    margin: 0 auto;
+  }
 }
 .filter__sets {
+  margin-top: 21px;
+  @media (min-width:$width-desktop+px){
+    margin-top: 0;
+  }
 }
 .filter__btn-submit {
   display: flex;

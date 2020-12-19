@@ -12,7 +12,7 @@
   <svg style="display: none"></svg>
 
   <header class="header">
-    <div class="header__body">
+    <div class="header__body container">
       <a class="header__logo main-logo" href="index.html">svg</a>
 
       <nav class="header__menu header-menu">
@@ -73,6 +73,7 @@
         <div class="filter__container container">
 
           <div class="filter__country filter-country">
+
             <div class="filter-country__header">
               <p class="filter-country__heading">Фильтрация по странам:</p>
               <ul class="filter-country__continents">
@@ -81,16 +82,16 @@
                 <li class="filter-country__continent">Америка</li>
                 <li class="filter-country__continent">Острова</li>
               </ul>
-              <button class="filter-country__btn btn-filter-country" aria-expanded="false">
-                <p class="btn-filter-country__show">показать все</p>
-                <p class="btn-filter-country__close ">свернуть</p>
+              <button type="button" class="filter-country__btn btn-filter-country" aria-expanded="false">
+                <p class="btn-filter-country__btn-show">показать все</p>
+                <p class="btn-filter-country__btn-close ">свернуть</p>
                 <div class="btn-filter-country__icon"></div>
               </button>
             </div>
 
             <div class="filter-country__list-wrapper">
               <ul class="filter-country__list country-list">
-                <li class="country-list__item">
+                <li class="country-list__item country-list__item--current">
                   <span class="country-list__main-letter country-list__main-letter--current">а</span>
                   <ul class="country-list__submenu">
                     <li class="country-list__country">Австралия</li>
@@ -379,7 +380,8 @@
                   </ul>
                 </li>
               </ul>
-              <button class="filter-country__btn-close-countrylist">сверунть</button>
+              <button class="filter-country__btn-close-countrylist"><span
+                  class="btn-decor-cross">сверунть</span></button>
             </div>
           </div>
 
@@ -390,15 +392,15 @@
               <p class="sets-row__name">хобби</p>
               <div class="sets-row__group">
                 <input class="sets-row__input visually-hidden" type="checkbox" name="hobby-gym" id="hobby-gym" checked>
-                <label class="sets-row__label" for="hobby-gym">спортзал</label>
+                <label class="sets-row__label" for="hobby-gym">Спортзал</label>
                 <input class="sets-row__input visually-hidden" type="checkbox" name="hobby-shisha" id="hobby-shisha">
-                <label class="sets-row__label" for="hobby-shisha">кальян</label>
+                <label class="sets-row__label" for="hobby-shisha">Кальян</label>
                 <input class="sets-row__input visually-hidden" type="checkbox" name="hobby-couch" id="hobby-couch">
-                <label class="sets-row__label" for="hobby-couch">диван</label>
+                <label class="sets-row__label" for="hobby-couch">Диван</label>
               </div>
             </div>
             <!-- группа чекбоксов -->
-            <div class="filter-sets__row sets-row">
+            <div class="filter-sets__row sets-row sets-row--active">
               <p class="sets-row__name">музыка</p>
               <div class="sets-row__group">
                 <input class="sets-row__input visually-hidden" type="checkbox" name="music-rock" id="music-rock"

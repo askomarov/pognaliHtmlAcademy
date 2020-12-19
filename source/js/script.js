@@ -1,6 +1,7 @@
 let menuButton = document.querySelector('.header-menu__toggle');
 let mainMenu = document.querySelector('.header-menu__wrapper');
 
+// отнимаем класс у главного на десктопе
 window.addEventListener("resize", function () {
   if (window.innerWidth > 1439.98) {
     mainMenu.classList.remove("header-menu__wrapper--shown");
@@ -9,6 +10,7 @@ window.addEventListener("resize", function () {
 }
 );
 
+// главное меню
 function toggleMenu() {
   mainMenu.classList.remove('header-menu__wrapper--no-js');
   menuButton.classList.remove('header-menu__toggle--no-js');
@@ -49,10 +51,66 @@ function closePopup(btn, section, classToShow) {
   });
 };
 
+
+
+let pageCatalog = document.querySelector('.page-catalog');
+let btnToggleFilterCountry = document.querySelector('.btn-filter-country');
+let filterCountry = document.querySelector('.filter-country');
+let btnCloseFilterContry = document.querySelector('.filter-country__btn-close-countrylist')
+
+
+function showSettings() {
+  let settingRows = document.querySelectorAll(".sets-row");
+  for (let i = 0; i < settingRows.length; i++) {
+    settingRows[i].onclick = function () {
+      this.classList.toggle("sets-row--active");
+    }
+  }
+};
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
+  // главное меню
   toggleMenu();
+
+  // попап с бизнес-тарифом
   if (tarifPopupSection) {
     showPopup(showTarifPopupBtn, tarifPopupSection, 'business-tarif--show-popup');
     closePopup(closetarifPopupBtn, tarifPopupSection, 'business-tarif--show-popup');
   };
+
+  if (pageCatalog) {
+    // открыть закрыть меню фильтра стран
+    btnToggleFilterCountry.addEventListener("click", function () {
+      if (filterCountry.classList.contains("filter-country--open")) {
+        btnToggleFilterCountry.setAttribute("aria-expanded", "false");
+        btnToggleFilterCountry.setAttribute("aria-label", "открыть меню");
+        filterCountry.classList.remove("filter-country--open");
+      } else {
+        filterCountry.classList.add("filter-country--open");
+        btnToggleFilterCountry.setAttribute("aria-label", "закрыть меню");
+        btnToggleFilterCountry.setAttribute("aria-expanded", "true");
+      }
+    })
+    closePopup(btnCloseFilterContry, filterCountry, 'filter-country--open');
+    // при нажатии на большую кнопку внизу списка фильтра стран
+    let closeFilterContry = function () {
+      btnCloseFilterContry.addEventListener('click', function (e) {
+        e.preventDefault();
+        filterCountry.classList.remove("filter-country--open");
+        btnToggleFilterCountry.setAttribute("aria-expanded", "false");
+        btnToggleFilterCountry.setAttribute("aria-label", "открыть меню");
+      });
+      document.addEventListener('keyup', function () {
+        if (keyCode = 27) {
+          filterCountry.classList.remove("filter-country--open");
+          btnToggleFilterCountry.setAttribute("aria-expanded", "false");
+          btnToggleFilterCountry.setAttribute("aria-label", "открыть меню");
+        }
+      });
+    };
+    closeFilterContry();
+    showSettings();
+  }
 });

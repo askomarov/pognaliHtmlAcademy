@@ -65,6 +65,12 @@ function showSettings() {
     settingRows[i].onclick = function () {
       this.classList.toggle("sets-row--active");
     }
+    // settingRows[i].onmouseover = function () {
+    //   this.classList.add("sets-row--active");
+    // }
+    // settingRows[i].onmouseout = function () {
+    //   this.classList.remove("sets-row--active");
+    // }
   }
 };
 

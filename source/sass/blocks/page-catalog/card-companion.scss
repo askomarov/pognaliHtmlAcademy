@@ -1,52 +1,270 @@
 .card-companion {
+  border-radius: 20px;
+  padding: 15px 20px 20px;
   background: #ffffff;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 66px;
+  grid-template-areas:
+    "avatar name name"
+    "tags tags tags"
+    "wish wish wish"
+    "travelmode travelmode level"
+    "btn btn btn";
+  @media (min-width: $width-tablet+px) {
+    grid-template-columns: 190px 150px 1fr 60px;
+
+    // grid-template-rows: min-content 1fr 60px min-content;
+    grid-template-areas:
+      "avatar name name travelmode"
+      "avatar tags tags travelmode"
+      "avatar btn likes level"
+      "wish wish wish wish";
+    padding: 35px 25px 15px 35px;
+    column-gap: 29px;
+  }
+  @media (min-width: $width-desktop+px) {
+    grid-template-columns: 285px 150px 1fr 1fr 60px;
+    grid-template-rows: 46px min-content 1fr min-content 42px;
+    grid-template-areas:
+      "avatar . . . ."
+      "avatar name name wish wish"
+      "avatar tags tags wish wish"
+      "avatar btn likes travelmode level"
+      "avatar . . . .";
+    padding: 0;
+    padding-right: 43px;
+    column-gap: 52px;
+  }
+}
+.card-companion__wrapper--wish {
+  grid-area: wish;
+  @media (min-width: $width-tablet+px) {
+    padding-top: 22px;
+  }
+  @media (min-width: $width-desktop+px) {
+    padding: 0;
+    .card-companion__title {
+      display: none;
+    }
+  }
+}
+.card-companion__wrapper--travelmode {
+  grid-area: travelmode;
+  @media (min-width: $width-tablet+px) {
+    .card-companion__title {
+      display: none;
+    }
+  }
+  @media (min-width: $width-desktop+px) {
+    display: grid;
+    align-items: center;
+  }
+}
+.card-companion__wrapper--level {
+  width: 100%;
+  grid-area: level;
+  text-align: center;
+  .card-companion__title {
+    margin-left: 15px;
+  }
+  @media (min-width: $width-tablet+px) {
+    align-self: center;
+    .card-companion__title {
+      display: none;
+    }
+  }
 }
 
 .card-companion__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: tomato;
+  overflow: hidden;
+  margin-bottom: 13px;
+  grid-area: avatar;
+  @media (min-width: $width-tablet+px) {
+    margin: 0;
+    width: 190px;
+    height: 190px;
+    border-radius: 20px;
+  }
+  @media (min-width: $width-desktop+px) {
+    width: 285px;
+    height: 285px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
 .card-companion__title {
+  display: inline-block;
   font-weight: normal;
   font-size: 15px;
   line-height: 16px;
   color: #444444;
+  position: relative;
+  background: #ffffff;
+  span {
+    position: relative;
+    z-index: 2;
+    margin-left: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #ffffff;
+  }
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 100%;
+    height: 1px;
+    background: #edeff6;
+    z-index: 1;
+  }
+  &::before {
+    content: "";
+    left: 100%;
+    width: 1000%;
+  }
   @media (min-width: $width-tablet+px) {
     // display: none;
   }
 }
 .card-companion__name {
+  grid-area: name;
   font-weight: bold;
   font-size: 20px;
   line-height: 20px;
   color: #1d2e5b;
+  position: relative;
+  &::after {
+    position: absolute;
+    right: 0px;
+    top: 8px;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #f97676;
+  }
   @media (min-width: $width-tablet+px) {
     font-size: 30px;
     line-height: 30px;
+    &::after {
+      top: initial;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #f97676;
+      margin-left: 22px;
+    }
+    br {
+      display: none;
+    }
+  }
+  @media (min-width: $width-desktop+px) {
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -18px;
+      margin: 0;
+    }
+  }
+}
+.card-companion__name--online {
+  &:after {
+    background: #81e31e;
   }
 }
 
-.card-companion__name--offline {
-}
-
 .card-companion__tags-list {
+  grid-area: tags;
+  max-width: 181px;
+  margin-bottom: 16px;
+  @media (min-width: $width-tablet+px) {
+    margin-bottom: 0;
+    max-width: 220px;
+    .tags-list__item-text {
+      color: #000000;
+    }
+  }
+  @media (min-width: $width-desktop+px) {
+    padding-top: 20px;
+  }
 }
-
 .card-companion__wish {
+}
+.card-companion__wish-list {
+  padding-top: 19px;
+  padding-bottom: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  @media (min-width: $width-tablet+px) {
+    padding-top: 18px;
+    padding-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    width: 100%;
+  }
+  @media (min-width: $width-desktop+px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0;
+  }
+  .wish-list__country {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 14px;
+    align-items: center;
+    @media (min-width: $width-tablet+px) {
+      margin-right: 25px;
+      margin-bottom: 10px;
+    }
+    @media (min-width: $width-desktop+px) {
+      gap: 18px;
+      margin: 0;
+    }
+  }
 }
 
 .card-companion__likes {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: #161c35;
-
+  position: absolute;
+  top: 54px;
+  left: 67px;
   @media (min-width: $width-tablet+px) {
-    font-size: 20px;
-    line-height: 20px;
+    position: relative;
+    top: initial;
+    left: initial;
+    grid-area: likes;
+    align-self: end;
+    margin-left: -28px;
+  }
+  @media (min-width: $width-desktop+px) {
+    align-self: center;
+    margin-left: -54px;
   }
 }
 
 .card-companion__level-wrapper {
+  margin: 9px auto 0;
+  @media (min-width: $width-tablet+px) {
+    margin-top: 0;
+    margin-bottom: -10px;
+  }
+  @media (min-width: $width-desktop+px) {
+    margin: 0;
+  }
   &.level-wrapper {
     width: 45px;
     height: 45px;
@@ -86,10 +304,9 @@
   }
 }
 
-.card-companion__travelmode-list {
-}
-
 .card-companion__btn-call {
+  margin-top: 14px;
+  grid-area: btn;
   display: flex;
   width: 100%;
   align-items: center;
@@ -106,5 +323,42 @@
     min-height: 50px;
     font-size: 20px;
     line-height: 20px;
+    width: 150px;
+    margin: 0;
+    height: 50px;
+    align-self: end;
+  }
+  @media (min-width: $width-desktop+px) {
+    align-self: center;
+  }
+}
+
+.card-companion__travelmode-list {
+  margin-top: 17px;
+  height: auto;
+  gap: 1px;
+  @media (min-width: $width-tablet+px) {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 4px;
+  }
+  @media (min-width: $width-desktop+px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .travelmode-list__item {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #edeff6;
+    @media (min-width: $width-tablet+px) {
+      width: 26px;
+      height: 26px;
+      border-radius: 0;
+    }
   }
 }

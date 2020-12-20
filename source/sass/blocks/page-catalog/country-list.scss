@@ -2,7 +2,6 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  margin-right: 25px;
   margin-bottom: 284px;
   gap: 1px;
   background: #cbced9;
@@ -14,11 +13,12 @@
     column-gap: 0;
     background: transparent;
     margin-bottom: 78px;
-    margin-right: 235px;
+    margin-left: 49px;
+    margin-right: 350px;
   }
   @media (min-width: $width-desktop+px) {
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 37px;
     margin-bottom: 49px;
   }
 }
@@ -100,7 +100,7 @@
     top: 0;
     left: 100%;
     right: initial;
-    transform: translateX(60px);
+    transform: translateX(100px);
   }
   @media (min-width: $width-desktop+px) {
     grid-area: submenu;

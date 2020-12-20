@@ -5,8 +5,28 @@
 }
 .filter__container {
   background: #edeff6;
+  margin-bottom: 21px;
+  @media (min-width: $width-tablet+px) {
+    margin-bottom: 43px;
+  }
   @media (min-width: $width-desktop+px) {
     max-width: 100%;
+  }
+}
+.fliter__content {
+  padding-bottom: 76px;
+  @media (min-width: $width-tablet+px) {
+    padding-bottom: 122px;
+  }
+  @media (min-width: $width-desktop+px) {
+    padding-bottom: 135px;
+    display: grid;
+    grid-template-columns: 1fr 285px;
+    column-gap: 85px;
+    grid-template-areas:
+      "companions settings"
+      "show-more settings"
+      "pagination settings";
   }
 }
 .filter__country {
@@ -17,13 +37,18 @@
   @media (min-width: $width-tablet+px) {
     margin: 0 -40px;
   }
-  @media (min-width:$width-desktop+px){
-    margin: 0 auto;
+  @media (min-width: $width-desktop+px) {
+    margin: 0 0 60px;
   }
 }
 .filter__sets {
-  margin-top: 21px;
-  @media (min-width:$width-desktop+px){
+  grid-area: settings;
+  align-self: start;
+  margin-bottom: 28px;
+  @media (min-width: $width-tablet+px) {
+    margin-bottom: 40px;
+  }
+  @media (min-width: $width-desktop+px) {
     margin-top: 0;
   }
 }
@@ -47,8 +72,14 @@
   }
 }
 .filter__companions {
+  grid-area: companions;
+  margin-bottom: 20px;
+  @media (min-width: $width-tablet+px) {
+    margin-bottom: 46px;
+  }
 }
 .filter__companions-show-more {
+  grid-area: show-more;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,7 +93,7 @@
   line-height: 30px;
   min-height: 40px;
   position: relative;
-
+  margin-bottom: 26px;
   &::after,
   &::before {
     content: "";
@@ -80,6 +111,7 @@
   }
 
   @media (min-width: $width-tablet+px) {
+    margin-bottom: 51px;
     font-size: 20px;
     line-height: 20px;
     min-height: 50px;
@@ -91,4 +123,5 @@
   }
 }
 .filter__pagination {
+  grid-area: pagination;
 }

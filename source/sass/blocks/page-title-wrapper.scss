@@ -6,6 +6,7 @@
   border-bottom-right-radius: var(--main-border-radius);
   position: relative;
   z-index: 5;
+  max-width: 100%;
   @media (min-width: $width-tablet+px) {
     padding-left: 75px;
     padding-right: 75px;
@@ -55,7 +56,6 @@
       grid-template-columns: min-content 176px;
       align-items: stretch;
       justify-content: space-between;
-      column-gap: 156px;
     }
   }
   .page-title-wrapper__link-main-page {
@@ -72,8 +72,8 @@
   }
 }
 
-.page-form{
-  .page-title-wrapper{
+.page-form {
+  .page-title-wrapper {
     @media (min-width: $width-desktop+px) {
       padding-top: 59px;
       position: absolute;

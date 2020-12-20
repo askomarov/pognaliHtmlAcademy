@@ -5,6 +5,9 @@
   @media (min-width: $width-tablet+px) and (max-width: $width-desktop+px) {
     padding: 36px;
   }
+  @media (min-width: $width-desktop+px) {
+    padding: 46px 42px 48px 49px;
+  }
 }
 .filter-sets__title {
   font-weight: bold;
@@ -20,4 +23,8 @@
   }
 }
 .filter-sets__row {
+  &:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 25px;
+  }
 }

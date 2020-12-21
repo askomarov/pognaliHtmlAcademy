@@ -1,13 +1,50 @@
 .slider-group {
+  gap: 25px;
+  @media (min-width: $width-tablet+px) and (max-width: $width-desktop+px) {
+    gap: 0;
+    grid-template-columns: 275px 148px;
+    justify-content: space-between;
+  }
 }
-
+.slider-group__inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  height: 34px;
+  border-radius: 4px;
+  background: #cbced9;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 11px;
+    background: linear-gradient(180deg, #ffffff 43%, #cbced9 43%, #cbced9 53%, #ffffff 53%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 4px 0;
+    z-index: 5;
+    @media (min-width: $width-tablet+px) and (max-width: $width-desktop+px) {
+      width: 21px;
+      height: 15px;
+    }
+  }
+  @media (min-width: $width-tablet+px) {
+    height: 46px;
+  }
+}
 .slider-group__input {
+  border: 1px solid #cbced9;
+  height: 100%;
+  width: auto;
   font-weight: 500;
   font-size: 14px;
-  line-height: 13px;
+  line-height: 100%;
   letter-spacing: 0.04em;
   color: #1d2e5b;
-
+  text-align: center;
   @media (min-width: $width-tablet+px) {
     font-size: 20px;
     line-height: 20px;
@@ -15,10 +52,57 @@
 }
 
 .slider-group__input--start {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-right: 0;
+  color: rgba($color: #1d2e5b, $alpha: 0.1);
+  @media (min-width: $width-tablet+px) {
+    color: inherit;
+  }
 }
 
 .slider-group__input--end {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-left: 0;
 }
 
 .slider-group__slider {
+  width: 100%;
+  height: 2px;
+  background-color: rgba($color: #1d2e5b, $alpha: 0.2);
+  position: relative;
+  span {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background: #1d2e5b;
+    &::after,
+    &::before {
+      cursor: pointer;
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: inherit;
+      @media (min-width: $width-tablet+px) and (max-width: $width-desktop+px) {
+        width: 13px;
+        height: 13px;
+      }
+    }
+    &::after {
+      right: 100%;
+    }
+  }
+  @media (min-width: $width-tablet+px) and (max-width: $width-desktop+px) {
+    order: -1;
+    height: 3px;
+  }
 }

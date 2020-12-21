@@ -1,6 +1,44 @@
 .companion-likes {
 }
 .companion-likes--active {
+  .companion-likes__value {
+    &::before {
+      background: #f9eaea;
+    }
+  }
 }
 .companion-likes__value {
+  color: #161c35;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #161c35;
+  position: relative;
+  vertical-align: middle;
+  min-width: 100%;
+  &::before {
+    content: "";
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    background: #e2e5f2;
+    margin-right: 7px;
+  }
+  @media (min-width: $width-tablet+px) {
+    font-size: 20px;
+    line-height: 20px;
+    &::before {
+      width: 50px;
+      height: 50px;
+      margin-right: 6px;
+    }
+  }
 }

@@ -12,7 +12,7 @@
   <svg style="display: none"></svg>
 
   <header class="header">
-    <div class="header__body">
+    <div class="header__body container">
       <a class="header__logo main-logo" href="index.html">svg</a>
 
       <nav class="header__menu header-menu">
@@ -73,6 +73,7 @@
         <div class="filter__container container">
 
           <div class="filter__country filter-country">
+
             <div class="filter-country__header">
               <p class="filter-country__heading">Фильтрация по странам:</p>
               <ul class="filter-country__continents">
@@ -81,16 +82,16 @@
                 <li class="filter-country__continent">Америка</li>
                 <li class="filter-country__continent">Острова</li>
               </ul>
-              <button class="filter-country__btn btn-filter-country" aria-expanded="false">
-                <p class="btn-filter-country__show">показать все</p>
-                <p class="btn-filter-country__close ">свернуть</p>
+              <button type="button" class="filter-country__btn btn-filter-country" aria-expanded="false">
+                <p class="btn-filter-country__btn-show">показать все</p>
+                <p class="btn-filter-country__btn-close ">свернуть</p>
                 <div class="btn-filter-country__icon"></div>
               </button>
             </div>
 
             <div class="filter-country__list-wrapper">
               <ul class="filter-country__list country-list">
-                <li class="country-list__item">
+                <li class="country-list__item country-list__item--current">
                   <span class="country-list__main-letter country-list__main-letter--current">а</span>
                   <ul class="country-list__submenu">
                     <li class="country-list__country">Австралия</li>
@@ -379,10 +380,12 @@
                   </ul>
                 </li>
               </ul>
-              <button class="filter-country__btn-close-countrylist">сверунть</button>
+              <button class="filter-country__btn-close-countrylist"><span
+                  class="btn-decor-cross">сверунть</span></button>
             </div>
           </div>
-
+        </div>
+        <div class="fliter__content container">
           <div class="filter__sets filter-sets">
             <h3 class="filter-sets__title">Подберите идеального попутчика</h3>
             <!-- группа чекбоксов -->
@@ -390,15 +393,15 @@
               <p class="sets-row__name">хобби</p>
               <div class="sets-row__group">
                 <input class="sets-row__input visually-hidden" type="checkbox" name="hobby-gym" id="hobby-gym" checked>
-                <label class="sets-row__label" for="hobby-gym">спортзал</label>
+                <label class="sets-row__label" for="hobby-gym">Спортзал</label>
                 <input class="sets-row__input visually-hidden" type="checkbox" name="hobby-shisha" id="hobby-shisha">
-                <label class="sets-row__label" for="hobby-shisha">кальян</label>
+                <label class="sets-row__label" for="hobby-shisha">Кальян</label>
                 <input class="sets-row__input visually-hidden" type="checkbox" name="hobby-couch" id="hobby-couch">
-                <label class="sets-row__label" for="hobby-couch">диван</label>
+                <label class="sets-row__label" for="hobby-couch">Диван</label>
               </div>
             </div>
             <!-- группа чекбоксов -->
-            <div class="filter-sets__row sets-row">
+            <div class="filter-sets__row sets-row sets-row--active">
               <p class="sets-row__name">музыка</p>
               <div class="sets-row__group">
                 <input class="sets-row__input visually-hidden" type="checkbox" name="music-rock" id="music-rock"
@@ -423,7 +426,7 @@
               </div>
             </div>
             <!-- группа чекбоксов - транспорт-->
-            <div class="filter-sets__row sets-row">
+            <div class="filter-sets__row sets-row sets-row--active">
               <p class="sets-row__name">транспорт</p>
               <div class="sets-row__group sets-row__group--travelmode">
                 <input class="sets-row__input visually-hidden" type="checkbox" name="самолет" id="самолет" checked>
@@ -438,47 +441,37 @@
               </div>
             </div>
             <!-- level -->
-            <div class="filter-sets__row sets-row">
+            <div class="filter-sets__row sets-row sets-row--active">
               <p class="sets-row__name">левел</p>
               <div class="sets-row__group slider-group">
-                <input class="slider-group__input slider-group__input--start" type="number" value="30" min="0" max="99">
-                <input class="slider-group__input slider-group__input--end" type="number" value="100" min="1" max="100">
-                <div class="slider-group__slider"></div>
+                <div class="slider-group__inputs">
+                  <input class="slider-group__input slider-group__input--start" type="number" value="30" min="0"
+                    max="99">
+                  <input class="slider-group__input slider-group__input--end" type="number" value="100" min="1"
+                    max="100">
+                </div>
+                <div class="slider-group__slider">
+                  <span></span>
+                </div>
               </div>
             </div>
             <button class="filter__btn-submit" type="submit">показать</button>
           </div>
 
-          <ul class="filter__companions companions">
+          <ul class="filter__companions companions-catalog">
             <!-- Таня Фирсова  -->
-            <li class="companions__card card-companion">
+            <li class="companions-catalog__card card-companion">
               <div class="card-companion__avatar">
                 <img src="img/" alt="" width="70" height="70" />
               </div>
-              <p class="card-companion__name card-companion__name--offline">Таня Фирсова</p>
-              <!--такой же блок с главной страницы <ul class="companions-item__tags-list tags-list"> -->
+              <p class="card-companion__name card-companion__name--offline">Таня <br>Фирсова</p>
               <ul class="card-companion__tags-list tags-list">
                 <li class="tags-list__item">
-                  <p class="tags-list__item-text">#ЗОЖ</p>
-                </li>
-                <li class="tags-list__item">
-                  <p class="tags-list__item-text">#ПП</p>
-                </li>
-                <li class="tags-list__item">
-                  <p class="tags-list__item-text">#Фитнес</p>
-                </li>
-                <li class="tags-list__item">
-                  <p class="tags-list__item-text">#пляж</p>
-                </li>
-                <li class="tags-list__item">
-                  <p class="tags-list__item-text">#авокадо</p>
-                </li>
-                <li class="tags-list__item">
-                  <p class="tags-list__item-text">#смузи</p>
+                  <p class="tags-list__item-text">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                 </li>
               </ul>
-              <div class="card-companion__wrapper">
-                <p class="card-companion__title">хочет посетить:</p>
+              <div class="card-companion__wrapper card-companion__wrapper--wish">
+                <p class="card-companion__title"><span>хочет посетить:</span></p>
                 <ul class="card-companion__wish-list wish-list">
                   <li class="wish-list__country">
                     <img class="wish-list__country-flag" width="35" height="24" alt="">
@@ -498,8 +491,8 @@
                 <span class="companion-likes__value">1,5 М</span>
               </div>
 
-              <div class="card-companion__wrapper">
-                <p class="card-companion__title">левел:</p>
+              <div class="card-companion__wrapper card-companion__wrapper--level">
+                <p class="card-companion__title"><span>левел:</span></p>
                 <div class="card-companion__level-wrapper level-wrapper">
                   <svg class="level-wrapper__svg-prorgess-bar" viewbox="0 0 200 200">
                     <circle class="svg-circle svg-circle--underline" r="91" cx="100" cy="100" />
@@ -513,11 +506,11 @@
                 </div>
               </div>
 
-              <div class="card-companion__wrapper">
-                <p class="card-companion__title">транспорт:</p>
+              <div class="card-companion__wrapper card-companion__wrapper--travelmode">
+                <p class="card-companion__title"><span>транспорт:</span></p>
                 <ul class="card-companion__travelmode-list travelmode-list">
                   <li class="travelmode-list__item travelmode-list__item--active">
-                    <svg class="travelmode-list__icon" aria-label="самолет"></svg>
+                    <svg width="32" height="32" class="travelmode-list__icon" aria-label="самолет"></svg>
                   </li>
                   <li class="travelmode-list__item">
                     <svg class="travelmode-list__icon" aria-label="автомобиль"></svg>
@@ -534,30 +527,18 @@
             </li>
 
             <!-- Петя Демин -->
-            <li class="companions__card card-companion">
+            <li class="companions-catalog__card card-companion">
               <div class="card-companion__avatar">
                 <img src="img/" alt="" width="70" height="70" />
               </div>
-              <p class="card-companion__name card-companion__name--offline">Петя Демин</p>
+              <p class="card-companion__name card-companion__name--offline">Петя <br>Демин</p>
               <ul class="card-companion__tags-list tags-list">
                 <li class="tags-list__item">
-                  <p class="tags-list__item-text">#бургер</p>
-                </li>
-                <li class="tags-list__item">
-                  <p class="tags-list__item-text">#бар</p>
-                </li>
-                <li class="tags-list__item">
-                  <p class="tags-list__item-text">#футбол</p>
-                </li>
-                <li class="tags-list__item">
-                  <p class="tags-list__item-text">#концерт</p>
-                </li>
-                <li class="tags-list__item">
-                  <p class="tags-list__item-text">#крафт</p>
+                  <p class="tags-list__item-text">#бургер #бар #футбол #концерт #крафт</p>
                 </li>
               </ul>
-              <div class="card-companion__wrapper">
-                <p class="card-companion__title">хочет посетить:</p>
+              <div class="card-companion__wrapper card-companion__wrapper--wish">
+                <p class="card-companion__title"><span>хочет посетить:</span></p>
                 <ul class="card-companion__wish-list wish-list">
                   <li class="wish-list__country">
                     <img class="wish-list__country-flag" width="35" height="24" alt="">
@@ -569,11 +550,11 @@
                   </li>
                 </ul>
               </div>
-              <div class="card-companion__likes companion-likes companion-likes--active">
+              <div class="card-companion__likes companion-likes">
                 <span class="companion-likes__value">1500</span>
               </div>
-              <div class="card-companion__wrapper">
-                <p class="card-companion__title">левел:</p>
+              <div class="card-companion__wrapper card-companion__wrapper--level">
+                <p class="card-companion__title"><span>левел:</span></p>
                 <div class="card-companion__level-wrapper level-wrapper">
                   <svg class="level-wrapper__svg-prorgess-bar" viewbox="0 0 200 200">
                     <circle class="svg-circle svg-circle--underline" r="91" cx="100" cy="100" />
@@ -587,8 +568,8 @@
                 </div>
               </div>
 
-              <div class="card-companion__wrapper">
-                <p class="card-companion__title">транспорт:</p>
+              <div class="card-companion__wrapper card-companion__wrapper--travelmode">
+                <p class="card-companion__title"><span>транспорт:</span></p>
                 <ul class="card-companion__travelmode-list travelmode-list">
                   <li class="travelmode-list__item travelmode-list__item--active">
                     <svg class="travelmode-list__icon" aria-label="самолет"></svg>
@@ -609,30 +590,18 @@
             </li>
 
             <!-- Марк Смолов -->
-            <li class="companions__card card-companion">
+            <li class="companions-catalog__card card-companion">
               <div class="card-companion__avatar">
                 <img src="img/" alt="" width="70" height="70" />
               </div>
-              <p class="card-companion__name card-companion__name--offline">Марк Смолов</p>
+              <p class="card-companion__name card-companion__name--offline">Марк <br>Смолов</p>
               <ul class="card-companion__tags-list tags-list">
                 <li class="tags-list__item">
-                  <p class="tags-list__item-text">#рэп</p>
-                </li>
-                <li class="tags-list__item">
-                  <p class="tags-list__item-text">#тату</p>
-                </li>
-                <li class="tags-list__item">
-                  <p class="tags-list__item-text">#хайпбист</p>
-                </li>
-                <li class="tags-list__item">
-                  <p class="tags-list__item-text">#кроссовки</p>
-                </li>
-                <li class="tags-list__item">
-                  <p class="tags-list__item-text">#суприм</p>
+                  <p class="tags-list__item-text">#рэп #тату #хайпбист #кроссовки #суприм</p>
                 </li>
               </ul>
-              <div class="card-companion__wrapper">
-                <p class="card-companion__title">хочет посетить:</p>
+              <div class="card-companion__wrapper card-companion__wrapper--wish">
+                <p class="card-companion__title"><span>хочет посетить:</span></p>
                 <ul class="card-companion__wish-list wish-list">
                   <li class="wish-list__country">
                     <img class="wish-list__country-flag" width="35" height="24" alt="">
@@ -648,11 +617,11 @@
                   </li>
                 </ul>
               </div>
-              <div class="card-companion__likes companion-likes companion-likes--active">
+              <div class="card-companion__likes companion-likes">
                 <span class="companion-likes__value">170</span>
               </div>
-              <div class="card-companion__wrapper">
-                <p class="card-companion__title">левел:</p>
+              <div class="card-companion__wrapper card-companion__wrapper--level">
+                <p class="card-companion__title"><span>левел:</span></p>
                 <div class="card-companion__level-wrapper level-wrapper">
                   <svg class="level-wrapper__svg-prorgess-bar" viewbox="0 0 200 200">
                     <circle class="svg-circle svg-circle--underline" r="91" cx="100" cy="100" />
@@ -665,8 +634,8 @@
                   </div>
                 </div>
               </div>
-              <div class="card-companion__wrapper">
-                <p class="card-companion__title">транспорт:</p>
+              <div class="card-companion__wrapper card-companion__wrapper--travelmode">
+                <p class="card-companion__title"><span>транспорт:</span></p>
                 <ul class="card-companion__travelmode-list travelmode-list">
                   <li class="travelmode-list__item travelmode-list__item--active">
                     <svg class="travelmode-list__icon" aria-label="самолет"></svg>
@@ -686,28 +655,19 @@
             </li>
 
             <!-- Лариса Роговая -->
-            <li class="companions__card card-companion">
+            <li class="companions-catalog__card card-companion">
               <div class="card-companion__avatar">
                 <img src="img/" alt="" width="70" height="70" />
               </div>
-              <p class="card-companion__name card-companion__name--offline">Лариса Роговая</p>
+              <p class="card-companion__name card-companion__name--online">Лариса <br>Роговая</p>
               <ul class="card-companion__tags-list tags-list">
                 <li class="tags-list__item">
-                  <p class="tags-list__item-text">#образование</p>
-                </li>
-                <li class="tags-list__item">
-                  <p class="tags-list__item-text">#карьера</p>
-                </li>
-                <li class="tags-list__item">
-                  <p class="tags-list__item-text">#учеба</p>
-                </li>
-                <li class="tags-list__item">
-                  <p class="tags-list__item-text">#линкедин</p>
+                  <p class="tags-list__item-text">#образование #карьера #учеба #линкедин</p>
                 </li>
               </ul>
-              <div class="card-companion__wish wish-list">
-                <p class="wish-list__title">хочет посетить:</p>
-                <ul class="wish-list__list">
+              <div class="card-companion__wrapper card-companion__wrapper--wish">
+                <p class="card-companion__title"><span>хочет посетить:</span></p>
+                <ul class="card-companion__wish-list wish-list">
                   <li class="wish-list__country">
                     <img class="wish-list__country-flag" width="35" height="24" alt="">
                     <p class="wish-list__coutry-name">Великобритания</p>
@@ -718,12 +678,12 @@
                   </li>
                 </ul>
               </div>
-              <div class="card-companion__likes companion-likes companion-likes--active">
+              <div class="card-companion__likes companion-likes">
                 <span class="companion-likes__value">23</span>
               </div>
 
-              <div class="card-companion__wrapper">
-                <p class="card-companion__title">левел:</p>
+              <div class="card-companion__wrapper card-companion__wrapper--level">
+                <p class="card-companion__title"><span>левел:</span></p>
                 <div class="card-companion__level-wrapper level-wrapper">
                   <svg class="level-wrapper__svg-prorgess-bar" viewbox="0 0 200 200">
                     <circle class="svg-circle svg-circle--underline" r="91" cx="100" cy="100" />
@@ -737,8 +697,8 @@
                 </div>
               </div>
 
-              <div class="card-companion__wrapper">
-                <p class="card-companion__title">транспорт:</p>
+              <div class="card-companion__wrapper card-companion__wrapper--travelmode">
+                <p class="card-companion__title"><span>транспорт:</span></p>
                 <ul class="card-companion__travelmode-list travelmode-list">
                   <li class="travelmode-list__item travelmode-list__item--active">
                     <svg class="travelmode-list__icon" aria-label="самолет"></svg>

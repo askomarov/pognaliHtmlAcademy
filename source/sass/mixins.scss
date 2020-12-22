@@ -7,10 +7,10 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: var(--main-border-radius);
-    bottom: 100%;
+    height: calc(var(--main-border-radius) + 1%);
+    bottom: 99%;
     left: 0;
-    background: inherit;
+    background-color: inherit;
     z-index: -1;
   }
 }
@@ -19,6 +19,7 @@
   position: relative;
   border-top-left-radius: var(--main-border-top-radius);
   border-top-right-radius: var(--main-border-top-radius);
+
   &::after {
     content: "";
     position: absolute;

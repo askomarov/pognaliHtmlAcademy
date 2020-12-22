@@ -13,7 +13,6 @@
 .companions-item__img-wrapper {
   width: 100%;
   min-height: 270px;
-  border: 1px solid #000;
   position: relative;
   img {
     position: absolute;
@@ -21,7 +20,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    object-fit: contain;
+    object-fit: cover;
   }
 }
 .companions-item__desc {

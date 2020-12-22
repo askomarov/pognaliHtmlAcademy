@@ -9,7 +9,6 @@
 // Файлы стилей общих блоков
 @import "blocks/visually-hidden.scss";
 @import "blocks/page.scss";
-@import "blocks/main-logo.scss";
 @import "blocks/main-text.scss";
 @import "blocks/main-title.scss";
 @import "blocks/main-btn.scss";
@@ -30,6 +29,7 @@
 ////////////////////// ГЛАВНАЯ СТРАНИЦА /////////////////////////////
 // Стили блоков PROMO
 @import "blocks/page-index/promo/promo.scss";
+@import "blocks/page-index/promo/btns-menu.scss";
 @import "blocks/page-index/promo/steps-guide.scss";
 // Стили блоков ABOUT
 @import "blocks/page-index/about/about.scss";

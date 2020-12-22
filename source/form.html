@@ -14,7 +14,20 @@
 
   <header class="header">
     <div class="header__body container">
-      <a class="header__logo main-logo" href="index.html">svg</a>
+      <a class="header__logo main-logo" href="index.html">
+        <picture>
+          <source srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x"
+            media="(min-width:1440px)" type="image/webp">
+          <source srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.jpg 2x"
+            media="(min-width:1440px)">
+          <source srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x" media="(min-width:768px)">
+          <source type="image/webp" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x"
+            media="(min-width:768px)">
+          <source type="image/wepb" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
+          <img class="header__logo-img" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x"
+            width="96" height="15" alt="логотип Погнали" />
+        </picture>
+      </a>
 
       <nav class="header__menu header-menu">
         <button type="button" class="header-menu__toggle header-menu__toggle--no-js">
@@ -83,7 +96,17 @@
 
           <!-- еще грид элемент -->
           <div class="user-info__img-wrapper">
-            <img src="img/" alt="" width="100" height="100" />
+            <picture>
+              <source srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x" media="(min-width:1440px)"
+                type="image/webp">
+              <source srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x" media="(min-width:1440px)">
+              <source srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x" media="(min-width:768px)">
+              <source type="image/webp" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x"
+                media="(min-width:768px)">
+              <source type="image/wepb" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
+              <img class="" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="100" height="100"
+                alt="фотография Демин" />
+            </picture>
           </div>
 
           <!-- еще грид элемент -->
@@ -416,10 +439,18 @@
 
   <footer class="footer">
     <div class="footer__container container">
-      <a href="index.html" class="footer__logo main-logo">
-        <svg width="96" height="15" role="img" aria-label="ссылка на главную страницу">
-          <use xlink:href="#"></use>
-        </svg>
+      <a href="index.html" class="footer__logo">
+        <picture>
+          <source srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x" media="(min-width:1440px)"
+            type="image/webp">
+          <source srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.jpg 2x" media="(min-width:1440px)">
+          <source srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x" media="(min-width:768px)">
+          <source type="image/webp" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x"
+            media="(min-width:768px)">
+          <source type="image/wepb" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
+          <img class="footer__logo-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
+            width="96" height="15" alt="логотип Погнали" />
+        </picture>
       </a>
       <ul class="footer__social">
         <li class="footer__social-item">

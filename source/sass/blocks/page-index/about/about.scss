@@ -1,23 +1,40 @@
 .about {
-  background: $bgcolor;
+  background-color: #182044;
   padding-top: 33px;
   padding-bottom: 82px;
   border-bottom-left-radius: var(--main-border-radius);
   border-bottom-right-radius: var(--main-border-radius);
   @include sectionRadiusBackground;
-  @media (min-width: $width-tablet+px) {
+  background-image: url("../img/about-mobile@1x.png"), url("../img/about-back-mobile.png");
+  background-position: 20px 0px, left top;
+  background-repeat: no-repeat;
+
+  @media (min-width: $width-tablet + px) {
     padding-top: 41px;
     padding-bottom: 89px;
+    background-image: url("../img/about-tablet@1x.png");
+    background-position: right top;
   }
+
   @media (min-width: $width-desktop+px) {
     padding-top: 42px;
+    padding-top: 132px;
     padding-bottom: 163px;
+    background-image: url("../img/about-desktop@1x.png");
+    background-position: 750px bottom;
+    @include sectionRadiusBackground;
   }
 }
 
 .about__container {
+  padding-left: 49px;
+  padding-right: 60px;
+  max-width: 320px;
+  position: relative;
+  z-index: 1;
   @media (min-width: $width-tablet+px) {
     padding: 0 74px;
+    max-width: 100%;
   }
   @media (min-width: $width-desktop+px) {
     padding: 0 130px;
@@ -26,21 +43,47 @@
 
 .about__title {
   margin-bottom: 19px;
+  position: relative;
+  // &::after {
+  //   content: "";
+  //   width: 132px;
+  //   height: 132px;
+  //   background: #141b3b;
+  //   border-radius: 20px;
+  //   position: absolute;
+  //   top: -33px;
+  //   left: -49px;
+  //   z-index: -1;
+  // }
   @media (min-width: $width-tablet+px) {
     margin-bottom: 40px;
   }
+
   @media (min-width: $width-desktop+px) {
     margin-bottom: 57px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 212px;
+      height: 212px;
+      top: -62px;
+      left: -72px;
+      background: #141b3b;
+      border-radius: 20px;
+      z-index: -1;
+    }
   }
 }
 
 .about__text {
   color: #ffffff;
   margin-bottom: 20px;
+
   @media (min-width: $width-tablet+px) {
     margin-bottom: 31px;
     max-width: 300px;
   }
+
   @media (min-width: $width-desktop+px) {
     margin-bottom: 38px;
     max-width: 619px;
@@ -49,10 +92,12 @@
 
 .about__text-bottom {
   color: #ffffff;
+
   @media (min-width: $width-tablet+px) {
     margin-bottom: 52px;
     max-width: 265px;
   }
+
   @media (min-width: $width-desktop+px) {
     margin-bottom: 85px;
     max-width: 425px;
@@ -63,5 +108,6 @@
   @media (max-width: $width-tablet+px) {
     display: none;
   }
+
   max-width: 285px;
 }

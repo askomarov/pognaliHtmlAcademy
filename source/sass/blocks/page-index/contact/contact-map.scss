@@ -1,3 +1,29 @@
+.contact-map {
+  background-image: url("../img/map-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-desktop@2x.jpg");
+  }
+
+  @media (max-width: $width-tablet+px) {
+    background-image: url("../img/map-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $width-mobile+px) {
+    background-image: url("../img/map-mobile@1x.jpg");
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-mobile@2x.jpg");
+    }
+  }
+}
 .contact-map__frame {
 }
 

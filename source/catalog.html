@@ -13,7 +13,20 @@
 
   <header class="header">
     <div class="header__body container">
-      <a class="header__logo main-logo" href="index.html">svg</a>
+      <a class="header__logo" href="index.html">
+        <picture>
+          <source srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x"
+            media="(min-width:1440px)" type="image/webp">
+          <source srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.jpg 2x"
+            media="(min-width:1440px)">
+          <source srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x" media="(min-width:768px)">
+          <source type="image/webp" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x"
+            media="(min-width:768px)">
+          <source type="image/wepb" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
+          <img class="header__logo-img" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x"
+            width="96" height="15" alt="логотип Погнали" />
+        </picture>
+      </a>
 
       <nav class="header__menu header-menu">
         <button type="button" class="header-menu__toggle header-menu__toggle--no-js">
@@ -462,7 +475,18 @@
             <!-- Таня Фирсова  -->
             <li class="companions-catalog__card card-companion">
               <div class="card-companion__avatar">
-                <img src="img/" alt="" width="70" height="70" />
+                <picture>
+                  <source srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x"
+                    media="(min-width:1440px)" type="image/webp">
+                  <source srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x"
+                    media="(min-width:1440px)">
+                  <source srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x" media="(min-width:768px)">
+                  <source type="image/webp" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x"
+                    media="(min-width:768px)">
+                  <source type="image/wepb" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
+                  <img class="" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" width="70"
+                    height="70" alt="фотография Таня Фирсова" />
+                </picture>
               </div>
               <p class="card-companion__name card-companion__name--offline">Таня <br>Фирсова</p>
               <ul class="card-companion__tags-list tags-list">
@@ -529,7 +553,17 @@
             <!-- Петя Демин -->
             <li class="companions-catalog__card card-companion">
               <div class="card-companion__avatar">
-                <img src="img/" alt="" width="70" height="70" />
+                <picture>
+                  <source srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x" media="(min-width:1440px)"
+                    type="image/webp">
+                  <source srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x" media="(min-width:1440px)">
+                  <source srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x" media="(min-width:768px)">
+                  <source type="image/webp" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x"
+                    media="(min-width:768px)">
+                  <source type="image/wepb" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
+                  <img class="" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="70" height="70"
+                    alt="фотография Демин" />
+                </picture>
               </div>
               <p class="card-companion__name card-companion__name--offline">Петя <br>Демин</p>
               <ul class="card-companion__tags-list tags-list">
@@ -592,7 +626,18 @@
             <!-- Марк Смолов -->
             <li class="companions-catalog__card card-companion">
               <div class="card-companion__avatar">
-                <img src="img/" alt="" width="70" height="70" />
+                <picture>
+                  <source srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x"
+                    media="(min-width:1440px)" type="image/webp">
+                  <source srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x"
+                    media="(min-width:1440px)">
+                  <source srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x" media="(min-width:768px)">
+                  <source type="image/webp" srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x"
+                    media="(min-width:768px)">
+                  <source type="image/wepb" srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x">
+                  <img class="" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" width="70"
+                    height="70" alt="фотография Смолов" />
+                </picture>
               </div>
               <p class="card-companion__name card-companion__name--offline">Марк <br>Смолов</p>
               <ul class="card-companion__tags-list tags-list">
@@ -657,7 +702,19 @@
             <!-- Лариса Роговая -->
             <li class="companions-catalog__card card-companion">
               <div class="card-companion__avatar">
-                <img src="img/" alt="" width="70" height="70" />
+                <picture>
+                  <source srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x"
+                    media="(min-width:1440px)" type="image/webp">
+                  <source srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x"
+                    media="(min-width:1440px)">
+                  <source srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x"
+                    media="(min-width:768px)">
+                  <source type="image/webp" srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x"
+                    media="(min-width:768px)">
+                  <source type="image/wepb" srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x">
+                  <img class="" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" width="70"
+                    height="70" alt="фотография Роговая" />
+                </picture>
               </div>
               <p class="card-companion__name card-companion__name--online">Лариса <br>Роговая</p>
               <ul class="card-companion__tags-list tags-list">
@@ -751,10 +808,18 @@
 
   <footer class="footer">
     <div class="footer__container container">
-      <a href="index.html" class="footer__logo main-logo">
-        <svg width="96" height="15" role="img" aria-label="ссылка на главную страницу">
-          <use xlink:href="#"></use>
-        </svg>
+      <a href="index.html" class="footer__logo">
+        <picture>
+          <source srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x" media="(min-width:1440px)"
+            type="image/webp">
+          <source srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.jpg 2x" media="(min-width:1440px)">
+          <source srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x" media="(min-width:768px)">
+          <source type="image/webp" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x"
+            media="(min-width:768px)">
+          <source type="image/wepb" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
+          <img class="footer__logo-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
+            width="96" height="15" alt="логотип Погнали" />
+        </picture>
       </a>
       <ul class="footer__social">
         <li class="footer__social-item">

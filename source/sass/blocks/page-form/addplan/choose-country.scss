@@ -19,10 +19,11 @@
       content: "";
       position: absolute;
       bottom: -16px;
-      left: 168px;
-      width: 1px;
+      left: 165px;
+      width: 5px;
       height: 10px;
-      background: red;
+      background-image: url("../img/small-arrow.svg");
+
       @media (min-width: $width-tablet+px) {
         display: none;
       }
@@ -50,7 +51,7 @@
 }
 .choose-country__item {
   position: relative;
-  min-height: 42px;
+  height: 42px;
   @media (min-width: $width-tablet+px) {
     min-height: 70px;
     padding-right: 44px;
@@ -105,13 +106,6 @@
   flex: 1 0 168px;
   border: 1px solid #cbced9;
   border-radius: 4px;
-  font-weight: 500;
-  font-size: 14px;
-  color: #1d2e5b;
-  line-height: 18px;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  line-height: 42px;
   padding-left: 11px;
   position: relative;
   white-space: nowrap;
@@ -136,12 +130,13 @@
     }
   }
   @media (min-width: $width-tablet+px) {
-    line-height: 70px;
-    font-weight: 500;
-    font-size: 20px;
     padding-left: 25px;
+    padding-right: 27px;
     margin-right: 52px;
     max-width: 369px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   @media (min-width: $width-desktop+px) {
     max-width: 730px;
@@ -150,15 +145,26 @@
 }
 .choose-country__option-text {
   position: absolute;
+  font-weight: 500;
+  font-size: 14px;
+  color: #1d2e5b;
+  line-height: 18px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  line-height: 40px;
   @media (min-width: $width-tablet+px) {
     position: relative;
+    display: inline-block;
+    line-height: 70px;
+    font-weight: 500;
+    font-size: 20px;
   }
 }
 .choose-country__option--current {
   &::before {
     background: #ffffff;
     border: 1px solid #cbced9;
-    right: 49px;
+    right: 46px;
     @media (min-width: $width-tablet+px) {
       width: 14px;
       height: 14px;
@@ -169,22 +175,53 @@
     }
   }
 }
+.choose-country__drop-arrow {
+  position: relative;
+  z-index: 1;
+  width: 56px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 14px;
+  margin-left: auto;
+  fill: #b3b3b3;
+  background: linear-gradient(270deg, #ffffff 0%, #ffffff 66%, rgba(255, 255, 255, 0) 82%, rgba(255, 255, 255, 0) 100%);
+  @media (min-width: $width-tablet+px) {
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    width: 50px;
+    height: 50px;
+
+    svg {
+      width: 20px;
+      height: 9px;
+    }
+  }
+}
 
 .choose-country__flag-wrapper {
   border: 1px solid #cbced9;
   border-left: 0;
   border-radius: 4px;
   padding: 9px;
-  width: 57px;
+  width: 53px;
   z-index: 1;
-  background: chartreuse;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+
   @media (min-width: $width-tablet+px) {
     width: 70px;
     height: 47px;
     border: 0;
   }
 }
+
 .choose-country__del-choosen {
   cursor: pointer;
   position: absolute;
@@ -195,6 +232,17 @@
   border-radius: 50%;
   background: #edeff6;
   z-index: 2;
+  fill: #afb0b5;
+  @media (min-width: $width-tablet+px) {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    fill: #e5e5e5;
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
   @media (min-width: $width-tablet+px) {
     top: 50%;
     right: 0;
@@ -209,7 +257,6 @@
   text-transform: uppercase;
   color: #1d2e5b;
   font-weight: 500;
-
   background: #edeff6;
   border-radius: 4px;
   height: 42px;
@@ -228,7 +275,7 @@
     height: 8px;
     border-radius: 50%;
     background: transparent;
-    right: 49px;
+    right: 46px;
     border: 1px solid #cbced9;
     z-index: 2;
     @media (min-width: $width-tablet+px) {
@@ -256,5 +303,44 @@
   @media (min-width: $width-desktop+px) {
     width: auto;
     max-width: 730px;
+  }
+}
+.choose-country__add-new-btn-plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  position: relative;
+  background: transparent;
+  @media (min-width: $width-tablet+px) {
+    width: 20px;
+    height: 20px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: #cccccc;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: #cccccc;
+  }
+  @media (min-width: $width-tablet+px) {
+    &::after,
+    &::before {
+      background-color: #9c9fa8;
+    }
   }
 }

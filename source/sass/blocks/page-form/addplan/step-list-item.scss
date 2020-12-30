@@ -10,7 +10,7 @@
 .step-item {
   background: #ffffff;
   border-radius: 10px;
-  padding: 24px 25px 23px;
+  padding: 24px 25px 17px;
   @media (min-width: $width-tablet+px) {
     border-radius: 30px;
     padding: 48px 40px 56px 40px;
@@ -132,53 +132,23 @@
 }
 .step-item__input-body {
   grid-column: 1/-1;
-  width: 100%;
-  display: grid;
-  grid-template-columns: min-content 1fr min-content;
-  border: 1px solid #cbced9;
-  border-radius: 4px;
-  padding: 14px;
   @media (min-width: $width-desktop+px) {
     grid-column: initial;
   }
 }
-.traveldays-settings {
-}
-.companions-settings {
-}
-.step-item__btn-minus {
-}
-.step-item__btn-plus {
-}
-.step-item__input {
-  width: 100%;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 14px;
-  text-transform: uppercase;
-  color: #1d2e5b;
-  text-align: center;
-  @media (min-width: $width-tablet+px) {
-    font-size: 20px;
-    line-height: 20px;
-  }
-  @media (min-width: $width-desktop+px) {
-    line-height: 18px;
+input[name="children-yes"]:checked ~ .step-item__child-cheks {
+  &::after {
+    content: "";
+    background-image: url("../img/icon_check-mark.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 }
-
-.step-item__input-companions {
-}
-
-.step-item__input-days {
-}
-
 .step-item__child-cheks {
   grid-area: set-child;
   font-weight: normal;
   font-size: 15px;
-  line-height: 15px;
+  line-height: 26px;
   color: #1d2e5b;
   position: relative;
   padding-left: 39px;
@@ -201,7 +171,7 @@
     margin-right: 60px;
   }
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     width: 26px;
@@ -233,7 +203,7 @@
   justify-content: center;
   font-weight: bold;
   font-size: 17px;
-  line-height: 30px;
+  line-height: 18px;
   text-align: center;
   text-transform: uppercase;
   color: #1d2e5b;

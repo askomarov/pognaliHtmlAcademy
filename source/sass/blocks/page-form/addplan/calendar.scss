@@ -23,6 +23,8 @@
 .calendar__mth-btn {
   width: 9px;
   height: 18px;
+  background-color: transparent;
+  fill: #b3b3b3;
   @media (min-width: $width-tablet+px) {
     width: 19px;
     height: 34px;

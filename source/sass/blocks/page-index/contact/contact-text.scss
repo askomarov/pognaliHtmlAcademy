@@ -12,7 +12,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 48px;
+    gap: 0;
+    padding-right: 75px;
   }
 }
 
@@ -22,10 +23,34 @@
   line-height: 22px;
   text-transform: uppercase;
   color: #1d2e5b;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+  gap: 16px;
 
   @media (min-width: $width-tablet+px) {
     font-size: 28px;
     line-height: 28px;
+    gap: 26px;
+
+    svg {
+      width: 68px;
+      height: 68px;
+    }
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $width-desktop+px) {
+    gap: 31px;
+    margin-left: auto;
+    margin-right: 147px;
+    svg {
+      width: 90px;
+      height: 90px;
+    }
   }
 }
 

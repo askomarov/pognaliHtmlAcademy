@@ -47,6 +47,20 @@
       background: #ffffff;
     }
   }
+
+  .header__logo-img--blue {
+    display: none;
+  }
+}
+
+.header__logo--blue {
+  .header__logo-img--blue {
+    display: block;
+  }
+
+  .header__logo-img--white {
+    display: none;
+  }
 }
 
 .header__logo-img {
@@ -83,5 +97,11 @@
     justify-content: center;
     align-items: center;
     min-width: 188px;
+  }
+}
+
+.page-form {
+  .header {
+    background: #182044;
   }
 }

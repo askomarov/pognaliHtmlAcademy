@@ -81,6 +81,7 @@
     border-top-right-radius: var(--border-radius);
     @media (min-width: $width-tablet+px) {
       border-top-right-radius: 0;
+      border-top-left-radius: 0;
       &:before {
         content: "";
         position: absolute;
@@ -93,6 +94,7 @@
       }
     }
     @media (min-width: $width-desktop+px) {
+      border-top-left-radius: var(--border-radius);
       &:before {
         width: 40px;
         height: 100%;

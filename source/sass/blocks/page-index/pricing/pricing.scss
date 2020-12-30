@@ -23,11 +23,13 @@
   grid-template-columns: 1fr 1fr;
   row-gap: 31px;
   align-items: center;
+  padding-left: 49px;
   @media (min-width: $width-tablet+px) {
     row-gap: 0;
+    grid-template-columns: 2fr 1fr;
+    padding-left: 40px;
   }
   @media (min-width: $width-desktop+px) {
-    grid-template-columns: 2fr 1fr;
     grid-template-rows: min-content 1fr min-content;
   }
   @media (min-width: $width-desktop+px) {
@@ -58,11 +60,13 @@
   border-radius: 50%;
   background: #ffffff;
   z-index: 1;
+
   @media (min-width: $width-tablet+px) {
     order: 10;
     grid-column: 2/3;
     margin-right: 45px;
   }
+
   @media (min-width: $width-desktop+px) {
     order: initial;
     grid-column: 2/3;
@@ -70,24 +74,13 @@
     justify-self: center;
     width: 198px;
     height: 198px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
-  &::after {
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 20px;
-    font-family: $fontfamily;
-    content: "\20BD";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-radius: 50%;
-    width: 34px;
-    height: 34px;
-    background: $color_3;
-  }
+
   &::before {
     @media (min-width: $width-tablet+px) {
       content: "";
@@ -101,6 +94,7 @@
       background: #e2e5f2;
       border-radius: 20px;
     }
+
     @media (min-width: $width-desktop+px) {
       width: 446px;
       height: 300px;
@@ -206,21 +200,17 @@
 }
 
 .pricing__link-business-tarif {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 16px;
-  color: #132576;
   grid-column: span 2;
 
   @media (min-width: $width-tablet+px) {
-    font-size: 20px;
-    line-height: 20px;
     grid-column: initial;
+    justify-self: start;
   }
+
   @media (min-width: $width-desktop+px) {
     grid-template-columns: 1/-1;
     grid-row: -1/-2;
-    line-height: 68px;
+    margin-top: 32px;
   }
 }
 

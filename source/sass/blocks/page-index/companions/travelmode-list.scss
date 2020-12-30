@@ -1,11 +1,12 @@
 .travelmode-list {
-  border: 1px solid #000;
   height: 20px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   svg {
-    width: 100%;
-    height: 100%;
+    // width: auto;
+    // height: 100%;
   }
   @media (min-width: $width-tablet+px) {
     height: 25px;
@@ -13,14 +14,57 @@
 }
 
 .travelmode-list__item {
-  svg {
-    width: 10px;
-    height: 10px;
-  }
+  fill: rgba($color: #1d2e5b, $alpha: 0.15);
 }
 
 .travelmode-list__item--active {
+  fill: #101d41;
 }
 
 .travelmode-list__icon {
+  @media (min-width: $width-tablet+px) {
+    &[aria-label="самолет"] {
+      width: 23px;
+      height: 22px;
+    }
+
+    &[aria-label="автобус"] {
+      width: 18px;
+      height: 20px;
+    }
+
+    &[aria-label="велосипед"] {
+      width: 25px;
+      height: 25px;
+    }
+
+    &[aria-label="пешком"] {
+      width: 22px;
+      height: 24px;
+    }
+  }
+}
+
+.user-info__travelmode-list.travelmode-list {
+  height: auto;
+  padding-top: 16px;
+  padding-bottom: 15px;
+  justify-content: center;
+  gap: 1px;
+  .travelmode-list__item {  
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .travelmode-list__btn {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 50%;
+    outline: none;
+  }
 }

@@ -9,11 +9,20 @@
   background-position: 20px 0px, left top;
   background-repeat: no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/about-mobile@2x.png"), url("../img/about-back-mobile.png");
+  }
+
   @media (min-width: $width-tablet + px) {
     padding-top: 41px;
     padding-bottom: 89px;
     background-image: url("../img/about-tablet@1x.png");
     background-position: right top;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/about-tablet@2x.png");
+      background-position: 84% top;
+      background-size: 720px 596px;
+    }
   }
 
   @media (min-width: $width-desktop+px) {
@@ -24,20 +33,21 @@
     background-position: 750px bottom;
     @include sectionRadiusBackground;
   }
+  @media (min-width: 1600px) {
+    background-position: 90% bottom;
+  }
 }
 
 .about__container {
   padding-left: 49px;
   padding-right: 60px;
-  max-width: 320px;
   position: relative;
   z-index: 1;
   @media (min-width: $width-tablet+px) {
     padding: 0 74px;
-    max-width: 100%;
   }
   @media (min-width: $width-desktop+px) {
-    padding: 0 130px;
+    padding: 0 70px;
   }
 }
 

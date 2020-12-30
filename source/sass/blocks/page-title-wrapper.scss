@@ -8,6 +8,8 @@
   z-index: 5;
   max-width: 100%;
   @media (min-width: $width-tablet+px) {
+    margin-top: -1px;
+    padding-top: 106px;
     padding-left: 75px;
     padding-right: 75px;
   }

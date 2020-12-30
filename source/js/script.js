@@ -1,7 +1,7 @@
 let menuButton = document.querySelector('.header-menu__toggle');
 let mainMenu = document.querySelector('.header-menu__wrapper');
-
-// отнимаем класс у главного на десктопе
+let headerLogo = document.querySelector(".header__logo")
+// отнимаем класс у главного меню на десктопе
 window.addEventListener("resize", function () {
   if (window.innerWidth > 1439.98) {
     mainMenu.classList.remove("header-menu__wrapper--shown");
@@ -20,10 +20,12 @@ function toggleMenu() {
       menuButton.setAttribute("aria-expanded", "false");
       menuButton.setAttribute("aria-label", "открыть меню");
       mainMenu.classList.remove("header-menu__wrapper--shown");
+      headerLogo.classList.remove("header__logo--blue");
     } else {
       mainMenu.classList.add("header-menu__wrapper--shown");
       menuButton.setAttribute("aria-label", "закрыть меню");
       menuButton.setAttribute("aria-expanded", "true");
+      headerLogo.classList.add("header__logo--blue");
     }
   });
 };

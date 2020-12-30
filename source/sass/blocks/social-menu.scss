@@ -1,15 +1,44 @@
 .social-menu {
-  height: 21px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  grid-template-rows: auto;
+  gap: 26px;
+  justify-self: center;
+  @media (min-width: $width-tablet+px) {
+    justify-self: start;
+    margin-left: 26px;
+    column-gap: 35px;
+  }
 }
 
 .social-menu__item {
+  height: auto;
 }
 
 .social-menu__link {
-  svg {
-    width: 20px;
-    height: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: $width-tablet+px) {
+    &--fb {
+      svg {
+        width: 14px;
+        height: 28px;
+      }
+    }
+    &--vk {
+      svg {
+        width: 31px;
+        height: 16px;
+      }
+    }
+    &--inst {
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
 }

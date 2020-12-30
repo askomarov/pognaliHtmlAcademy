@@ -1,5 +1,5 @@
 .feedback {
-   background: #192144;
+  background: #192144;
   padding-top: 72px;
   padding-bottom: 29px;
   border-bottom-left-radius: var(--main-border-radius);
@@ -30,7 +30,6 @@
   }
 
   @media (min-width: $width-desktop+px) {
-    padding: 0 133px;
   }
 }
 
@@ -170,8 +169,10 @@
   flex-wrap: wrap;
   text-align: left;
   @media (min-width: $width-desktop+px) {
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
+    column-gap: 110px;
+    row-gap: 50px;
   }
 }
 
@@ -182,12 +183,27 @@
   color: #ffd74b;
   text-transform: uppercase;
   flex: 0 0 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: min-content 1fr;
+  gap: 16px;
 
   @media (min-width: $width-tablet+px) {
     font-size: 28px;
     line-height: 28px;
+    align-items: center;
+    gap: 22px;
+    svg {
+      width: 68px;
+      height: 68px;
+    }
   }
   @media (min-width: $width-desktop+px) {
     flex: 0 0 auto;
+    gap: 31px;
+    svg {
+      width: 90px;
+      height: 90px;
+    }
   }
 }

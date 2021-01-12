@@ -197,7 +197,7 @@
 
     svg {
       width: 20px;
-      height: 9px;
+      height: 13px;
     }
   }
 }
@@ -219,6 +219,11 @@
     width: 70px;
     height: 47px;
     border: 0;
+    padding: 0;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
@@ -341,6 +346,52 @@
     &::after,
     &::before {
       background-color: #9c9fa8;
+    }
+  }
+}
+
+.choose-country__item--current {
+  .icon-drop-close {
+    display: none;
+  }
+}
+.choose-country__item--current:hover {
+  .choose-country__submenu {
+    display: grid;
+    @media (min-width: $width-tablet+px) {
+      width: 577px;
+      grid-template-columns: 289px 1fr;
+      gap: 79px;
+    }
+    @media (min-width: $width-desktop+px) {
+      width: 100%;
+      grid-template-columns: 2fr 1fr;
+      gap: 0;
+    }
+  }
+  .submenu-country__country-list {
+    padding-right: 0;
+  }
+  .choose-country__option-text {
+    color: #ffffff;
+  }
+  .choose-country__drop-arrow {
+    background: transparent;
+    @media (min-width: $width-tablet+px) {
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  .icon-drop-open {
+    display: none;
+  }
+  .icon-drop-close {
+    display: block;
+    fill: #ffffff;
+    @media (min-width: $width-tablet+px) {
+      fill: rgba($color: #ffffff, $alpha: 0.3);
     }
   }
 }

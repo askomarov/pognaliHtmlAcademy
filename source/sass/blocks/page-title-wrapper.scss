@@ -13,6 +13,19 @@
     padding-left: 75px;
     padding-right: 75px;
   }
+  @media (min-width: $width-desktop+px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.page-title-wrapper__container {
+  height: 100%;
+  @media (min-width: $width-desktop+px) {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-left: 64px;
+  }
 }
 
 .page-title-wrapper__text {
@@ -52,7 +65,7 @@
 }
 
 .page-catalog {
-  .page-title-wrapper {
+  .page-title-wrapper__container {
     @media (min-width: $width-tablet+px) {
       display: grid;
       grid-template-columns: min-content 176px;

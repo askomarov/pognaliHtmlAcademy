@@ -18,6 +18,7 @@
   @media (min-width: $width-desktop+px) {
     border-radius: 60px;
     padding: 100px 160px 100px 160px;
+    position: relative;
   }
 }
 .step-item__title {
@@ -30,6 +31,7 @@
   @media (min-width: $width-tablet+px) {
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 34px;
   }
 }
 .step-item__text {
@@ -123,11 +125,13 @@
     font-size: 20px;
     line-height: 18px;
     letter-spacing: 0.08em;
+    margin-right: 6px;
   }
   @media (min-width: $width-desktop+px) {
     color: #1d2e5b;
     order: 2;
     justify-self: end;
+    margin-right: 0;
   }
 }
 .step-item__input-body {
@@ -142,6 +146,11 @@ input[name="children-yes"]:checked ~ .step-item__child-cheks {
     background-image: url("../img/icon_check-mark.svg");
     background-position: center center;
     background-repeat: no-repeat;
+  }
+  @media (min-width: $width-tablet+px) {
+    &::after {
+      background-size: 18px 17px;
+    }
   }
 }
 .step-item__child-cheks {
@@ -248,8 +257,10 @@ input[name="children-yes"]:checked ~ .step-item__child-cheks {
 }
 
 .step-item__anchor {
-  scroll-margin-top: 150px;
+  scroll-margin-top: 100px;
   @media (min-width: $width-desktop+px) {
     scroll-margin-top: 0px;
+    position: absolute;
+    top: 0;
   }
 }

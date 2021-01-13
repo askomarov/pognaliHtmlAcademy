@@ -33,6 +33,14 @@
       height: 100%;
     }
   }
+  &:hover,
+  &:focus,
+  &:focus-within {
+    fill: rgba($color: #000000, $alpha: 0.5);
+  }
+  &:active {
+    fill: rgba($color: #000000, $alpha: 0.1);
+  }
 }
 .calendar__mth-btn--prev {
 }

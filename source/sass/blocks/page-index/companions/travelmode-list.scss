@@ -45,7 +45,7 @@
   }
 }
 
-.user-info__travelmode-list.travelmode-list {
+.user-info__travelmode-list {
   height: auto;
   padding-top: 16px;
   padding-bottom: 15px;
@@ -60,6 +60,26 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    &:hover,
+    &:focus,
+    &:focus-within {
+      filter: drop-shadow(0px 2px 6px rgba(22, 28, 53, 0.17));
+      fill: #616d8c;
+      &:not(.travelmode-list__item--active) {
+        fill: #b2b2b2;
+      }
+    }
+    &:active {
+      filter: none;
+      background-color: #e2e5f1;
+      fill: #a7aec4;
+      &:not(.travelmode-list__item--active) {
+        fill: #ced3e2;
+      }
+      .travelmode-list__btn {
+        background-color: inherit;
+      }
+    }
   }
 
   .travelmode-list__btn {

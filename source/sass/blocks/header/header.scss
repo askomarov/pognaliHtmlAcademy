@@ -97,10 +97,20 @@
     justify-content: center;
     align-items: center;
     min-width: 188px;
+    &:hover,
+    &:focus,
+    &:focus-within {
+      background-color: #ffbd30;
+    }
+    &:active {
+      background-color: #ffbd30;
+      color: rgba($color: #161c35, $alpha: 0.3);
+    }
   }
 }
 
-.page-form {
+.page-form,
+.page-catalog {
   .header {
     background: #182044;
   }

@@ -62,13 +62,34 @@
       height: 36px;
     }
   }
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
+  }
+}
+.header-actions__link--tel {
+}
+.header-actions__link--mail {
+  &:active {
+  }
 }
 @media (min-width: $width-desktop+px) {
   .header-actions__link--tel {
     background-color: #ff8d30;
+    &:hover,
+    &:focus,
+    &:focus-within {
+      background-color: #f26926;
+    }
   }
   .header-actions__link--mail {
     background-color: #ffbd30;
+    &:hover,
+    &:focus,
+    &:focus-within {
+      background-color: #ff8d30;
+    }
   }
 }
 

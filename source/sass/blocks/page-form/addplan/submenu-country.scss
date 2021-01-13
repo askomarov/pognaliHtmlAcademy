@@ -65,6 +65,17 @@
   @media (min-width: $width-desktop+px) {
     border: 1px solid #cbced9;
     border-radius: 4px;
+    &:hover,
+    &:focus,
+    &:focus-within {
+      border-color: #959bb2;
+    }
+
+    &:active {
+      background-color: #1d2e5b;
+      border-color: #1d2e5b;
+      color: #ffffff;
+    }
   }
 }
 .submenu-country__letter--current {
@@ -113,5 +124,13 @@
   }
   @media (min-width: $width-desktop+px) {
     margin-bottom: 10px;
+    &:hover,
+    &:focus,
+    &:focus-within {
+      color: #1d2e5b;
+    }
+    &:active {
+      color: rgba($color: #1d2e5b, $alpha: 0.3);
+    }
   }
 }

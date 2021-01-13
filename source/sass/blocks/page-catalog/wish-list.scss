@@ -2,8 +2,21 @@
 }
 
 .wish-list__country {
+  @media (min-width: $width-tablet+px) {
+    svg {
+      width: 36px;
+      height: 24px;
+    }
+  }
+  @media (min-width: $width-desktop+px) {
+    svg {
+      width: 35px;
+    }
+  }
 }
 .wish-list__country-flag {
+  @media (min-width: $width-tablet+px) {
+  }
 }
 .wish-list__coutry-name {
   font-weight: 500;

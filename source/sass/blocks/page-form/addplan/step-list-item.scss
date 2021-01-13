@@ -195,6 +195,20 @@ input[name="children-yes"]:checked ~ .step-item__child-cheks {
       height: 36px;
     }
   }
+  &:hover,
+  &:focus,
+  &:focus-within {
+    &::after {
+      border-color: #959bb2;
+    }
+  }
+  &:active {
+    &::after {
+      border-color: #e2e5f1;
+      background-color: #e2e5f1;
+      filter: opacity(0.3);
+    }
+  }
 }
 .step-item__calendar {
   margin-bottom: 20px;
@@ -238,13 +252,23 @@ input[name="children-yes"]:checked ~ .step-item__child-cheks {
       border-right: 14px solid #1d2e5b;
     }
   }
+  &:hover,
+  &:focus,
+  &:focus-within {
+    opacity: 0.7;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
+
 .step-item__btn-submit {
   width: 100%;
   @media (min-width: $width-tablet+px) {
     width: 286px;
   }
 }
+
 .step-item__action-desc {
 }
 

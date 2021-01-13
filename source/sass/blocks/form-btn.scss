@@ -22,7 +22,7 @@
   @media (min-width: $width-desktop+px) {
     width: 286px;
   }
-  &:after {
+  &::after {
     @media (min-width: $width-tablet+px) {
       content: "";
       vertical-align: middle;
@@ -30,6 +30,17 @@
       border-top: 6px solid transparent;
       border-bottom: 6px solid transparent;
       border-left: 13px solid #1d2e5b;
+    }
+  }
+  &:hover,
+  &:focus,
+  &:focus-within {
+    background-color: #ffbd30;
+  }
+  &:active {
+    color: rgba($color: #1d2e5b, $alpha: 0.3);
+    &::after {
+      border-left-color: rgba($color: #1d2e5b, $alpha: 0.3);
     }
   }
 }

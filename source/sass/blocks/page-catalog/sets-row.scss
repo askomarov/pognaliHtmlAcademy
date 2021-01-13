@@ -139,8 +139,17 @@
 .sets-row__input {
   &:checked + .sets-row__label {
     &::after {
-      // background: red;
+      content: "";
+      background-image: url("../img/icon_check-mark.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      @media (min-width: $width-tablet+px) {
+        background-size: 18px 17px;
+      }
     }
+  }
+  &:checked + .sets-row__label--icon {
+    fill: #1d2e5b;
   }
 }
 
@@ -169,5 +178,17 @@
     font-size: 20px;
     line-height: 24px;
     padding-left: 36px;
+  }
+}
+.sets-row__label--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: rgba($color: #1d2e5b, $alpha: 0.15);
+  @media (min-width: $width-tablet+px) {
+    svg {
+      width: 23px;
+      height: 22px;
+    }
   }
 }

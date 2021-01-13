@@ -36,6 +36,14 @@
     line-height: 20px;
     color: #ffffff;
   }
+  &:hover,
+  &:focus,
+  &:focus-within {
+    color: #ffd74b;
+  }
+  &:active {
+    color: rgba($color: #ffd74b, $alpha: 0.3);
+  }
 }
 
 .site-list__link--active {

@@ -78,6 +78,11 @@
   text-transform: uppercase;
   color: #192144;
   position: relative;
+  background-image: url("../img/filter.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 15px 10px;
+
   @media (min-width: $width-tablet+px) {
     display: none;
   }
@@ -86,7 +91,7 @@
     font-size: 20px;
     line-height: 20px;
     padding-left: 45px;
-    margin-left: -25px;
+    background-size: 23px 15px;
   }
 }
 

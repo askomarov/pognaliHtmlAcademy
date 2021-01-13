@@ -164,6 +164,15 @@
     border-top-right-radius: 0;
     margin-bottom: 27px;
   }
+  &:hover,
+  &:focus,
+  &:focus-within {
+    background-color: #d1d7e9;
+  }
+  &:active {
+    background-color: #dfe3f0;
+    color: rgba($color: #161C35, $alpha: 0.3);
+  }
 }
 .user-info__img-btn--text {
   span {
@@ -178,6 +187,16 @@
   position: relative;
   @media (min-width: $width-desktop+px) {
     grid-column: 1/4;
+  }
+  &:hover {
+    border-color: #aeb4cb;
+  }
+  &:focus-within,
+  &:focus {
+    border-color: #161c35;
+    .user-info__tags-list {
+      color: #444444;
+    }
   }
 }
 .user-info__heading-wrapper {

@@ -21,8 +21,7 @@
   }
 
   @media (min-width: $width-desktop+px) {
-    background-image: url("../img/smolov-back-desktop@1x.png"),
-    url("../img/rogovaya-back-desktop@1x.png");
+    background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-desktop@1x.png");
     padding-top: 130px;
     padding-bottom: 134px;
     background-size: 143px 143px, 285px 285px;
@@ -107,7 +106,7 @@
     padding: 0 34px;
     margin-bottom: 80px;
   }
-  
+
   @media (min-width: $width-desktop+px) {
     grid-row: span 2;
     grid-column: -1/-2;

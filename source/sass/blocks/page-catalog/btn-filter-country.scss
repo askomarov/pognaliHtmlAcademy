@@ -35,6 +35,24 @@
         font-size: inherit;
       }
     }
+    &:hover {
+      color: rgba($color: #192144, $alpha: 0.6);
+      .btn-filter-country__icon {
+        background: rgba($color: #192144, $alpha: 0.6);
+        &::after,
+        &::before {
+          background: rgba($color: #192144, $alpha: 0.6);
+        }
+      }
+    }
+  }
+  &:focus-within,
+  &:focus {
+    opacity: 0.6;
+    outline: auto;
+  }
+  &:active {
+    opacity: 0.3;
   }
 }
 .btn-filter-country__btn-show {
@@ -99,7 +117,6 @@
   width: 3px;
   height: 3px;
   border-radius: 50%;
-  background: #192144;
   position: relative;
   transition: all 0.5s ease 0s;
   &::after,
@@ -109,7 +126,6 @@
     width: 3px;
     height: 3px;
     border-radius: 50%;
-    background: #192144;
     position: absolute;
     top: 0;
   }
@@ -153,7 +169,6 @@
     width: 16px;
     height: 2px;
     border-radius: 0;
-    background: #192144;
     left: 50%;
     top: 50%;
     right: initial;

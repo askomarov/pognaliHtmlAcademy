@@ -112,6 +112,7 @@
 }
 
 .filter-country__continent {
+  cursor: pointer;
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
@@ -121,6 +122,12 @@
   @media (min-width: $width-tablet+px) {
     font-size: 20px;
     line-height: 20px;
+    &:hover {
+      color: rgba($color: #192144, $alpha: 0.6);
+    }
+  }
+  &:active {
+    color: #192144;
   }
 }
 
@@ -174,9 +181,18 @@
     max-width: 615px;
     margin: 0 auto;
     line-height: 26px;
+    &:hover {
+      background: #c8cee8;
+    }
   }
   @media (min-width: $width-desktop+px) {
     max-width: 100%;
+  }
+  &:active {
+    background: #c8cee8;
+    .btn-decor-cross {
+      opacity: 0.3;
+    }
   }
 
   .btn-decor-cross {

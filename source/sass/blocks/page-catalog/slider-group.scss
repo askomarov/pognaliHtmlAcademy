@@ -9,10 +9,8 @@
 .slider-group__inputs {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1px;
   height: 34px;
   border-radius: 4px;
-  background: #cbced9;
   position: relative;
   &::after {
     content: "";
@@ -45,16 +43,36 @@
   letter-spacing: 0.04em;
   color: #1d2e5b;
   text-align: center;
+  -moz-appearance: textfield;
+  position: relative;
   @media (min-width: $width-tablet+px) {
     font-size: 20px;
     line-height: 20px;
+  }
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  &:hover {
+    border-color: #959bb2;
+    z-index: 4;
+  }
+  &:active,
+  &:focus,
+  &:focus-within {
+    border-color: #000000;
+    z-index: 4;
+  }
+  &:focus,
+  &:focus-within {
+    outline: none;
   }
 }
 
 .slider-group__input--start {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
-  border-right: 0;
+  margin-right: -1px;
   color: rgba($color: #1d2e5b, $alpha: 0.1);
   @media (min-width: $width-tablet+px) {
     color: inherit;
@@ -64,7 +82,7 @@
 .slider-group__input--end {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
-  border-left: 0;
+  margin-left: -1px;
 }
 
 .slider-group__slider {
@@ -72,37 +90,47 @@
   height: 2px;
   background-color: rgba($color: #1d2e5b, $alpha: 0.2);
   position: relative;
-  span {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 70%;
-    height: 100%;
-    background: #1d2e5b;
-    &::after,
-    &::before {
-      cursor: pointer;
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 0;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: inherit;
-      @media (min-width: $width-tablet+px) and (max-width: $width-desktop+px) {
-        width: 13px;
-        height: 13px;
-      }
-    }
-    &::after {
-      right: 100%;
-    }
-  }
+
   @media (min-width: $width-tablet+px) and (max-width: $width-desktop+px) {
     order: -1;
     height: 3px;
   }
+}
+.slider-group__range-active {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background: #1d2e5b;
+}
+.slider-group__dot {
+  cursor: pointer;
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: inherit;
+  @media (min-width: $width-tablet+px) {
+    width: 13px;
+    height: 13px;
+    &:hover {
+      width: 19px;
+      height: 19px;
+    }
+    &:active {
+      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.24);
+    }
+  }
+}
+.slider-group__dot--end {
+}
+.slider-group__dot--start {
+  right: 100%;
+  transform: translate(50%, -50%);
 }

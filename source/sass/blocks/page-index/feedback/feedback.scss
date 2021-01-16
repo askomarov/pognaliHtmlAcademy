@@ -66,6 +66,20 @@
 .feedback__authlink {
   color: #ffd74b;
   text-decoration: underline;
+  &:focus,
+  &:focus-within {
+    color: #ff8d30;
+    text-decoration: underline;
+  }
+  @media (min-width: $width-tablet+px) {
+    &:hover {
+      color: #ff8d30;
+      text-decoration: underline;
+    }
+  }
+  &:active {
+    color: rgba($color: #ff8d30, $alpha: 0.3);
+  }
 }
 
 .feedback__mail-form {
@@ -94,7 +108,8 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 62px;
-
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   &::placeholder {
     font-weight: bold;
     font-size: inherit;
@@ -107,6 +122,21 @@
     font-size: 24px;
     line-height: 80px;
     min-height: 80px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    &:hover {
+      background: #edeff6;
+      &::placeholder {
+        color: rgba($color: #444444, $alpha: 0.5);
+      }
+    }
+  }
+  &:focus,
+  &:focus-within {
+    background: #192144;
+    outline: none;
+    box-shadow: inset 0 0 0 4px #ffffff;
+    color: #ffffff;
   }
 }
 
@@ -181,6 +211,7 @@
   font-size: 16px;
   line-height: 22px;
   color: #ffd74b;
+  fill: #ffd74b;
   text-transform: uppercase;
   flex: 0 0 100%;
   display: grid;
@@ -197,6 +228,14 @@
       width: 68px;
       height: 68px;
     }
+    &:hover {
+      color: #ffbd30;
+      fill: #ffbd30;
+    }
+  }
+  &:active {
+    color: rgba($color: #ffbd30, $alpha: 0.3);
+    fill: rgba($color: #ffbd30, $alpha: 0.3);
   }
   @media (min-width: $width-desktop+px) {
     flex: 0 0 auto;

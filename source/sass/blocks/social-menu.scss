@@ -20,7 +20,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
+  fill: #192144;
+  &:hover {
+    fill: rgba($color: #192144, $alpha: 0.6);
+  }
+  &:active{
+    fill: rgba($color: #192144, $alpha: 0.3);
+  }
   @media (min-width: $width-tablet+px) {
     &--fb {
       svg {

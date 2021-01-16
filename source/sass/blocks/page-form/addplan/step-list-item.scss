@@ -153,6 +153,28 @@ input[name="children-yes"]:checked ~ .step-item__child-cheks {
     }
   }
 }
+input[name="children-yes"] {
+  &:focus,
+  &:focus-within,
+  &:hover {
+    + .step-item__child-cheks {
+      outline: inherit;
+      &::after {
+        border-color: #959bb2;
+      }
+    }
+  }
+  &:active {
+    + .step-item__child-cheks {
+      &::after {
+        border-color: #e2e5f1;
+        background-color: #e2e5f1;
+        filter: opacity(0.3);
+      }
+    }
+  }
+}
+
 .step-item__child-cheks {
   grid-area: set-child;
   font-weight: normal;
@@ -162,6 +184,7 @@ input[name="children-yes"]:checked ~ .step-item__child-cheks {
   position: relative;
   padding-left: 39px;
   margin-bottom: 28px;
+  max-width: max-content;
 
   @media (min-width: $width-tablet+px) {
     margin-bottom: 0;
@@ -195,31 +218,21 @@ input[name="children-yes"]:checked ~ .step-item__child-cheks {
       height: 36px;
     }
   }
-  &:hover,
-  &:focus,
-  &:focus-within {
-    &::after {
-      border-color: #959bb2;
-    }
-  }
-  &:active {
-    &::after {
-      border-color: #e2e5f1;
-      background-color: #e2e5f1;
-      filter: opacity(0.3);
-    }
-  }
 }
+
 .step-item__calendar {
   margin-bottom: 20px;
   @media (min-width: $width-tablet+px) {
     margin-bottom: 47px;
   }
 }
+
 .step-item__next-step {
 }
+
 .step-item__choose-country {
 }
+
 .step-item__prev-step {
   display: flex;
   align-items: center;
@@ -230,6 +243,7 @@ input[name="children-yes"]:checked ~ .step-item__child-cheks {
   text-align: center;
   text-transform: uppercase;
   color: #1d2e5b;
+
   @media (min-width: $width-tablet+px) {
     justify-content: space-between;
     font-size: 24px;
@@ -238,6 +252,7 @@ input[name="children-yes"]:checked ~ .step-item__child-cheks {
     justify-self: end;
     width: 185px;
   }
+
   @media (min-width: $width-desktop+px) {
     margin-left: 41px;
   }
@@ -252,11 +267,13 @@ input[name="children-yes"]:checked ~ .step-item__child-cheks {
       border-right: 14px solid #1d2e5b;
     }
   }
+
   &:hover,
   &:focus,
   &:focus-within {
     opacity: 0.7;
   }
+
   &:active {
     opacity: 0.3;
   }

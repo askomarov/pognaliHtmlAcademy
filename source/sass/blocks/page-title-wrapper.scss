@@ -84,6 +84,16 @@
       line-height: 20px;
       color: #ffffff;
       display: flex;
+      justify-content: space-between;
+      align-self: start;
+      align-items: center;
+      fill: #ffffff;
+      &:hover {
+        opacity: 0.6;
+      }
+      &:active{
+        opacity: 0.3;
+      }
     }
   }
 }

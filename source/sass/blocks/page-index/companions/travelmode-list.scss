@@ -15,8 +15,27 @@
 
 .travelmode-list__item {
   fill: rgba($color: #1d2e5b, $alpha: 0.15);
+  position: relative;
+  &:hover {
+    & > .travelmode-list__item-tooltip {
+      opacity: 1;
+      visibility: visible;
+      height: 72px;
+    }
+  }
 }
-
+.travelmode-list__item-tooltip {
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0;
+  margin-top: -2px;
+  padding-top: 15px;
+  // height: 72px;
+}
 .travelmode-list__item--active {
   fill: #101d41;
 }
@@ -86,6 +105,9 @@
     width: 100%;
     height: 100%;
     background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     outline: none;
   }
@@ -106,6 +128,26 @@
     .travelmode-list__icon {
       width: 32px;
       height: 22px;
+    }
+  }
+}
+
+.travelmode-list__checkbox:checked {
+  & + .travelmode-list__btn {
+    fill: #1d2e5b;
+    &:hover {
+      fill: #616d8c;
+    }
+  }
+}
+.travelmode-list__checkbox:not(:checked) {
+  & + .travelmode-list__btn {
+    fill: #d9d9d9;
+    &:hover {
+      fill: #b2b2b2;
+    }
+    &:active {
+      fill: #ced3e2;
     }
   }
 }

@@ -62,17 +62,16 @@ let btnCloseFilterContry = document.querySelector('.filter-country__btn-close-co
 
 
 function showSettings() {
-  let settingRows = document.querySelectorAll(".sets-row");
-  for (let i = 0; i < settingRows.length; i++) {
-    settingRows[i].onclick = function () {
-      this.classList.toggle("sets-row--active");
+  let settingsGroups = document.querySelectorAll(".sets-row")
+  let btnOpenSetting = document.querySelectorAll(".sets-row__name");
+  for (let j = 0; j < settingsGroups.length; j++) {
+    settingsGroups[0].classList.remove("sets-row--active")
+    settingsGroups[2].classList.remove("sets-row--active")
+  }
+  for (let i = 0; i < btnOpenSetting.length; i++) {
+    btnOpenSetting[i].onclick = function () {
+      settingsGroups[i].classList.toggle("sets-row--active");
     }
-    // settingRows[i].onmouseover = function () {
-    //   this.classList.add("sets-row--active");
-    // }
-    // settingRows[i].onmouseout = function () {
-    //   this.classList.remove("sets-row--active");
-    // }
   }
 };
 
@@ -121,4 +120,25 @@ document.addEventListener('DOMContentLoaded', function () {
     closeFilterContry();
     showSettings();
   }
+
+  if (pageForm) {
+    // выпадающий список стран
+    let dropdownWrapper = document.querySelector(".choose-country__item--current");
+    let dropdownMenu = dropdownWrapper.querySelector(".choose-country__submenu");
+    let dropdownMenuToggle = dropdownWrapper.querySelector(".choose-country__drop-arrow");
+
+    let dropdownToggle = function () {
+      dropdownMenuToggle.addEventListener("click", function () {
+        dropdownWrapper.classList.toggle("show-menu");
+        dropdownMenu.classList.toggle("choose-country__submenu--open");
+      })
+    }
+    dropdownToggle();
+  }
 });
+
+
+// выпадающий список стран
+let pageForm = document.querySelector('.page-form');
+
+

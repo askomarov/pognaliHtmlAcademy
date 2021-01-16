@@ -62,33 +62,38 @@
     display: none;
   }
   &:hover {
-    .choose-country__option--current {
-      border: 1px solid #1d2e5b;
-      background: #1d2e5b;
-      color: #ffffff;
-      letter-spacing: 0.02em;
-      padding-left: 17px;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-      &::before {
-        z-index: -1;
-      }
-      @media (min-width: $width-tablet+px) {
-        padding-left: 25px;
-      }
+    .choose-country__option {
+      border-color: #959bb2;
     }
-    .choose-country__del-choosen {
-      display: none;
-      @media (min-width: $width-tablet+px) {
-        display: block;
-      }
+  }
+}
+.choose-country__item--current.show-menu {
+  .choose-country__option--current {
+    border: 1px solid #1d2e5b;
+    background: #1d2e5b;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+    padding-left: 17px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    &::before {
+      z-index: -1;
     }
-    .choose-country__header {
-      z-index: 4;
+    @media (min-width: $width-tablet+px) {
+      padding-left: 25px;
     }
-    .submenu-country {
-      display: grid;
+  }
+  .choose-country__del-choosen {
+    display: none;
+    @media (min-width: $width-tablet+px) {
+      display: block;
     }
+  }
+  .choose-country__header {
+    z-index: 4;
+  }
+  .submenu-country {
+    display: grid;
   }
 }
 .choose-country__submenu {
@@ -161,6 +166,8 @@
   }
 }
 .choose-country__option--current {
+  cursor: unset;
+  background: transparent;
   &::before {
     background: #ffffff;
     border: 1px solid #cbced9;
@@ -174,8 +181,14 @@
       right: -48px;
     }
   }
+  &:focus-within,
+  &:focus {
+    outline: none;
+    border-color: #959bb2;
+  }
 }
 .choose-country__drop-arrow {
+  cursor: pointer;
   position: relative;
   z-index: 1;
   width: 56px;
@@ -377,7 +390,7 @@
     display: none;
   }
 }
-.choose-country__item--current:hover {
+.choose-country__item--current.show-menu {
   .choose-country__submenu {
     display: grid;
     @media (min-width: $width-tablet+px) {
@@ -415,10 +428,17 @@
     @media (min-width: $width-tablet+px) {
       fill: rgba($color: #ffffff, $alpha: 0.3);
     }
-    &:hover {
+  }
+}
+.choose-country__drop-arrow {
+  &:hover {
+    .icon-drop-close {
       fill: #ffffff;
     }
-    &:active {
+  }
+
+  &:active {
+    .icon-drop-close {
       fill: rgba($color: #fff, $alpha: 0.1);
     }
   }

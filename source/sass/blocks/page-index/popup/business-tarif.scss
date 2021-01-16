@@ -95,4 +95,10 @@
       margin: 0 -60px;
     }
   }
+  &:hover {
+    background: #edeff6;
+  }
+  &:active {
+    color: rgba($color: #1d2e5b, $alpha: 0.3);
+  }
 }

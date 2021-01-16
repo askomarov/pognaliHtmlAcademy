@@ -27,6 +27,11 @@
   font-size: 20px;
   line-height: 20px;
   color: #1d2e5b;
+  @media (min-width: $width-tablet+px) {
+    &:hover:not(.filter-pagination__link--active) {
+      color: rgba($color: #1d2e5b, $alpha: 0.6);
+    }
+  }
 }
 .filter-pagination__link--active {
   background: #ffd74b;
@@ -41,6 +46,8 @@
   overflow: hidden;
   @media (min-width: $width-tablet+px) {
     gap: 10px;
+    border-radius: 0;
+    overflow: initial;
   }
 }
 .filter-pagination__btn {
@@ -65,9 +72,34 @@
   &::after {
     border-right: 10px solid #1d2e5b;
   }
+  @media (min-width: $width-tablet+px) {
+    &:hover {
+      &::after {
+        border-right-color: rgba($color: #1d2e5b, $alpha: 0.6);
+      }
+    }
+  }
+  &:active {
+    &::after {
+      border-right-color: rgba($color: #1d2e5b, $alpha: 0.3);
+    }
+  }
 }
+
 .filter-pagination__btn--next {
   &::after {
     border-left: 10px solid #1d2e5b;
+  }
+  @media (min-width: $width-tablet+px) {
+    &:hover {
+      &::after {
+        border-left-color: rgba($color: #1d2e5b, $alpha: 0.6);
+      }
+    }
+  }
+  &:active {
+    &::after {
+      border-left-color: rgba($color: #1d2e5b, $alpha: 0.3);
+    }
   }
 }

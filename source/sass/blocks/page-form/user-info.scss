@@ -255,7 +255,7 @@
     height: 95px;
   }
   @media (min-width: $width-desktop+px) {
-    padding: 39px 35px;
+    padding: 39px 35px 0;
   }
 
   &:focus,

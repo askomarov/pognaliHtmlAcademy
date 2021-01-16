@@ -112,6 +112,14 @@
     font-size: 20px;
     line-height: 23px;
     min-height: 140px;
+    &:hover {
+      border-color: #959bb2;
+    }
+    &:focus,
+    &:focus-within {
+      outline: none;
+      border-color: #161c35;
+    }
   }
   @media (min-width: $width-desktop+px) {
     max-width: 730px;

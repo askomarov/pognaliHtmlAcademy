@@ -5,14 +5,15 @@
   padding-bottom: 20px;
 
   @media (max-width: $width-tablet+px) {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
   }
 
   @media (min-width: $width-tablet+px) {
     border-radius: 20px;
 
     &:hover {
-      filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.16));
+      filter: drop-shadow(0 4px 9px rgba(0, 0, 0, 0.16));
+
       img {
         transform: scale(1.1);
       }
@@ -27,6 +28,7 @@
   overflow: hidden;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+
   img {
     transition: transform 0.7s ease 0s;
     position: absolute;
@@ -36,6 +38,7 @@
     left: 0;
     object-fit: cover;
   }
+
   @media (min-width: $width-tablet+px) {
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
@@ -63,7 +66,7 @@
   margin-bottom: 15px;
   position: relative;
 
-  &:after {
+  &::after {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -78,17 +81,19 @@
   @media (min-width: $width-tablet+px) {
     font-size: 24px;
     line-height: 22px;
+
     &:hover {
       color: rgba($color: #1d2e5b, $alpha: 0.7);
     }
   }
+
   &:active {
     color: rgba($color: #1d2e5b, $alpha: 0.3);
   }
 }
 
 .companions-item__name--online {
-  &:after {
+  &::after {
     background: #81e31e;
   }
 }

@@ -7,6 +7,7 @@
     "action-desc action-desc"
     "btn-sub btn-sub"
     "prev-step prev-step";
+
   @media (min-width: $width-tablet+px) {
     padding-bottom: 53px;
     grid-template-areas:
@@ -15,6 +16,7 @@
       "action-desc action-desc"
       "btn-sub prev-step";
   }
+
   @media (min-width: $width-desktop+px) {
     padding-bottom: 104px;
     grid-template-columns: 730px 1fr;
@@ -25,51 +27,65 @@
       "action-desc action-desc"
       "btn-sub prev-step";
   }
+
   .step-item__title {
     grid-area: title;
     margin-bottom: 15px;
+
     @media (min-width: $width-tablet+px) {
       margin-bottom: 34px;
     }
+
     @media (min-width: $width-desktop+px) {
       margin-bottom: 35px;
+
       br {
         display: none;
       }
     }
   }
+
   .step-item__text {
     grid-area: text;
     margin-bottom: 19px;
+
     @media (min-width: $width-tablet+px) {
       margin-bottom: 34px;
       max-width: 500px;
     }
+
     @media (min-width: $width-desktop+px) {
       margin-bottom: 0;
     }
   }
+
   .step-item__action-desc {
     grid-area: action-desc;
     margin-bottom: 22px;
+
     @media (min-width: $width-tablet+px) {
       margin-bottom: 49px;
     }
+
     @media (min-width: $width-desktop+px) {
       margin-top: 55px;
       margin-bottom: 58px;
     }
   }
+
   .step-item__btn-submit {
     grid-area: btn-sub;
     margin-bottom: 17px;
+
     @media (min-width: $width-tablet+px) {
       margin-bottom: 0;
     }
   }
+
   .step-item__prev-step {
     grid-area: prev-step;
   }
+
   .step-item__plan-points {
     grid-area: plan-points;
   }

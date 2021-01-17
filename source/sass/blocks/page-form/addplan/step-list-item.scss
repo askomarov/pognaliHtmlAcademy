@@ -1,26 +1,29 @@
 .steps-list {
   display: grid;
   gap: 10px;
+
   @media (min-width: $width-tablet+px) {
     gap: 40px;
   }
 }
-.steps-list__item {
-}
+
 .step-item {
   background: #ffffff;
   border-radius: 10px;
   padding: 24px 25px 17px;
+
   @media (min-width: $width-tablet+px) {
     border-radius: 30px;
     padding: 48px 40px 56px 40px;
   }
+
   @media (min-width: $width-desktop+px) {
     border-radius: 60px;
     padding: 100px 160px 100px 160px;
     position: relative;
   }
 }
+
 .step-item__title {
   font-weight: bold;
   font-size: 20px;
@@ -34,6 +37,7 @@
     margin-bottom: 34px;
   }
 }
+
 .step-item__text {
   font-weight: normal;
   font-size: 16px;
@@ -45,6 +49,7 @@
     line-height: 24px;
   }
 }
+
 .step-item__travel-set {
   display: grid;
   row-gap: 20px;
@@ -52,6 +57,7 @@
     "set-companions"
     "set-days"
     "set-child";
+
   @media (min-width: $width-tablet+px) {
     row-gap: 34px;
     grid-template-areas:
@@ -60,6 +66,7 @@
       "set-days";
     margin-bottom: 60px;
   }
+
   @media (min-width: $width-desktop+px) {
     row-gap: 14px;
     column-gap: 60px;
@@ -72,6 +79,7 @@
     margin-bottom: 33px;
   }
 }
+
 .step-item__settings {
   display: grid;
   grid-template-columns: 1fr max-content;
@@ -82,6 +90,7 @@
     border-top: 1px solid #e1e3e9;
     padding-top: 26px;
   }
+
   @media (min-width: $width-desktop+px) {
     grid-template-columns: 185px 180px 1fr;
     align-items: center;
@@ -98,6 +107,7 @@
     grid-area: set-days;
   }
 }
+
 .step-item__setting-text {
   font-weight: 500;
   font-size: 16px;
@@ -105,15 +115,18 @@
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #1d2e5b;
+
   @media (min-width: $width-tablet+px) {
     font-size: 20px;
     line-height: 18px;
     letter-spacing: 0.1em;
   }
+
   @media (min-width: $width-desktop+px) {
     letter-spacing: normal;
   }
 }
+
 .step-item__setting-subtext {
   font-weight: 500;
   font-size: 16px;
@@ -121,12 +134,14 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: rgba($color: #1d2e5b, $alpha: 0.3);
+
   @media (min-width: $width-tablet+px) {
     font-size: 20px;
     line-height: 18px;
     letter-spacing: 0.08em;
     margin-right: 6px;
   }
+
   @media (min-width: $width-desktop+px) {
     color: #1d2e5b;
     order: 2;
@@ -134,12 +149,15 @@
     margin-right: 0;
   }
 }
+
 .step-item__input-body {
   grid-column: 1/-1;
+
   @media (min-width: $width-desktop+px) {
     grid-column: initial;
   }
 }
+
 input[name="children-yes"]:checked ~ .step-item__child-cheks {
   &::after {
     content: "";
@@ -147,23 +165,27 @@ input[name="children-yes"]:checked ~ .step-item__child-cheks {
     background-position: center center;
     background-repeat: no-repeat;
   }
+
   @media (min-width: $width-tablet+px) {
     &::after {
       background-size: 18px 17px;
     }
   }
 }
+
 input[name="children-yes"] {
   &:focus,
   &:focus-within,
   &:hover {
     + .step-item__child-cheks {
       outline: inherit;
+
       &::after {
         border-color: #959bb2;
       }
     }
   }
+
   &:active {
     + .step-item__child-cheks {
       &::after {
@@ -213,6 +235,7 @@ input[name="children-yes"] {
     transform: translateY(-50%);
     border: 1px solid #cbced9;
     border-radius: 4px;
+
     @media (min-width: $width-tablet+px) {
       width: 36px;
       height: 36px;
@@ -222,15 +245,10 @@ input[name="children-yes"] {
 
 .step-item__calendar {
   margin-bottom: 20px;
+
   @media (min-width: $width-tablet+px) {
     margin-bottom: 47px;
   }
-}
-
-.step-item__next-step {
-}
-
-.step-item__choose-country {
 }
 
 .step-item__prev-step {
@@ -281,16 +299,15 @@ input[name="children-yes"] {
 
 .step-item__btn-submit {
   width: 100%;
+
   @media (min-width: $width-tablet+px) {
     width: 286px;
   }
 }
 
-.step-item__action-desc {
-}
-
 .step-item__plan-points {
   display: none;
+
   @media (min-width: $width-desktop+px) {
     display: flex;
     flex-direction: column;
@@ -299,8 +316,9 @@ input[name="children-yes"] {
 
 .step-item__anchor {
   scroll-margin-top: 100px;
+
   @media (min-width: $width-desktop+px) {
-    scroll-margin-top: 0px;
+    scroll-margin-top: 0;
     position: absolute;
     top: 0;
   }

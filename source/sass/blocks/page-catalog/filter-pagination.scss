@@ -2,20 +2,22 @@
   background: #ffffff;
   border-radius: 20px;
   display: grid;
+
   @media (min-width: $width-tablet+px) {
     padding: 25px 28px;
     grid-template-columns: 1fr 100px;
   }
 }
+
 .filter-pagination__list {
   display: none;
+
   @media (min-width: $width-tablet+px) {
     display: flex;
     flex-wrap: wrap;
   }
 }
-.filter-pagination__item {
-}
+
 .filter-pagination__link {
   display: flex;
   align-items: center;
@@ -27,15 +29,18 @@
   font-size: 20px;
   line-height: 20px;
   color: #1d2e5b;
+
   @media (min-width: $width-tablet+px) {
     &:hover:not(.filter-pagination__link--active) {
       color: rgba($color: #1d2e5b, $alpha: 0.6);
     }
   }
 }
+
 .filter-pagination__link--active {
   background: #ffd74b;
 }
+
 .filter-pagination__btns-wrapper {
   display: flex;
   justify-content: center;
@@ -44,17 +49,20 @@
   border-radius: 20px;
   min-height: 51px;
   overflow: hidden;
+
   @media (min-width: $width-tablet+px) {
     gap: 10px;
     border-radius: 0;
     overflow: initial;
   }
 }
+
 .filter-pagination__btn {
   flex: 0 1 50%;
   min-height: 100%;
   position: relative;
   background: transparent;
+
   &::after {
     content: "";
     position: absolute;
@@ -68,10 +76,12 @@
     border-top: 9px solid transparent;
   }
 }
+
 .filter-pagination__btn--prev {
   &::after {
     border-right: 10px solid #1d2e5b;
   }
+
   @media (min-width: $width-tablet+px) {
     &:hover {
       &::after {
@@ -79,6 +89,7 @@
       }
     }
   }
+
   &:active {
     &::after {
       border-right-color: rgba($color: #1d2e5b, $alpha: 0.3);
@@ -90,6 +101,7 @@
   &::after {
     border-left: 10px solid #1d2e5b;
   }
+
   @media (min-width: $width-tablet+px) {
     &:hover {
       &::after {
@@ -97,6 +109,7 @@
       }
     }
   }
+
   &:active {
     &::after {
       border-left-color: rgba($color: #1d2e5b, $alpha: 0.3);

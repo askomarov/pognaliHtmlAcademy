@@ -4,9 +4,11 @@
   padding-bottom: 82px;
   border-bottom-left-radius: var(--main-border-radius);
   border-bottom-right-radius: var(--main-border-radius);
+
   @include sectionRadiusBackground;
+
   background-image: url("../img/about-mobile@1x.png"), url("../img/about-back-mobile.png");
-  background-position: 20px 0px, left top;
+  background-position: 20px 0, left top;
   background-repeat: no-repeat;
 
   @media (min-resolution: 2dppx) {
@@ -18,6 +20,7 @@
     padding-bottom: 89px;
     background-image: url("../img/about-tablet@1x.png");
     background-position: right top;
+
     @media (min-resolution: 2dppx) {
       background-image: url("../img/about-tablet@2x.png");
       background-position: 84% top;
@@ -26,13 +29,14 @@
   }
 
   @media (min-width: $width-desktop+px) {
-    padding-top: 42px;
     padding-top: 132px;
     padding-bottom: 163px;
     background-image: url("../img/about-desktop@1x.png");
     background-position: 750px bottom;
+
     @include sectionRadiusBackground;
   }
+
   @media (min-width: 1600px) {
     background-position: 90% bottom;
   }
@@ -43,9 +47,11 @@
   padding-right: 60px;
   position: relative;
   z-index: 1;
+
   @media (min-width: $width-tablet+px) {
     padding: 0 74px;
   }
+
   @media (min-width: $width-desktop+px) {
     padding: 0 70px;
   }
@@ -54,23 +60,14 @@
 .about__title {
   margin-bottom: 19px;
   position: relative;
-  // &::after {
-  //   content: "";
-  //   width: 132px;
-  //   height: 132px;
-  //   background: #141b3b;
-  //   border-radius: 20px;
-  //   position: absolute;
-  //   top: -33px;
-  //   left: -49px;
-  //   z-index: -1;
-  // }
+
   @media (min-width: $width-tablet+px) {
     margin-bottom: 40px;
   }
 
   @media (min-width: $width-desktop+px) {
     margin-bottom: 57px;
+
     &::after {
       content: "";
       position: absolute;

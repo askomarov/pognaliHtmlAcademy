@@ -53,13 +53,10 @@ function closePopup(btn, section, classToShow) {
   });
 };
 
-
-
 let pageCatalog = document.querySelector('.page-catalog');
 let btnToggleFilterCountry = document.querySelector('.btn-filter-country');
 let filterCountry = document.querySelector('.filter-country');
 let btnCloseFilterContry = document.querySelector('.filter-country__btn-close-countrylist')
-
 
 function showSettings() {
   let settingsGroups = document.querySelectorAll(".sets-row")
@@ -75,7 +72,7 @@ function showSettings() {
   }
 };
 
-
+let pageForm = document.querySelector('.page-form');
 
 document.addEventListener('DOMContentLoaded', function () {
   // главное меню
@@ -122,6 +119,37 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   if (pageForm) {
+    // ошибка если пустая textarea
+    let addplanForm = document.querySelector(".addplan__form");
+    let planDesc1 = addplanForm.querySelector("#actions-in-1-country");
+    let planDesc2 = addplanForm.querySelector("#actions-in-2-country");
+
+    planDesc1.addEventListener("focus", function () {
+      if (!planDesc1.value) {
+        planDesc1.classList.remove("action-desc-list__textarea--error");
+      }
+    });
+    planDesc2.addEventListener("focus", function () {
+      if (!planDesc2.value) {
+        planDesc2.classList.remove("action-desc-list__textarea--error");
+      }
+    });
+
+    addplanForm.addEventListener("submit", function (evt) {
+      if (!planDesc1.value) {
+        evt.preventDefault();
+        planDesc1.classList.add("action-desc-list__textarea--error");
+      } else {
+        planDesc1.classList.remove("action-desc-list__textarea--error");
+      }
+      if (!planDesc2.value) {
+        evt.preventDefault();
+        planDesc2.classList.add("action-desc-list__textarea--error");
+      } else {
+        planDesc2.classList.remove("action-desc-list__textarea--error");
+      }
+    });
+
     // выпадающий список стран
     let dropdownWrapper = document.querySelector(".choose-country__item--current");
     let dropdownMenu = dropdownWrapper.querySelector(".choose-country__submenu");
@@ -136,9 +164,3 @@ document.addEventListener('DOMContentLoaded', function () {
     dropdownToggle();
   }
 });
-
-
-// выпадающий список стран
-let pageForm = document.querySelector('.page-form');
-
-

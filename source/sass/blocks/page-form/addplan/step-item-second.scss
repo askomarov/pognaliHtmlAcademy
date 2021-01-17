@@ -8,6 +8,7 @@
       "choose-country choose-country"
       "next-step prev-step";
   }
+
   @media (min-width: $width-desktop+px) {
     grid-template-columns: 730px 1fr;
     column-gap: 38px;
@@ -17,44 +18,56 @@
       "choose-country choose-country"
       "next-step prev-step";
   }
+
   .step-item__title {
     grid-area: title;
+
     @media (min-width: $width-desktop+px) {
       margin-bottom: 35px;
+
       br {
         display: none;
       }
     }
   }
+
   .step-item__text {
     grid-area: text;
     margin-bottom: 21px;
+
     @media (min-width: $width-tablet+px) {
       margin-bottom: 33px;
       padding-right: 140px;
     }
+
     @media (min-width: $width-desktop+px) {
       padding-right: 0;
       max-width: 474px;
       margin-bottom: 55px;
     }
   }
+
   .step-item__choose-country {
     grid-area: choose-country;
   }
+
   .step-item__next-step {
     grid-area: next-step;
     margin-bottom: 13px;
+
     @media (min-width: $width-tablet+px) {
       margin-bottom: 0;
     }
   }
+
   .step-item__prev-step {
     grid-area: prev-step;
+
     @media (min-width: $width-tablet+px) {
       align-self: center;
     }
   }
+
   .step-item__plan-points {
     grid-area: plan-points;
   }

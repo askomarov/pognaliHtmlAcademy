@@ -1,17 +1,20 @@
 .slider-group {
   gap: 25px;
+
   @media (min-width: $width-tablet+px) and (max-width: $width-desktop+px) {
     gap: 0;
     grid-template-columns: 275px 148px;
     justify-content: space-between;
   }
 }
+
 .slider-group__inputs {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 34px;
   border-radius: 4px;
   position: relative;
+
   &::after {
     content: "";
     position: absolute;
@@ -24,15 +27,18 @@
     transform: translate(-50%, -50%);
     padding: 4px 0;
     z-index: 5;
+
     @media (min-width: $width-tablet+px) and (max-width: $width-desktop+px) {
       width: 21px;
       height: 15px;
     }
   }
+
   @media (min-width: $width-tablet+px) {
     height: 46px;
   }
 }
+
 .slider-group__input {
   border: 1px solid #cbced9;
   height: 100%;
@@ -45,24 +51,29 @@
   text-align: center;
   -moz-appearance: textfield;
   position: relative;
+
   @media (min-width: $width-tablet+px) {
     font-size: 20px;
     line-height: 20px;
   }
+
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;
   }
+
   &:hover {
     border-color: #959bb2;
     z-index: 4;
   }
+
   &:active,
   &:focus,
   &:focus-within {
     border-color: #000000;
     z-index: 4;
   }
+
   &:focus,
   &:focus-within {
     outline: none;
@@ -74,6 +85,7 @@
   border-bottom-left-radius: 4px;
   margin-right: -1px;
   color: rgba($color: #1d2e5b, $alpha: 0.1);
+
   @media (min-width: $width-tablet+px) {
     color: inherit;
   }
@@ -96,6 +108,7 @@
     height: 3px;
   }
 }
+
 .slider-group__range-active {
   display: block;
   position: absolute;
@@ -105,6 +118,7 @@
   height: 100%;
   background: #1d2e5b;
 }
+
 .slider-group__dot {
   cursor: pointer;
   content: "";
@@ -116,20 +130,22 @@
   height: 10px;
   border-radius: 50%;
   background: inherit;
+
   @media (min-width: $width-tablet+px) {
     width: 13px;
     height: 13px;
+
     &:hover {
       width: 19px;
       height: 19px;
     }
+
     &:active {
-      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.24);
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.24);
     }
   }
 }
-.slider-group__dot--end {
-}
+
 .slider-group__dot--start {
   right: 100%;
   transform: translate(50%, -50%);

@@ -10,6 +10,7 @@
   text-transform: uppercase;
   color: #1d2e5b;
   min-height: 40px;
+
   @media (min-width: $width-tablet+px) {
     padding: 0 33px;
     font-size: 24px;
@@ -19,9 +20,11 @@
     text-transform: none;
     justify-content: space-between;
   }
+
   @media (min-width: $width-desktop+px) {
     width: 286px;
   }
+
   &::after {
     @media (min-width: $width-tablet+px) {
       content: "";
@@ -32,13 +35,16 @@
       border-left: 13px solid #1d2e5b;
     }
   }
+
   &:hover,
   &:focus,
   &:focus-within {
     background-color: #ffbd30;
   }
+
   &:active {
     color: rgba($color: #1d2e5b, $alpha: 0.3);
+
     &::after {
       border-left-color: rgba($color: #1d2e5b, $alpha: 0.3);
     }

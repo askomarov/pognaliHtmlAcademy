@@ -37,7 +37,7 @@
     height: 52px;
     margin-right: 145px;
 
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       top: 50%;
@@ -97,11 +97,13 @@
     justify-content: center;
     align-items: center;
     min-width: 188px;
+
     &:hover,
     &:focus,
     &:focus-within {
       background-color: #ffbd30;
     }
+
     &:active {
       background-color: #ffbd30;
       color: rgba($color: #161c35, $alpha: 0.3);

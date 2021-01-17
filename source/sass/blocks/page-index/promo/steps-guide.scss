@@ -7,11 +7,13 @@
   border-radius: 10px;
   overflow: hidden;
   background: #ff8d30;
+
   @media (min-width: $width-tablet+px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     border-radius: 20px;
   }
+
   @media (min-width: $width-desktop+px) {
     grid-template-columns: 315px 345px 345px 315px;
   }
@@ -26,6 +28,7 @@
   position: relative;
   z-index: 2;
   --border-radius: 20px;
+
   @media (max-width: $width-tablet+px) {
     &::before {
       content: "";
@@ -56,14 +59,14 @@
       justify-self: end;
     }
   }
-  &:first-child {
-  }
+
   &:nth-child(2) {
     background: $color_2_promo;
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
+
     @media (min-width: $width-desktop+px) {
-      &:before {
+      &::before {
         content: "";
         position: absolute;
         width: 40px;
@@ -75,14 +78,17 @@
       }
     }
   }
+
   &:nth-child(3) {
     background: $color_3_promo;
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
+
     @media (min-width: $width-tablet+px) {
       border-top-right-radius: 0;
       border-top-left-radius: 0;
-      &:before {
+
+      &::before {
         content: "";
         position: absolute;
         z-index: -1;
@@ -93,9 +99,11 @@
         background: inherit;
       }
     }
+
     @media (min-width: $width-desktop+px) {
       border-top-left-radius: var(--border-radius);
-      &:before {
+
+      &::before {
         width: 40px;
         height: 100%;
         right: -20px;
@@ -103,15 +111,18 @@
       }
     }
   }
+
   &:nth-child(4) {
     background: $color_4_promo;
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
+
     @media (min-width: $width-tablet+px) {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
       border-bottom-left-radius: var(--border-radius);
     }
+
     @media (min-width: $width-desktop+px) {
       border-top-left-radius: var(--border-radius);
     }
@@ -121,6 +132,7 @@
     row-gap: 9px;
     padding: 31px 21px 22px 33px;
   }
+
   @media (min-width: $width-desktop+px) {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -134,6 +146,7 @@
   flex: 0 1 65%;
   position: relative;
   z-index: 2;
+
   @media (min-width: $width-tablet+px) {
     font-size: 24px;
     line-height: 24px;

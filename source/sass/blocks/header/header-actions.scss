@@ -15,16 +15,17 @@
   justify-content: flex-start;
   align-items: center;
   border-radius: 25px;
-  background: #ffd74b;
   height: 45px;
   font-size: 16px;
   line-height: 45px;
   background: transparent;
+
   @media (min-width: $width-tablet+px) {
     height: 68px;
     font-size: 28px;
     line-height: 28px;
   }
+
   @media (min-width: $width-desktop+px) {
     height: 50px;
   }
@@ -41,13 +42,16 @@
   align-items: center;
   grid-template-columns: min-content 1fr;
   gap: 16px;
+
   @media (min-width: $width-tablet+px) {
     gap: 23px;
+
     svg {
       width: 68px;
       height: 68px;
     }
   }
+
   @media (min-width: $width-desktop+px) {
     display: flex;
     justify-content: center;
@@ -57,26 +61,24 @@
     width: 50px;
     height: 50px;
     gap: 0;
+
     svg {
       width: 36px;
       height: 36px;
     }
   }
+
   &:active {
     svg {
       opacity: 0.3;
     }
   }
 }
-.header-actions__link--tel {
-}
-.header-actions__link--mail {
-  &:active {
-  }
-}
+
 @media (min-width: $width-desktop+px) {
   .header-actions__link--tel {
     background-color: #ff8d30;
+
     &:hover,
     &:focus,
     &:focus-within {
@@ -84,8 +86,10 @@
       background-color: #f26926;
     }
   }
+
   .header-actions__link--mail {
     background-color: #ffbd30;
+
     &:hover,
     &:focus,
     &:focus-within {
@@ -97,10 +101,12 @@
 .icon-light {
   display: none;
 }
+
 @media (min-width: $width-desktop+px) {
   .icon-dark {
     display: none;
   }
+
   .icon-light {
     display: block;
   }

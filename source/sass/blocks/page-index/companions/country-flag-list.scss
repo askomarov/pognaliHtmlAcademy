@@ -11,6 +11,7 @@
   width: 35px;
   height: 25px;
   position: relative;
+
   &:hover {
     & > .country-flag-list__item-tooltip {
       opacity: 1;
@@ -19,6 +20,7 @@
     }
   }
 }
+
 .country-flag-list__item-tooltip {
   transition: all 0.3s ease 0s;
   opacity: 0;

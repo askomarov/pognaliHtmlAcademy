@@ -1,17 +1,17 @@
-.contact {
-}
-
 .contact__text-wrapper {
   padding-top: 31px;
   padding-bottom: 35px;
   background: #ffd74b;
   border-bottom-left-radius: var(--main-border-radius);
   border-bottom-right-radius: var(--main-border-radius);
+
   @include sectionRadiusBackground;
+
   @media (min-width: $width-tablet+px) {
     padding-top: 48px;
     padding-bottom: 84px;
   }
+
   @media (min-width: $width-desktop+px) {
     padding-top: 55px;
     padding-bottom: 58px;
@@ -21,6 +21,7 @@
 .contact__map-wrapper {
   background: gray;
   margin-top: -30px;
+
   @media (min-width: $width-tablet+px) {
     margin-top: -60px;
   }

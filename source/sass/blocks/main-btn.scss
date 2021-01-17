@@ -10,12 +10,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 23px;
+
   @media (min-width: $width-tablet+px) {
     height: 80px;
     padding: 0 33px;
     border-radius: 20px;
   }
-  &:after {
+
+  &::after {
     content: "";
     vertical-align: middle;
     display: inline-block;

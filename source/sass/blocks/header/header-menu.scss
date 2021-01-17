@@ -2,8 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (min-width: $width-tablet+px) {
-  }
 }
 
 .header-menu__toggle {
@@ -30,7 +28,7 @@
     background: #ffffff;
   }
 
-  &:before {
+  &::before {
     content: "";
     top: 0;
     bottom: initial;

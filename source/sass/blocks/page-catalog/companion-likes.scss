@@ -1,6 +1,4 @@
 .companion-likes {
-  &:hover {
-  }
   &:active {
     .companion-likes__value {
       &::before {
@@ -11,7 +9,6 @@
 }
 
 .companion-likes__value {
-  color: #161c35;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -23,6 +20,7 @@
   position: relative;
   vertical-align: middle;
   min-width: 100%;
+
   &::before {
     content: "";
     display: block;
@@ -39,9 +37,11 @@
     background-position: center center;
     background-size: 30px 30px;
   }
+
   @media (min-width: $width-tablet+px) {
     font-size: 20px;
     line-height: 20px;
+
     &::before {
       width: 50px;
       height: 50px;
@@ -50,6 +50,7 @@
     }
   }
 }
+
 .companion-likes--active {
   .companion-likes__value {
     &::before {
@@ -59,12 +60,14 @@
       background-position: center center;
       background-size: 30px 30px;
     }
+
     @media (min-width: $width-tablet+px) {
       &::before {
         background-size: 50px 50px;
       }
     }
   }
+
   &:hover {
     .companion-likes__value {
       &::before {
@@ -72,6 +75,7 @@
       }
     }
   }
+
   &:active {
     .companion-likes__value {
       &::before {

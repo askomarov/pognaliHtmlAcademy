@@ -13,6 +13,7 @@
 
   &:hover {
     border-color: #959bb2;
+
     .input-body__btn::after,
     .input-body__btn::before {
       background-color: #959bb2;
@@ -70,9 +71,6 @@
       background-color: #e5e5e5;
     }
   }
-}
-
-.input-body__btn--minus {
 }
 
 .input-body__btn--plus {

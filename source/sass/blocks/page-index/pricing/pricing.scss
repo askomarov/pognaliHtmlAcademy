@@ -5,6 +5,7 @@
   padding-bottom: 38px;
   border-bottom-left-radius: var(--main-border-radius);
   border-bottom-right-radius: var(--main-border-radius);
+
   @include sectionRadiusBackground;
 
   @media (min-width: $width-tablet+px) {
@@ -12,6 +13,7 @@
     padding-top: 74px;
     padding-bottom: 45px;
   }
+
   @media (min-width: $width-desktop+px) {
     padding-top: 107px;
     padding-bottom: 165px;
@@ -24,14 +26,17 @@
   row-gap: 31px;
   align-items: center;
   padding-left: 49px;
+
   @media (min-width: $width-tablet+px) {
     row-gap: 0;
     grid-template-columns: 2fr 1fr;
     padding-left: 40px;
   }
+
   @media (min-width: $width-desktop+px) {
     grid-template-rows: min-content 1fr min-content;
   }
+
   @media (min-width: $width-desktop+px) {
     padding-left: 70px;
     padding-right: 70px;
@@ -47,6 +52,7 @@
     margin-bottom: 73px;
     grid-row: 1/2;
   }
+
   @media (min-width: $width-desktop+px) {
     margin-bottom: 131px;
   }
@@ -86,7 +92,6 @@
       content: "";
       width: 198px;
       height: 285px;
-      background: black;
       bottom: 74px;
       left: -53px;
       position: absolute;
@@ -110,9 +115,11 @@
   grid-column: span 2;
   position: relative;
   z-index: 1;
+
   @media (min-width: $width-tablet+px) {
     margin-bottom: 30px;
   }
+
   @media (min-width: $width-desktop+px) {
     grid-column: initial;
     margin-bottom: 0;
@@ -150,6 +157,7 @@
     grid-row: 1/3;
     grid-column: 2/3;
     align-self: flex-start;
+
     @media (min-width: $width-tablet+px) {
       width: 68px;
       height: 68px;
@@ -172,6 +180,20 @@
     font-size: 28px;
     line-height: 28px;
   }
+
+  @media (min-width: $width-tablet+px) {
+    .pricing__item-name,
+    .pricing__item-price {
+      border-top: 1px solid #e1e3e9;
+    }
+
+    &:last-child {
+      .pricing__item-name,
+      .pricing__item-price {
+        border-bottom: 1px solid #e1e3e9;
+      }
+    }
+  }
 }
 
 .pricing__item-name {
@@ -189,6 +211,7 @@
 .pricing__item-price {
   margin-bottom: 13px;
   border-bottom: 1px solid #e1e3e9;
+
   @media (min-width: $width-tablet+px) {
     border: 0;
     margin-bottom: 0;
@@ -212,27 +235,14 @@
     grid-row: -1/-2;
     margin-top: 32px;
   }
+
   &:hover,
   &:focus,
   &:focus-within {
     opacity: 0.7;
   }
+
   &:active {
     opacity: 0.3;
-  }
-}
-
-.pricing__item {
-  @media (min-width: $width-tablet+px) {
-    .pricing__item-name,
-    .pricing__item-price {
-      border-top: 1px solid #e1e3e9;
-    }
-    &:last-child {
-      .pricing__item-name,
-      .pricing__item-price {
-        border-bottom: 1px solid #e1e3e9;
-      }
-    }
   }
 }

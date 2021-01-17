@@ -4,10 +4,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  svg {
-    // width: auto;
-    // height: 100%;
-  }
+
   @media (min-width: $width-tablet+px) {
     height: 25px;
   }
@@ -16,6 +13,7 @@
 .travelmode-list__item {
   fill: rgba($color: #1d2e5b, $alpha: 0.15);
   position: relative;
+
   &:hover {
     & > .travelmode-list__item-tooltip {
       opacity: 1;
@@ -24,18 +22,20 @@
     }
   }
 }
+
 .travelmode-list__item-tooltip {
   transition: all 0.3s ease 0s;
   opacity: 0;
   visibility: hidden;
   position: absolute;
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   height: 0;
   margin-top: -2px;
   padding-top: 15px;
-  // height: 72px;
 }
+
 .travelmode-list__item--active {
   fill: #101d41;
 }
@@ -79,22 +79,27 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+
     &:hover,
     &:focus,
     &:focus-within {
-      filter: drop-shadow(0px 2px 6px rgba(22, 28, 53, 0.17));
+      filter: drop-shadow(0 2px 6px rgba(22, 28, 53, 0.17));
       fill: #616d8c;
+
       &:not(.travelmode-list__item--active) {
         fill: #b2b2b2;
       }
     }
+
     &:active {
       filter: none;
       background-color: #e2e5f1;
       fill: #a7aec4;
+
       &:not(.travelmode-list__item--active) {
         fill: #ced3e2;
       }
+
       .travelmode-list__btn {
         background-color: inherit;
       }
@@ -120,11 +125,13 @@
       width: 44px;
       height: 44px;
     }
+
     .travelmode-list__btn {
       display: flex;
       align-items: center;
       justify-content: center;
     }
+
     .travelmode-list__icon {
       width: 32px;
       height: 22px;
@@ -135,17 +142,21 @@
 .travelmode-list__checkbox:checked {
   & + .travelmode-list__btn {
     fill: #1d2e5b;
+
     &:hover {
       fill: #616d8c;
     }
   }
 }
+
 .travelmode-list__checkbox:not(:checked) {
   & + .travelmode-list__btn {
     fill: #d9d9d9;
+
     &:hover {
       fill: #b2b2b2;
     }
+
     &:active {
       fill: #ced3e2;
     }

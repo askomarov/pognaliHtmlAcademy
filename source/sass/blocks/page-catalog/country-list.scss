@@ -14,8 +14,8 @@
     column-gap: 0;
     background: transparent;
     margin-bottom: 78px;
-    margin-left: 49px;
-    margin-right: 350px;
+    margin-left: 0;
+    margin-right: 280px;
   }
 
   @media (min-width: $width-desktop+px) {
@@ -110,7 +110,7 @@
     top: 0;
     left: 100%;
     right: initial;
-    transform: translateX(100px);
+    transform: translateX(92px);
   }
 
   @media (min-width: $width-desktop+px) {
@@ -131,9 +131,17 @@
   @media (min-width: $width-tablet+px) {
     line-height: 30px;
     font-size: 20px;
-
-    &:hover {
-      color: #1d2e5b;
+  }
+  a {
+    color: #444444;
+    width: 100%;
+    @media (min-width: $width-tablet+px) {
+      &:hover {
+        color: #1d2e5b;
+      }
+    }
+    &:active {
+      color: rgba($color: #1d2e5b, $alpha: 0.3);
     }
   }
 }

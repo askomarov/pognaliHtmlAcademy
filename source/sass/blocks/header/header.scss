@@ -117,3 +117,42 @@
     background: #182044;
   }
 }
+
+.header--no-js {
+  @media (max-width: $width-desktop+px) {
+  padding: 0;
+    .header-menu__wrapper {
+      display: grid;
+      position: relative;
+      padding-bottom: 41px;
+      @media (min-width: $width-tablet+px) {
+        padding-bottom: 91px;
+      }
+    }
+    .header-menu__toggle {
+      display: none;
+    }
+    .header__body {
+      position: relative;
+      display: grid;
+      justify-content: stretch;
+      padding: 0;
+    }
+    .header__menu {
+      order: -1;
+      width: 100%;
+    }
+    .header__logo {
+      position: absolute;
+      top: 27px;
+      left: 25px;
+      @media (min-width: $width-tablet+px) {
+        top: 45px;
+        left: 40px;
+      }
+    }
+    .header__authr-btn-doble {
+      display: none;
+    }
+  }
+}

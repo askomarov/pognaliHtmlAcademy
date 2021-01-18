@@ -171,3 +171,16 @@
 .filter__pagination {
   grid-area: pagination;
 }
+
+.filter--no-js {
+  .filter-country__list-wrapper {
+    display: block;
+    position: relative;
+  }
+  .filter-country__btn{
+    display: none;
+  }
+  .filter-country__btn-close-countrylist{
+    display: none;
+  }
+}

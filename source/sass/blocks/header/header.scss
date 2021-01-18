@@ -1,12 +1,15 @@
 .header {
-  background: #161c36;
+  background-color: #161c34;
   padding-top: 28px;
   padding-bottom: 28px;
-  background: tomato;
+
   @media (min-width: $width-tablet+px) {
     padding-top: 40px;
+    background-color: #182044;
   }
+
   @media (min-width: $width-desktop+px) {
+    background-color: #161c34;
     padding-top: 46px;
     padding-bottom: 62px;
   }
@@ -19,20 +22,22 @@
 }
 
 .header__logo {
-  background: black;
-  width: 100px;
+  width: 96px;
   height: 15px;
   position: relative;
   z-index: 20;
+
   @media (min-width: $width-tablet+px) {
-    width: 164px;
+    width: 166px;
     height: 42px;
   }
+
   @media (min-width: $width-desktop+px) {
     width: 200px;
     height: 52px;
     margin-right: 145px;
-    &:after {
+
+    &::after {
       content: "";
       position: absolute;
       top: 50%;
@@ -42,21 +47,42 @@
       background: #ffffff;
     }
   }
+
+  .header__logo-img--blue {
+    display: none;
+  }
+}
+
+.header__logo--blue {
+  .header__logo-img--blue {
+    display: block;
+  }
+
+  .header__logo-img--white {
+    display: none;
+  }
+}
+
+.header__logo-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .header__menu {
-  background: blue;
   min-height: 20px;
   min-width: 20px;
+
   @media (min-width: $width-tablet+px) {
     flex: 1 0 auto;
-  }
-  @media (min-width: $width-desktop+px) {
   }
 }
 
 .header__authr-btn-doble {
   display: none;
+
   @media (min-width: $width-tablet+px) {
     color: #161c35;
     text-decoration: none;
@@ -71,5 +97,23 @@
     justify-content: center;
     align-items: center;
     min-width: 188px;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      background-color: #ffbd30;
+    }
+
+    &:active {
+      background-color: #ffbd30;
+      color: rgba($color: #161c35, $alpha: 0.3);
+    }
+  }
+}
+
+.page-form,
+.page-catalog {
+  .header {
+    background: #182044;
   }
 }

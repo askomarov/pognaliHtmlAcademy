@@ -2,7 +2,6 @@
   border-radius: 20px;
   padding: 15px 20px 20px;
   background: #ffffff;
-  overflow: hidden;
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 66px;
@@ -12,10 +11,9 @@
     "wish wish wish"
     "travelmode travelmode level"
     "btn btn btn";
+
   @media (min-width: $width-tablet+px) {
     grid-template-columns: 190px 150px 1fr 60px;
-
-    // grid-template-rows: min-content 1fr 60px min-content;
     grid-template-areas:
       "avatar name name travelmode"
       "avatar tags tags travelmode"
@@ -24,8 +22,9 @@
     padding: 35px 25px 15px 35px;
     column-gap: 29px;
   }
+
   @media (min-width: $width-desktop+px) {
-    grid-template-columns: 285px 150px 1fr 1fr 60px;
+    grid-template-columns: 285px 150px 1fr 2fr 60px;
     grid-template-rows: 46px min-content 1fr min-content 42px;
     grid-template-areas:
       "avatar . . . ."
@@ -37,40 +36,59 @@
     padding-right: 43px;
     column-gap: 52px;
   }
+
+  &:hover {
+    filter: drop-shadow(0 4px 9px rgba(0, 0, 0, 0.16));
+
+    .card-companion__avatar img {
+      transform: scale(1.1);
+    }
+  }
 }
+
 .card-companion__wrapper--wish {
   grid-area: wish;
+
   @media (min-width: $width-tablet+px) {
     padding-top: 22px;
   }
+
   @media (min-width: $width-desktop+px) {
     padding: 0;
+
     .card-companion__title {
       display: none;
     }
   }
 }
+
 .card-companion__wrapper--travelmode {
   grid-area: travelmode;
+
   @media (min-width: $width-tablet+px) {
     .card-companion__title {
       display: none;
     }
   }
+
   @media (min-width: $width-desktop+px) {
     display: grid;
     align-items: center;
   }
 }
+
 .card-companion__wrapper--level {
   width: 100%;
   grid-area: level;
   text-align: center;
+
   .card-companion__title {
     margin-left: 15px;
   }
+
   @media (min-width: $width-tablet+px) {
     align-self: center;
+
     .card-companion__title {
       display: none;
     }
@@ -81,16 +99,27 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: tomato;
   overflow: hidden;
   margin-bottom: 13px;
   grid-area: avatar;
+  position: relative;
+
+  img {
+    transition: transform 0.5s ease 0s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   @media (min-width: $width-tablet+px) {
     margin: 0;
     width: 190px;
     height: 190px;
     border-radius: 20px;
   }
+
   @media (min-width: $width-desktop+px) {
     width: 285px;
     height: 285px;
@@ -98,6 +127,7 @@
     border-bottom-right-radius: 0;
   }
 }
+
 .card-companion__title {
   display: inline-block;
   font-weight: normal;
@@ -106,6 +136,7 @@
   color: #444444;
   position: relative;
   background: #ffffff;
+
   span {
     position: relative;
     z-index: 2;
@@ -114,6 +145,7 @@
     padding-right: 10px;
     background: #ffffff;
   }
+
   &::after,
   &::before {
     content: "";
@@ -125,15 +157,14 @@
     background: #edeff6;
     z-index: 1;
   }
+
   &::before {
     content: "";
     left: 100%;
     width: 1000%;
   }
-  @media (min-width: $width-tablet+px) {
-    // display: none;
-  }
 }
+
 .card-companion__name {
   grid-area: name;
   font-weight: bold;
@@ -141,9 +172,10 @@
   line-height: 20px;
   color: #1d2e5b;
   position: relative;
+
   &::after {
     position: absolute;
-    right: 0px;
+    right: 0;
     top: 8px;
     content: "";
     width: 6px;
@@ -151,9 +183,11 @@
     border-radius: 50%;
     background: #f97676;
   }
+
   @media (min-width: $width-tablet+px) {
     font-size: 30px;
     line-height: 30px;
+
     &::after {
       top: initial;
       display: inline-block;
@@ -165,10 +199,12 @@
       background: #f97676;
       margin-left: 22px;
     }
+
     br {
       display: none;
     }
   }
+
   @media (min-width: $width-desktop+px) {
     &::after {
       position: absolute;
@@ -178,9 +214,18 @@
       margin: 0;
     }
   }
+
+  &:hover {
+    color: rgba($color: #1d2e5b, $alpha: 0.6);
+  }
+
+  &:active {
+    color: rgba($color: #1d2e5b, $alpha: 0.3);
+  }
 }
+
 .card-companion__name--online {
-  &:after {
+  &::after {
     background: #81e31e;
   }
 }
@@ -189,25 +234,28 @@
   grid-area: tags;
   max-width: 181px;
   margin-bottom: 16px;
+
   @media (min-width: $width-tablet+px) {
     margin-bottom: 0;
     max-width: 220px;
+
     .tags-list__item-text {
       color: #000000;
     }
   }
+
   @media (min-width: $width-desktop+px) {
     padding-top: 20px;
   }
 }
-.card-companion__wish {
-}
+
 .card-companion__wish-list {
   padding-top: 19px;
   padding-bottom: 15px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
+
   @media (min-width: $width-tablet+px) {
     padding-top: 18px;
     padding-bottom: 0;
@@ -216,21 +264,25 @@
     gap: 0;
     width: 100%;
   }
+
   @media (min-width: $width-desktop+px) {
     display: grid;
     grid-template-columns: 1fr;
     gap: 12px;
     padding: 0;
   }
+
   .wish-list__country {
     display: grid;
     grid-template-columns: min-content 1fr;
     gap: 14px;
     align-items: center;
+
     @media (min-width: $width-tablet+px) {
       margin-right: 25px;
       margin-bottom: 10px;
     }
+
     @media (min-width: $width-desktop+px) {
       gap: 18px;
       margin: 0;
@@ -242,6 +294,7 @@
   position: absolute;
   top: 54px;
   left: 67px;
+
   @media (min-width: $width-tablet+px) {
     position: relative;
     top: initial;
@@ -250,6 +303,7 @@
     align-self: end;
     margin-left: -28px;
   }
+
   @media (min-width: $width-desktop+px) {
     align-self: center;
     margin-left: -54px;
@@ -258,45 +312,53 @@
 
 .card-companion__level-wrapper {
   margin: 9px auto 0;
+
   @media (min-width: $width-tablet+px) {
     margin-top: 0;
     margin-bottom: -10px;
   }
+
   @media (min-width: $width-desktop+px) {
     margin: 0;
   }
+
   &.level-wrapper {
     width: 45px;
     height: 45px;
+
     @media (min-width: $width-tablet+px) {
       width: 60px;
       height: 60px;
     }
   }
+
   .svg-circle {
     fill: none;
     stroke-width: 22px;
     r: 100;
     --circle-radius: 100;
   }
+
   .level-wrapper__svg-prorgess-bar {
     background: transparent;
   }
 
   .level-wrapper__level-value {
     color: #1d2e5b;
+
     &::after {
       width: 0;
 
       @media (min-width: $width-tablet+px) {
         width: 100%;
-        background: rgba($color: #000, $alpha: 0.1);
+        background: rgba($color: #000000, $alpha: 0.1);
       }
     }
   }
 
   .level-wrapper__text {
     display: none;
+
     @media (min-width: $width-tablet+px) {
       display: block;
       color: rgba($color: #000000, $alpha: 0.4);
@@ -319,6 +381,7 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 17px;
+
   @media (min-width: $width-tablet+px) {
     min-height: 50px;
     font-size: 20px;
@@ -328,8 +391,18 @@
     height: 50px;
     align-self: end;
   }
+
   @media (min-width: $width-desktop+px) {
     align-self: center;
+  }
+
+  &:hover {
+    background: #ffbd30;
+  }
+
+  &:active {
+    background: #ffbd30;
+    color: rgba($color: #161c35, $alpha: 0.3);
   }
 }
 
@@ -337,6 +410,7 @@
   margin-top: 17px;
   height: auto;
   gap: 1px;
+
   @media (min-width: $width-tablet+px) {
     margin: 0;
     display: grid;
@@ -344,6 +418,7 @@
     justify-items: center;
     gap: 4px;
   }
+
   @media (min-width: $width-desktop+px) {
     display: flex;
     flex-direction: row;
@@ -355,10 +430,55 @@
     height: 32px;
     border-radius: 50%;
     background: #edeff6;
+    display: grid;
+    place-items: center;
+
     @media (min-width: $width-tablet+px) {
       width: 26px;
       height: 26px;
       border-radius: 0;
+      background: transparent;
+    }
+  }
+
+  .travelmode-list__icon {
+    @media (min-width: $width-tablet+px) {
+      &--plane {
+        width: 19px;
+        height: 20px;
+      }
+
+      &--bus {
+        width: 19px;
+        height: 20px;
+      }
+
+      &--bike {
+        width: 20px;
+        height: 24px;
+      }
+
+      &--run {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  @media (min-width: $width-desktop+px) {
+    &--bus {
+      width: 18px;
+      height: 20px;
+    }
+
+    &--bike {
+      width: 22px;
+      height: 19px;
+    }
+
+    &--run {
+      width: 17px;
+      height: 19px;
     }
   }
 }

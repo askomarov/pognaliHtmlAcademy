@@ -1,23 +1,30 @@
 .filter {
   background: #edeff6;
   position: relative;
+
   @include sectionRadiusBackground;
 }
+
 .filter__container {
   background: #edeff6;
   margin-bottom: 21px;
+
   @media (min-width: $width-tablet+px) {
     margin-bottom: 43px;
   }
+
   @media (min-width: $width-desktop+px) {
     max-width: 100%;
   }
 }
+
 .fliter__content {
   padding-bottom: 76px;
+
   @media (min-width: $width-tablet+px) {
     padding-bottom: 122px;
   }
+
   @media (min-width: $width-desktop+px) {
     padding-bottom: 135px;
     display: grid;
@@ -29,29 +36,37 @@
       "pagination settings";
   }
 }
+
 .filter__country {
   margin: 0 -25px;
   padding: 0 25px;
   position: relative;
+
   @include sectionRadiusBackground;
+
   @media (min-width: $width-tablet+px) {
     margin: 0 -40px;
   }
+
   @media (min-width: $width-desktop+px) {
     margin: 0 0 60px;
   }
 }
+
 .filter__sets {
   grid-area: settings;
   align-self: start;
   margin-bottom: 28px;
+
   @media (min-width: $width-tablet+px) {
     margin-bottom: 40px;
   }
+
   @media (min-width: $width-desktop+px) {
     margin-top: 0;
   }
 }
+
 .filter__btn-submit {
   display: flex;
   align-items: center;
@@ -65,19 +80,33 @@
   line-height: 17px;
   text-transform: uppercase;
   color: #161c35;
+
   @media (min-width: $width-tablet+px) {
     min-height: 50px;
     font-size: 20px;
     line-height: 20px;
+
+    &:hover,
+    &:focus-within,
+    &:focus {
+      filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.14));
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
+
 .filter__companions {
   grid-area: companions;
   margin-bottom: 20px;
+
   @media (min-width: $width-tablet+px) {
     margin-bottom: 46px;
   }
 }
+
 .filter__companions-show-more {
   grid-area: show-more;
   display: flex;
@@ -94,6 +123,7 @@
   min-height: 40px;
   position: relative;
   margin-bottom: 26px;
+
   &::after,
   &::before {
     content: "";
@@ -115,13 +145,29 @@
     font-size: 20px;
     line-height: 20px;
     min-height: 50px;
+
     &::after,
     &::before {
       width: 26px;
       left: -51px;
     }
+
+    &:hover {
+      &::after,
+      &::before {
+        background: rgba($color: #1d2e5b, $alpha: 0.6);
+      }
+    }
+  }
+
+  &:active {
+    &::after,
+    &::before {
+      background: rgba($color: #1d2e5b, $alpha: 0.3);
+    }
   }
 }
+
 .filter__pagination {
   grid-area: pagination;
 }

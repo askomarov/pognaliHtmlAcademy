@@ -4,41 +4,45 @@
   background: #e2e5f2;
   border-bottom-left-radius: var(--main-border-radius);
   border-bottom-right-radius: var(--main-border-radius);
+
   @media (min-width: $width-tablet+px) {
     padding-top: 63px;
     padding-bottom: 59px;
   }
+
   @media (min-width: $width-desktop+px) {
     padding-top: 58px;
     padding-bottom: 60px;
     padding-left: 0;
     padding-right: 0;
   }
+
   &--open {
     .filter-country__continents {
       display: flex;
     }
-    .filter-country__list {
-    }
+
     .filter-country__list-wrapper {
       display: block;
       position: absolute;
       z-index: 10;
       background: inherit;
       width: 100%;
-      padding: 0;
       margin: 0;
       left: 0;
       padding: 21px 50px 28px 50px;
       border-bottom-left-radius: var(--main-border-radius);
       border-bottom-right-radius: var(--main-border-radius);
+
       @media (min-width: $width-tablet+px) {
         padding: 63px 60px 79px;
       }
+
       @media (min-width: $width-desktop+px) {
         min-width: 100%;
       }
     }
+
     @media (min-width: $width-desktop+px) {
       top: 0;
     }
@@ -52,12 +56,14 @@
     "heading btn-filter"
     "continents continents";
   align-items: center;
+
   @media (min-width: $width-tablet+px) {
     grid-template-areas: "continents btn-filter";
     grid-template-columns: 1fr 185px;
     padding-left: 50px;
     padding-right: 50px;
   }
+
   @media (min-width: $width-desktop+px) {
     grid-template-areas: "heading continents btn-filter";
     grid-template-columns: auto 1fr min-content;
@@ -67,8 +73,7 @@
     gap: 30px;
   }
 }
-.filter-country__header--showsubmenu {
-}
+
 .filter-country__heading {
   grid-area: heading;
   padding-left: 27px;
@@ -78,15 +83,21 @@
   text-transform: uppercase;
   color: #192144;
   position: relative;
+  background-image: url("../img/filter.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 15px 10px;
+
   @media (min-width: $width-tablet+px) {
     display: none;
   }
+
   @media (min-width: $width-desktop+px) {
     display: block;
     font-size: 20px;
     line-height: 20px;
     padding-left: 45px;
-    margin-left: -25px;
+    background-size: 23px 15px;
   }
 }
 
@@ -97,6 +108,7 @@
   display: none;
   flex-direction: column;
   gap: 6px;
+
   @media (min-width: $width-tablet+px) {
     display: flex;
     flex-direction: row;
@@ -107,15 +119,25 @@
 }
 
 .filter-country__continent {
+  cursor: pointer;
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: rgba($color: #192144, $alpha: 0.3);
   padding-left: 0;
+
   @media (min-width: $width-tablet+px) {
     font-size: 20px;
     line-height: 20px;
+
+    &:hover {
+      color: rgba($color: #192144, $alpha: 0.6);
+    }
+  }
+
+  &:active {
+    color: #192144;
   }
 }
 
@@ -125,6 +147,7 @@
 
 .filter-country__btn {
   grid-area: btn-filter;
+
   @media (min-width: $width-desktop+px) {
     margin-right: 10px;
   }
@@ -135,8 +158,7 @@
   padding-bottom: 11px;
   margin-top: 21px;
   padding-left: 25px;
-  @media (min-width: $width-tablet+px) {
-  }
+
   @media (min-width: $width-desktop+px) {
     margin: 0 auto;
     padding: 0;
@@ -146,8 +168,6 @@
   }
 }
 
-.filter-country__list {
-}
 .filter-country__btn-close-countrylist {
   background: #d6daed;
   border-radius: 20px;
@@ -164,22 +184,38 @@
   min-width: 270px;
   width: 100%;
   margin-left: -25px;
+
   @media (min-width: $width-tablet+px) {
     min-height: 100px;
     max-width: 615px;
     margin: 0 auto;
     line-height: 26px;
+
+    &:hover {
+      background: #c8cee8;
+    }
   }
+
   @media (min-width: $width-desktop+px) {
     max-width: 100%;
+  }
+
+  &:active {
+    background: #c8cee8;
+
+    .btn-decor-cross {
+      opacity: 0.3;
+    }
   }
 
   .btn-decor-cross {
     position: relative;
     padding-left: 25px;
+
     @media (min-width: $width-tablet+px) {
       padding-left: 40px;
     }
+
     &::after,
     &::before {
       content: "";
@@ -192,14 +228,17 @@
       top: 50%;
       right: initial;
       transition: all 0.5s ease 0s;
+
       @media (min-width: $width-tablet+px) {
         width: 22px;
         left: 8px;
       }
     }
+
     &::after {
       transform: translate(-50%, -50%) rotate(45deg);
     }
+
     &::before {
       transform: translate(-50%, -50%) rotate(-45deg);
     }

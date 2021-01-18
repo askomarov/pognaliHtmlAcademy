@@ -1,6 +1,47 @@
 .directions-list {
+  @media (min-width: $width-tablet+px) {
+    position: relative;
+    z-index: 1;
 
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 140px;
+      height: 140px;
+      background: #e2e5f2;
+      border-radius: 20px;
+      top: -48px;
+      left: -36px;
+
+      @media (min-width: $width-desktop+px) {
+        top: -70px;
+        left: -70px;
+      }
+    }
+  }
 }
 
 .directions-list__item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+
+    @media (min-width: $width-desktop+px) {
+      position: relative;
+      z-index: 1;
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 81px;
+        bottom: 0;
+        left: 0%;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(237, 239, 246, 0.5) 33%, #edeff6 100%);
+      }
+    }
+  }
 }

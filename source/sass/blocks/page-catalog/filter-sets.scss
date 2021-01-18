@@ -2,13 +2,16 @@
   background: #ffd74b;
   border-radius: 20px;
   padding: 20px;
+
   @media (min-width: $width-tablet+px) and (max-width: $width-desktop+px) {
     padding: 36px;
   }
+
   @media (min-width: $width-desktop+px) {
     padding: 46px 42px 48px 49px;
   }
 }
+
 .filter-sets__title {
   font-weight: bold;
   font-size: 22px;
@@ -16,12 +19,14 @@
   letter-spacing: 0.02em;
   color: #1d2e5b;
   margin-bottom: 23px;
+
   @media (min-width: $width-tablet+px) {
     font-size: 30px;
     line-height: 30px;
     margin-bottom: 38px;
   }
 }
+
 .filter-sets__row {
   &:last-of-type {
     padding-bottom: 0;

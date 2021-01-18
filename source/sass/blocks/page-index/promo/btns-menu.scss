@@ -1,0 +1,42 @@
+.btns-menu {
+  display: flex;
+
+  @media (min-width: $width-tablet+px) {
+    display: none;
+  }
+}
+
+.btns-menu__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btns-menu__link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #161c35;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+}
+
+.btns-menu__link--tel {
+  background: #ff8d30;
+}
+
+.btns-menu__link--mail {
+  background: #ffbd30;
+}
+
+.btns-menu__link--auth {
+  background: #ffd74b;
+  border-radius: 25px;
+  width: 190px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 40px;
+  text-align: center;
+}

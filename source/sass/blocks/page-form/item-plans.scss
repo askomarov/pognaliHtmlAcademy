@@ -17,7 +17,8 @@
       "country country number"
       "companions date change-link";
     position: relative;
-    &:after {
+
+    &::after {
       content: "";
       position: absolute;
       bottom: 54px;
@@ -27,18 +28,21 @@
       background: rgba($color: #cbced9, $alpha: 0.3);
     }
   }
+
   @media (min-width: $width-desktop+px) {
     grid-template-columns: min-content 2fr 1fr repeat(2, auto);
     grid-template-areas: "number country companions date change-link";
     align-items: center;
     padding: 40px;
     column-gap: 32px;
-    &:after {
+
+    &::after {
       content: "";
       display: none;
     }
   }
 }
+
 .item-plans__country {
   font-weight: bold;
   font-size: 16px;
@@ -47,21 +51,25 @@
   display: inline-block;
   grid-area: country;
   margin-bottom: 20px;
+
   @media (min-width: $width-tablet+px) {
     font-size: 24px;
     line-height: 24px;
     margin-bottom: 54px;
     grid-column: span 2;
   }
+
   @media (min-width: $width-desktop+px) {
     grid-column: initial;
     margin-bottom: 0;
   }
 }
+
 .item-plans__companions {
   grid-area: companions;
   margin-bottom: 5px;
   letter-spacing: 0.06em;
+
   @media (min-width: $width-tablet+px) {
     margin-bottom: 0;
     font-size: 20px;
@@ -69,19 +77,23 @@
     letter-spacing: 0.1em;
   }
 }
+
 .item-plans__date {
   grid-area: date;
   margin-bottom: 24px;
+
   @media (min-width: $width-tablet+px) {
     margin-bottom: 0;
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.1em;
   }
-  @media (min-width:$width-desktop+px){
+
+  @media (min-width: $width-desktop+px) {
     margin-right: 116px;
   }
 }
+
 .item-plans__change-link {
   grid-area: change-link;
   text-decoration: none;
@@ -91,5 +103,15 @@
     justify-self: end;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    color: rgba($color: #000000, $alpha: 0.6);
+  }
+
+  &:active {
+    color: rgba($color: #000000, $alpha: 0.1);
   }
 }

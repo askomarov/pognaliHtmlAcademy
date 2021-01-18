@@ -1,7 +1,7 @@
 let menuButton = document.querySelector('.header-menu__toggle');
 let mainMenu = document.querySelector('.header-menu__wrapper');
-
-// отнимаем класс у главного на десктопе
+let headerLogo = document.querySelector(".header__logo")
+// отнимаем класс у главного меню на десктопе
 window.addEventListener("resize", function () {
   if (window.innerWidth > 1439.98) {
     mainMenu.classList.remove("header-menu__wrapper--shown");
@@ -20,10 +20,12 @@ function toggleMenu() {
       menuButton.setAttribute("aria-expanded", "false");
       menuButton.setAttribute("aria-label", "открыть меню");
       mainMenu.classList.remove("header-menu__wrapper--shown");
+      headerLogo.classList.remove("header__logo--blue");
     } else {
       mainMenu.classList.add("header-menu__wrapper--shown");
       menuButton.setAttribute("aria-label", "закрыть меню");
       menuButton.setAttribute("aria-expanded", "true");
+      headerLogo.classList.add("header__logo--blue");
     }
   });
 };
@@ -51,30 +53,26 @@ function closePopup(btn, section, classToShow) {
   });
 };
 
-
-
 let pageCatalog = document.querySelector('.page-catalog');
 let btnToggleFilterCountry = document.querySelector('.btn-filter-country');
 let filterCountry = document.querySelector('.filter-country');
 let btnCloseFilterContry = document.querySelector('.filter-country__btn-close-countrylist')
 
-
 function showSettings() {
-  let settingRows = document.querySelectorAll(".sets-row");
-  for (let i = 0; i < settingRows.length; i++) {
-    settingRows[i].onclick = function () {
-      this.classList.toggle("sets-row--active");
+  let settingsGroups = document.querySelectorAll(".sets-row")
+  let btnOpenSetting = document.querySelectorAll(".sets-row__name");
+  for (let j = 0; j < settingsGroups.length; j++) {
+    settingsGroups[0].classList.remove("sets-row--active")
+    settingsGroups[2].classList.remove("sets-row--active")
+  }
+  for (let i = 0; i < btnOpenSetting.length; i++) {
+    btnOpenSetting[i].onclick = function () {
+      settingsGroups[i].classList.toggle("sets-row--active");
     }
-    // settingRows[i].onmouseover = function () {
-    //   this.classList.add("sets-row--active");
-    // }
-    // settingRows[i].onmouseout = function () {
-    //   this.classList.remove("sets-row--active");
-    // }
   }
 };
 
-
+let pageForm = document.querySelector('.page-form');
 
 document.addEventListener('DOMContentLoaded', function () {
   // главное меню
@@ -118,5 +116,51 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     closeFilterContry();
     showSettings();
+  }
+
+  if (pageForm) {
+    // ошибка если пустая textarea
+    let addplanForm = document.querySelector(".addplan__form");
+    let planDesc1 = addplanForm.querySelector("#actions-in-1-country");
+    let planDesc2 = addplanForm.querySelector("#actions-in-2-country");
+
+    planDesc1.addEventListener("focus", function () {
+      if (!planDesc1.value) {
+        planDesc1.classList.remove("action-desc-list__textarea--error");
+      }
+    });
+    planDesc2.addEventListener("focus", function () {
+      if (!planDesc2.value) {
+        planDesc2.classList.remove("action-desc-list__textarea--error");
+      }
+    });
+
+    addplanForm.addEventListener("submit", function (evt) {
+      if (!planDesc1.value) {
+        evt.preventDefault();
+        planDesc1.classList.add("action-desc-list__textarea--error");
+      } else {
+        planDesc1.classList.remove("action-desc-list__textarea--error");
+      }
+      if (!planDesc2.value) {
+        evt.preventDefault();
+        planDesc2.classList.add("action-desc-list__textarea--error");
+      } else {
+        planDesc2.classList.remove("action-desc-list__textarea--error");
+      }
+    });
+
+    // выпадающий список стран
+    let dropdownWrapper = document.querySelector(".choose-country__item--current");
+    let dropdownMenu = dropdownWrapper.querySelector(".choose-country__submenu");
+    let dropdownMenuToggle = dropdownWrapper.querySelector(".choose-country__drop-arrow");
+
+    let dropdownToggle = function () {
+      dropdownMenuToggle.addEventListener("click", function () {
+        dropdownWrapper.classList.toggle("show-menu");
+        dropdownMenu.classList.toggle("choose-country__submenu--open");
+      })
+    }
+    dropdownToggle();
   }
 });

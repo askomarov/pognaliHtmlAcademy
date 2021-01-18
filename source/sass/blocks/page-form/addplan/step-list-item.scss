@@ -1,25 +1,29 @@
 .steps-list {
   display: grid;
   gap: 10px;
+
   @media (min-width: $width-tablet+px) {
     gap: 40px;
   }
 }
-.steps-list__item {
-}
+
 .step-item {
   background: #ffffff;
   border-radius: 10px;
-  padding: 24px 25px 23px;
+  padding: 24px 25px 17px;
+
   @media (min-width: $width-tablet+px) {
     border-radius: 30px;
     padding: 48px 40px 56px 40px;
   }
+
   @media (min-width: $width-desktop+px) {
     border-radius: 60px;
     padding: 100px 160px 100px 160px;
+    position: relative;
   }
 }
+
 .step-item__title {
   font-weight: bold;
   font-size: 20px;
@@ -30,8 +34,10 @@
   @media (min-width: $width-tablet+px) {
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 34px;
   }
 }
+
 .step-item__text {
   font-weight: normal;
   font-size: 16px;
@@ -43,6 +49,7 @@
     line-height: 24px;
   }
 }
+
 .step-item__travel-set {
   display: grid;
   row-gap: 20px;
@@ -50,6 +57,7 @@
     "set-companions"
     "set-days"
     "set-child";
+
   @media (min-width: $width-tablet+px) {
     row-gap: 34px;
     grid-template-areas:
@@ -58,6 +66,7 @@
       "set-days";
     margin-bottom: 60px;
   }
+
   @media (min-width: $width-desktop+px) {
     row-gap: 14px;
     column-gap: 60px;
@@ -70,6 +79,7 @@
     margin-bottom: 33px;
   }
 }
+
 .step-item__settings {
   display: grid;
   grid-template-columns: 1fr max-content;
@@ -80,6 +90,7 @@
     border-top: 1px solid #e1e3e9;
     padding-top: 26px;
   }
+
   @media (min-width: $width-desktop+px) {
     grid-template-columns: 185px 180px 1fr;
     align-items: center;
@@ -96,6 +107,7 @@
     grid-area: set-days;
   }
 }
+
 .step-item__setting-text {
   font-weight: 500;
   font-size: 16px;
@@ -103,15 +115,18 @@
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #1d2e5b;
+
   @media (min-width: $width-tablet+px) {
     font-size: 20px;
     line-height: 18px;
     letter-spacing: 0.1em;
   }
+
   @media (min-width: $width-desktop+px) {
     letter-spacing: normal;
   }
 }
+
 .step-item__setting-subtext {
   font-weight: 500;
   font-size: 16px;
@@ -119,70 +134,79 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: rgba($color: #1d2e5b, $alpha: 0.3);
+
   @media (min-width: $width-tablet+px) {
     font-size: 20px;
     line-height: 18px;
     letter-spacing: 0.08em;
+    margin-right: 6px;
   }
+
   @media (min-width: $width-desktop+px) {
     color: #1d2e5b;
     order: 2;
     justify-self: end;
+    margin-right: 0;
   }
 }
+
 .step-item__input-body {
   grid-column: 1/-1;
-  width: 100%;
-  display: grid;
-  grid-template-columns: min-content 1fr min-content;
-  border: 1px solid #cbced9;
-  border-radius: 4px;
-  padding: 14px;
+
   @media (min-width: $width-desktop+px) {
     grid-column: initial;
   }
 }
-.traveldays-settings {
-}
-.companions-settings {
-}
-.step-item__btn-minus {
-}
-.step-item__btn-plus {
-}
-.step-item__input {
-  width: 100%;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 14px;
-  text-transform: uppercase;
-  color: #1d2e5b;
-  text-align: center;
+
+input[name="children-yes"]:checked ~ .step-item__child-cheks {
+  &::after {
+    content: "";
+    background-image: url("../img/icon_check-mark.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
   @media (min-width: $width-tablet+px) {
-    font-size: 20px;
-    line-height: 20px;
-  }
-  @media (min-width: $width-desktop+px) {
-    line-height: 18px;
+    &::after {
+      background-size: 18px 17px;
+    }
   }
 }
 
-.step-item__input-companions {
-}
+input[name="children-yes"] {
+  &:focus,
+  &:focus-within,
+  &:hover {
+    + .step-item__child-cheks {
+      outline: inherit;
 
-.step-item__input-days {
+      &::after {
+        border-color: #959bb2;
+      }
+    }
+  }
+
+  &:active {
+    + .step-item__child-cheks {
+      &::after {
+        border-color: #e2e5f1;
+        background-color: #e2e5f1;
+        filter: opacity(0.3);
+      }
+    }
+  }
 }
 
 .step-item__child-cheks {
   grid-area: set-child;
   font-weight: normal;
   font-size: 15px;
-  line-height: 15px;
+  line-height: 26px;
   color: #1d2e5b;
   position: relative;
   padding-left: 39px;
   margin-bottom: 28px;
+  max-width: max-content;
 
   @media (min-width: $width-tablet+px) {
     margin-bottom: 0;
@@ -201,7 +225,7 @@
     margin-right: 60px;
   }
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     width: 26px;
@@ -211,32 +235,33 @@
     transform: translateY(-50%);
     border: 1px solid #cbced9;
     border-radius: 4px;
+
     @media (min-width: $width-tablet+px) {
       width: 36px;
       height: 36px;
     }
   }
 }
+
 .step-item__calendar {
   margin-bottom: 20px;
+
   @media (min-width: $width-tablet+px) {
     margin-bottom: 47px;
   }
 }
-.step-item__next-step {
-}
-.step-item__choose-country {
-}
+
 .step-item__prev-step {
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
   font-size: 17px;
-  line-height: 30px;
+  line-height: 18px;
   text-align: center;
   text-transform: uppercase;
   color: #1d2e5b;
+
   @media (min-width: $width-tablet+px) {
     justify-content: space-between;
     font-size: 24px;
@@ -245,6 +270,7 @@
     justify-self: end;
     width: 185px;
   }
+
   @media (min-width: $width-desktop+px) {
     margin-left: 41px;
   }
@@ -259,18 +285,29 @@
       border-right: 14px solid #1d2e5b;
     }
   }
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
+
 .step-item__btn-submit {
   width: 100%;
+
   @media (min-width: $width-tablet+px) {
     width: 286px;
   }
 }
-.step-item__action-desc {
-}
 
 .step-item__plan-points {
   display: none;
+
   @media (min-width: $width-desktop+px) {
     display: flex;
     flex-direction: column;
@@ -278,8 +315,11 @@
 }
 
 .step-item__anchor {
-  scroll-margin-top: 150px;
+  scroll-margin-top: 100px;
+
   @media (min-width: $width-desktop+px) {
-    scroll-margin-top: 0px;
+    scroll-margin-top: 0;
+    position: absolute;
+    top: 0;
   }
 }

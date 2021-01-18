@@ -1,6 +1,6 @@
 .plan-points {
   display: inline-flex;
-  gap: 16px;
+
   @media (min-width: $width-desktop+px) {
     row-gap: 27px;
   }
@@ -8,8 +8,13 @@
 
 .plan-points__item {
   font-size: 0;
+  margin-right: 16px;
 
-  &:after {
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &::after {
     content: "";
     display: block;
     border-radius: 50%;
@@ -27,7 +32,9 @@
     line-height: 24px;
     position: relative;
     padding-left: 42px;
-    &:after {
+    margin-right: 0;
+
+    &::after {
       width: 6px;
       height: 6px;
       position: absolute;
@@ -41,7 +48,7 @@
 .plan-points__item--active {
   color: #000000;
 
-  &:after {
+  &::after {
     background: #1d2e5b;
   }
 }

@@ -3,9 +3,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   @media (min-width: $width-tablet+px) {
     align-items: flex-start;
   }
+
   @media (min-width: $width-desktop+px) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -14,9 +16,6 @@
     column-gap: 34px;
     row-gap: 10px;
   }
-}
-
-.site-list__item {
 }
 
 .site-list__link {
@@ -36,7 +35,14 @@
     line-height: 20px;
     color: #ffffff;
   }
-}
 
-.site-list__link--active {
+  &:hover,
+  &:focus,
+  &:focus-within {
+    color: #ffd74b;
+  }
+
+  &:active {
+    color: rgba($color: #ffd74b, $alpha: 0.3);
+  }
 }

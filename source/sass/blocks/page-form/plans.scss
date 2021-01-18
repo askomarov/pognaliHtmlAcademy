@@ -2,23 +2,29 @@
   background: #dfe3f0;
   padding-top: 28px;
   padding-bottom: 30px;
+
   @include sectionTopRadius;
+
   &::after {
     background: #edeff6;
   }
+
   @media (min-width: $width-tablet+px) {
     padding-top: 57px;
     padding-bottom: 76px;
   }
+
   @media (min-width: $width-desktop+px) {
     padding-top: 54px;
     padding-bottom: 64px;
   }
 }
+
 .plans__container {
   @media (min-width: $width-tablet+px) {
     padding: 0 75px;
   }
+
   @media (min-width: $width-desktop+px) {
     padding-left: 64px;
     padding-right: 0;
@@ -27,22 +33,28 @@
 
 .plans__title {
   margin-bottom: 29px;
+
   @media (min-width: $width-tablet+px) {
     margin-bottom: 48px;
   }
 }
+
 .plans__list {
   counter-reset: li;
 }
+
 .plans__item {
   margin-bottom: 10px;
+
   &:last-child {
     margin-bottom: 0;
   }
+
   &::before {
     content: counter(li) ". ";
     counter-increment: li;
     display: inline-block;
+
     @media (min-width: $width-tablet+px) {
       font-weight: 500;
       font-size: 20px;
@@ -51,6 +63,7 @@
       justify-self: end;
     }
   }
+
   @media (min-width: $width-desktop+px) {
     margin-bottom: 15px;
   }

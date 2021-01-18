@@ -16,6 +16,7 @@
 
 .main-text--bold {
   font-weight: bold;
+
   @media (min-width: $width-tablet+px) {
     font-size: 21px;
     line-height: 25px;

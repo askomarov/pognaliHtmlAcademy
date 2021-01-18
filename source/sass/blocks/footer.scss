@@ -1,15 +1,17 @@
 .footer {
-  background: tomato;
+  background: #ffffff;
   padding-top: 37px;
   padding-bottom: 19px;
   border-top-right-radius: var(--main-border-radius);
   border-top-left-radius: var(--main-border-radius);
   position: relative;
   bottom: var(--main-border-radius);
+
   @media (min-width: $width-tablet+px) {
     padding-top: 46px;
     padding-bottom: 32px;
   }
+
   @media (min-width: $width-desktop+px) {
     padding-top: 47px;
     padding-bottom: 43px;
@@ -19,42 +21,144 @@
 .footer__container {
   display: grid;
   grid-template-columns: 1fr;
+  justify-items: center;
+
   @media (min-width: $width-tablet+px) {
     grid-template-columns: repeat(3, 1fr);
+    align-items: center;
   }
 }
 
 .footer__logo {
+  width: 96px;
+  height: 15px;
+  position: relative;
+  margin-bottom: 40px;
+
+  @media (min-width: $width-tablet+px) {
+    width: 164px;
+    height: 42px;
+    margin-bottom: 0;
+    justify-self: start;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    width: 200px;
+    height: 55px;
+  }
+}
+
+.footer__logo-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 37px;
+
+  @media (min-width: $width-tablet+px) {
+    margin-bottom: 0;
+  }
 }
+
 .footer__social-item {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #ffd74b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  @media (min-width: $width-tablet+px) {
+    width: 62px;
+    height: 62px;
+  }
 }
+
 .footer__social-link {
+  fill: #192144;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: #ffbd30;
+  }
+
+  &:active {
+    background: #ffbd30;
+    fill: rgba($color: #192144, $alpha: 0.3);
+  }
+
+  @media (min-width: $width-tablet+px) {
+    &--fb svg {
+      width: 14px;
+      height: 26px;
+    }
+
+    &--vk svg {
+      width: 28px;
+      height: 18px;
+    }
+
+    &--inst svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
 }
-.footer__social-link--fb {
-}
-.footer__social-link--vk {
-}
-.footer__social-link--inst {
-}
+
 .footer__copy {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-self: stretch;
+  padding-top: 13px;
+  border-top: 1px solid #f2f2f2;
+
   @media (min-width: $width-tablet+px) {
-    justify-content: flex-end;
-    gap: 24px;
+    justify-self: end;
+    gap: 23px;
+    padding: 0;
+    border: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
+
 .footer__copy-text {
+  font-size: 16px;
+  line-height: 16px;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 20px;
   color: #444444;
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
+
 .footer__academy-logo {
   width: 27px;
   height: 34px;
+  fill: #192144;
 }

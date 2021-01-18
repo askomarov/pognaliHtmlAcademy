@@ -1,0 +1,34 @@
+.link-business-tarif {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  color: #132576;
+
+  @media (min-width: $width-tablet+px) {
+    font-size: 20px;
+    line-height: 20px;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 21px;
+    align-items: center;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    line-height: 68px;
+  }
+}
+
+.link-business-tarif__icon-wrapper {
+  display: none;
+
+  @media (min-width: $width-tablet+px) {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: #e2e5f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: #132576;
+  }
+}

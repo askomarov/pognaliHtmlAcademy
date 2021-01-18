@@ -1,6 +1,7 @@
 .header-actions {
   display: flex;
   flex-direction: column;
+
   @media (min-width: $width-desktop+px) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -14,11 +15,17 @@
   justify-content: flex-start;
   align-items: center;
   border-radius: 25px;
-  background: #ffd74b;
   height: 45px;
   font-size: 16px;
   line-height: 45px;
   background: transparent;
+
+  @media (min-width: $width-tablet+px) {
+    height: 68px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
   @media (min-width: $width-desktop+px) {
     height: 50px;
   }
@@ -29,27 +36,78 @@
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  padding-left: 61px;
   position: relative;
   width: 100%;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: #121936;
+  display: grid;
+  align-items: center;
+  grid-template-columns: min-content 1fr;
+  gap: 16px;
+
+  @media (min-width: $width-tablet+px) {
+    gap: 23px;
+
+    svg {
+      width: 68px;
+      height: 68px;
+    }
   }
+
   @media (min-width: $width-desktop+px) {
+    display: flex;
+    justify-content: center;
     font-size: 0;
     padding-left: 0;
+    border-radius: 50%;
     width: 50px;
     height: 50px;
-    &::before {
-      width: 50px;
-      height: 50px;
+    gap: 0;
+
+    svg {
+      width: 36px;
+      height: 36px;
     }
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: $width-desktop+px) {
+  .header-actions__link--tel {
+    background-color: #ff8d30;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      fill: #f26926;
+      background-color: #f26926;
+    }
+  }
+
+  .header-actions__link--mail {
+    background-color: #ffbd30;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      background-color: #ff8d30;
+    }
+  }
+}
+
+.icon-light {
+  display: none;
+}
+
+@media (min-width: $width-desktop+px) {
+  .icon-dark {
+    display: none;
+  }
+
+  .icon-light {
+    display: block;
   }
 }

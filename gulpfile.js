@@ -31,7 +31,7 @@ exports.sprite = sprite;
 const makewebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(webp({ quality: 70 }))
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('source/img'));
 };
 exports.webp = makewebp;
 
@@ -56,11 +56,11 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename('style.min.css'))
     .pipe(sourcemap.write(".")) //положил файл с картами кодами в корневую папку
-    .pipe(gulp.dest("source/css")) //галп положи файлы в папку.
+    .pipe(gulp.dest("build/css")) //галп положи файлы в папку.
     .pipe(sync.stream());
 };
 exports.styles = styles;
@@ -112,7 +112,7 @@ exports.clean = clean;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build/'
     },
     cors: true,
     notify: false,
@@ -123,15 +123,18 @@ const server = (done) => {
 exports.server = server;
 
 //build
-const build = gulp.series(clean, gulp.parallel(html, styles, scripts, sprite), gulp.series(copy));
+const build = gulp.series(
+  clean,
+  gulp.parallel(html, styles, scripts, sprite), gulp.series(copy));
 exports.build = build;
 
 // Watcher
 const watcher = () => {
+  gulp.watch("source/js/**/*.js", gulp.series("scripts"));
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
 exports.default = gulp.series(
-  styles, server, watcher
+  build, server, watcher
 );

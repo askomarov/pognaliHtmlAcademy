@@ -11,6 +11,7 @@
     "wish wish wish"
     "travelmode travelmode level"
     "btn btn btn";
+
   @media (max-width: $width-tablet+px) {
     overflow: hidden;
   }
@@ -70,6 +71,7 @@
     padding-left: 35px;
     margin-right: -25px;
     padding-right: 25px;
+
     &::after {
       content: "";
       position: absolute;
@@ -85,9 +87,11 @@
   @media (min-width: $width-desktop+px) {
     padding: 0;
     margin: 0;
+
     &::after {
       display: none;
     }
+
     .card-companion__title {
       display: none;
     }
@@ -188,6 +192,7 @@
     height: 1px;
     background: #edeff6;
     z-index: 1;
+
     @media (min-width: $width-tablet+px) {
       display: none;
     }
@@ -198,7 +203,8 @@
     left: 100%;
     width: 1000%;
   }
-  @media (min-width:$width-tablet+px){
+
+  @media (min-width: $width-tablet+px) {
     margin-left: 49px;
   }
 }

@@ -132,14 +132,17 @@
     line-height: 30px;
     font-size: 20px;
   }
+
   a {
     color: #444444;
     width: 100%;
+
     @media (min-width: $width-tablet+px) {
       &:hover {
         color: #1d2e5b;
       }
     }
+
     &:active {
       color: rgba($color: #1d2e5b, $alpha: 0.3);
     }

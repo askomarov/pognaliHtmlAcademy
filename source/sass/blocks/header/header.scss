@@ -2,6 +2,7 @@
   background-color: #161c34;
   padding-top: 28px;
   padding-bottom: 28px;
+  transition: all 0.5s ease 0s;
 
   @media (min-width: $width-tablet+px) {
     padding-top: 40px;
@@ -13,7 +14,6 @@
     padding-top: 46px;
     padding-bottom: 62px;
   }
-  transition: all 0.5s ease 0s;
 }
 
 .header__body {
@@ -179,10 +179,12 @@
   background: #ffffff;
   padding-top: 27px;
   padding-bottom: 31px;
+
   @media (min-width: $width-tablet+px) {
     padding-top: 40px;
     padding-bottom: 42px;
   }
+
   @media (min-width: $width-desktop+px) {
     padding-top: 17px;
     padding-bottom: 13px;

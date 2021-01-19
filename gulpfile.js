@@ -9,6 +9,7 @@ const sync = require("browser-sync").create();
 const htmlmin = require('gulp-htmlmin'); //минификация html
 const fileinclude = require('gulp-file-include');
 const rename = require("gulp-rename");
+const webp = require("gulp-webp");
 const imagemin = require("gulp-imagemin");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
@@ -29,11 +30,11 @@ exports.sprite = sprite;
 
 //webp
 const makewebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
     .pipe(webp({ quality: 70 }))
     .pipe(gulp.dest('source/img'));
 };
-exports.webp = makewebp;
+exports.makewebp = makewebp;
 
 //images
 const images = () => {
@@ -80,6 +81,7 @@ exports.html = html;
 //javascript
 const scripts = () => {
   return gulp.src('source/js/script.js')
+    .pipe(gulp.dest('build/js'))
     .pipe(terser())
     .pipe(rename({
       suffix: '.min'
@@ -132,7 +134,7 @@ exports.build = build;
 const watcher = () => {
   gulp.watch("source/js/**/*.js", gulp.series("scripts"));
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
 }
 
 exports.default = gulp.series(

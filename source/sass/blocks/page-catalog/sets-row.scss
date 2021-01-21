@@ -183,6 +183,15 @@
   &:checked + .sets-row__label--icon {
     fill: #1d2e5b;
   }
+
+  &:focus-within + .sets-row__label,
+  &:focus + .sets-row__label {
+    color: rgba($color: #000000, $alpha: 0.6);
+
+    &::after {
+      background-color: #f8f9fb;
+    }
+  }
 }
 
 .sets-row__label {
@@ -215,11 +224,13 @@
     padding-left: 36px;
   }
 
-  &:hover {
-    color: rgba($color: #000000, $alpha: 0.6);
+  @media (min-width: $width-desktop+px) {
+    &:hover {
+      color: rgba($color: #000000, $alpha: 0.6);
 
-    &::after {
-      background-color: #f8f9fb;
+      &::after {
+        background-color: #f8f9fb;
+      }
     }
   }
 
@@ -255,6 +266,8 @@
 }
 
 .sets-row__input:checked {
+  &:focus-within + .sets-row__label--icon,
+  &:focus + .sets-row__label--icon,
   & + .sets-row__label--icon:hover {
     fill: #616d8c;
   }
@@ -265,6 +278,8 @@
 }
 
 .sets-row__input:not(:checked) {
+  &:focus-within + .sets-row__label--icon,
+  &:focus + .sets-row__label--icon,
   & + .sets-row__label--icon:hover {
     fill: #b2b2b2;
   }

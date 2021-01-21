@@ -24,7 +24,14 @@
     }
   }
 }
-
+.contact__map-wrapper {
+  @media (min-width: $width-tablet+px) {
+    min-height: 584px;
+  }
+}
 .contact-map__frame {
   width: 100%;
+  @media (min-width: $width-tablet+px) {
+    min-height: 584px;
+  }
 }

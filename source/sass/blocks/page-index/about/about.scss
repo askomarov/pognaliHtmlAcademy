@@ -1,13 +1,14 @@
 .about {
   background-color: #182044;
   padding-top: 33px;
-  padding-bottom: 82px;
+  padding-bottom: 83px;
   border-bottom-left-radius: var(--main-border-radius);
   border-bottom-right-radius: var(--main-border-radius);
 
   @include sectionRadiusBackground;
 
   background-image: url("../img/about-mobile@1x.png"), url("../img/about-back-mobile.png");
+  background-size: 292px 353px, auto;
   background-position: 20px 0, left top;
   background-repeat: no-repeat;
 
@@ -16,8 +17,9 @@
   }
 
   @media (min-width: $width-tablet + px) {
-    padding-top: 41px;
+    padding-top: 38px;
     padding-bottom: 89px;
+    background-size: auto;
     background-image: url("../img/about-tablet@1x.png");
     background-position: right top;
 
@@ -101,7 +103,7 @@
   color: #ffffff;
 
   @media (min-width: $width-tablet+px) {
-    margin-bottom: 52px;
+    margin-bottom: 55px;
     max-width: 265px;
   }
 
@@ -116,5 +118,5 @@
     display: none;
   }
 
-  max-width: 285px;
+  max-width: 276px;
 }

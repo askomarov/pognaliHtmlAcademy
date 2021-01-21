@@ -11,7 +11,7 @@
 <body class="page page-form">
   @@include('svg-sprite.html')
 
-  <header class="header">
+  <header class="header header--no-js">
     <div class="header__body container">
       <a class="header__logo" href="index.html">
         <picture>
@@ -44,13 +44,16 @@
         <div class="header-menu__wrapper">
           <ul class="header-menu__list site-list">
             <li class="site-list__item">
-              <a class="site-list__link" href="index.html">о сервисе</a>
+              <a class="site-list__link" href="index.html"><span
+                  class="site-list__link-text site-list__link-text--index">о сервисе</span></a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link site-list__link--active">направления</a>
+              <a class="site-list__link site-list__link--active"><span
+                  class="site-list__link-text site-list__link-text--form">направления</span></a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">попутчики</a>
+              <a class="site-list__link" href="catalog.html"><span
+                  class="site-list__link-text site-list__link-text--catalog">попутчики</span></a>
             </li>
           </ul>
           <ul class="header-menu__actions header-actions">
@@ -279,13 +282,15 @@
                 <!-- календарь ё-моё -->
                 <div class="calendar__wrapper">
                   <div class="calendar__top">
-                    <button class="calendar__mth-btn calendar__mth-btn--prev" aria-label="предыдущий месяц">
+                    <button type="button" class="calendar__mth-btn calendar__mth-btn--prev"
+                      aria-label="предыдущий месяц">
                       <svg width="9" height="18">
                         <use xlink:href="#month-arrow-left"></use>
                       </svg>
                     </button>
                     <p class="calendar__month">март <span class="calendar__month-year">2019</span></p>
-                    <button class="calendar__mth-btn calendar__mth-btn--next" aria-label="следующий месяц">
+                    <button type="button" class="calendar__mth-btn calendar__mth-btn--next"
+                      aria-label="следующий месяц">
                       <svg width="9" height="18">
                         <use xlink:href="#month-arrow-right"></use>
                       </svg>

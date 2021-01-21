@@ -46,3 +46,47 @@
     color: rgba($color: #ffd74b, $alpha: 0.3);
   }
 }
+
+@media (min-width: $width-desktop+px) {
+  .site-list__item {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .site-list__link:not(.site-list__link--active) {
+    position: relative;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      .site-list__link-text {
+        transform: translateY(-100%);
+      }
+    }
+  }
+
+  .site-list__link-text {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s;
+
+    &::before {
+      position: absolute;
+      top: 100%;
+      transform: translate3d(0, 0, 0);
+      white-space: nowrap;
+    }
+
+    &--index::before {
+      content: "о сервисе";
+    }
+
+    &--form::before {
+      content: "направления";
+    }
+
+    &--catalog::before {
+      content: "попутчики";
+    }
+  }
+}

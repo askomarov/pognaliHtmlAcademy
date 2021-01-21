@@ -1,6 +1,6 @@
 .feedback {
   background: #192144;
-  padding-top: 72px;
+  padding-top: 70px;
   padding-bottom: 29px;
   border-bottom-left-radius: var(--main-border-radius);
   border-bottom-right-radius: var(--main-border-radius);
@@ -43,7 +43,7 @@
   display: inline-block;
 
   &--mb {
-    margin-bottom: 29px;
+    margin-bottom: 31px;
 
     @media (min-width: $width-tablet+px) {
       margin-bottom: 65px;
@@ -179,7 +179,7 @@
     display: inline-block;
     border-top: 7px solid transparent;
     border-bottom: 7px solid transparent;
-    border-left: 14px solid #1d2e5b;
+    border-left: 12px solid #1d2e5b;
   }
 
   @media (min-width: $width-desktop+px) {

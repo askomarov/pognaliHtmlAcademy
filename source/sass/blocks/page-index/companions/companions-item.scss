@@ -99,8 +99,8 @@
 }
 
 .companions-item__tags-list {
-  padding: 0 46px;
-  gap: 5px;
+  padding: 0 44px;
+  column-gap: 5px;
   justify-content: center;
   margin-bottom: 14px;
   height: 100%;
@@ -122,6 +122,6 @@
 
 .companions-item .companions-item__level-wrapper {
   position: absolute;
-  top: 17px;
-  left: 16px;
+  top: 19px;
+  left: 17px;
 }

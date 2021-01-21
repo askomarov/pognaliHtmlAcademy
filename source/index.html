@@ -12,7 +12,7 @@
 <body class="page page-index">
   @@include('svg-sprite.html')
 
-  <header class="header">
+  <header class="header header--no-js">
     <div class="header__body container">
       <a class="header__logo">
         <picture>
@@ -45,13 +45,16 @@
         <div class="header-menu__wrapper">
           <ul class="header-menu__list site-list">
             <li class="site-list__item">
-              <a class="site-list__link site-list__link--active">о сервисе</a>
+              <a class="site-list__link site-list__link--active"><span
+                  class="site-list__link-text site-list__link-text--index">о сервисе</span></a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="form.html">направления</a>
+              <a class="site-list__link" href="form.html"><span
+                  class="site-list__link-text site-list__link-text--form">направления</span></a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">попутчики</a>
+              <a class="site-list__link" href="catalog.html"><span
+                  class="site-list__link-text site-list__link-text--catalog">попутчики</span></a>
             </li>
           </ul>
           <ul class="header-menu__actions header-actions">
@@ -142,7 +145,7 @@
             <p class="steps-guide__item-text">Изучите идеи путешественников</p>
           </li>
           <li class="steps-guide__item">
-            <p class="steps-guide__item-text">Находите тех, кто похож на вас</p>
+            <p class="steps-guide__item-text">Находите тех,<br> кто похож на вас</p>
           </li>
           <li class="steps-guide__item">
             <p class="steps-guide__item-text">Путешествуйте вместе!</p>
@@ -167,7 +170,8 @@
     <section class="directions">
       <div class="directions__container container">
         <h2 class="directions__title main-title">Направления</h2>
-        <p class="directions__text main-text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах,
+        <p class="directions__text main-text">Мы не продаем туры <br> и ничего не рекламируем. Люди сами пишут о
+          странах,
           куда хотели
           бы отправиться и чем можно там заняться.</p>
         <ul class="directions__list directions-list">
@@ -188,7 +192,7 @@
                   media="(min-width:768px)">
                 <source type="image/wepb" srcset="img/thailand-mobile@1x.webp 1x, img/thailand-mobile@2x.webp 2x">
                 <img src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x"
-                  alt="изображние где-то в Тайланда" width="270" height="110" />
+                  alt="изображние где-то в Тайланде" width="270" height="110" />
               </picture>
             </div>
           </li>
@@ -215,7 +219,7 @@
           <li class="directions-list__item directions-item">
             <div class="directions-item__text-wrapper">
               <h3 class="directions-item__title">Чехия</h3>
-              <p class="directions-item__slogan">Закоулки старой Европы</p>
+              <p class="directions-item__slogan">Закоулки <br>старой Европы</p>
               <p class="directions-item__users"><span class="directions-item__users-value">5326</span></p>
               <svg class="directions-item__flag" width="35" height="24" viewbox="0 0 70 46">
                 <use xlink:href="#flag-czech"></use>
@@ -243,7 +247,8 @@
           <h2 class="companions__title main-title">Попутчики</h2>
           <p class="companions__text main-text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному
             нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-          <p class="companions__text-bottom main-text main-text--bold">Теперь можно легко<br> найти единомышленников!
+          <p class="companions__text-bottom main-text main-text--bold">Теперь можно легко<br>&nbsp;найти
+            единомышленников!
           </p>
         </div>
 
@@ -385,7 +390,7 @@
                 <source type="image/webp" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x"
                   media="(min-width:768px)">
                 <source type="image/wepb" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
-                <img class="" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="270" height="270"
+                <img class="" src="img/demin-mobile@1x.png" srcset="img/demin-mobile@2x.png 2x" width="270" height="270"
                   alt="фотография Демин" />
               </picture>
             </div>
@@ -600,7 +605,7 @@
       <div class="contact__map-wrapper contact-map">
         <iframe class="contact-map__frame"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002815!2d30.320858715702567!3d59.93871916905466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1610899690206!5m2!1sru!2sru"
-          width="320" height="424"></iframe>
+          width="320" height="318"></iframe>
       </div>
     </section>
 

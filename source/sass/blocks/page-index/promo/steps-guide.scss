@@ -21,7 +21,7 @@
 
 .steps-guide__item {
   color: #ffffff;
-  padding: 22px 21px 24px 24px;
+  padding: 22px 21px 22px 24px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -30,11 +30,13 @@
   --border-radius: 20px;
 
   @media (max-width: $width-tablet+px) {
+    --border-radius: 10px;
+
     &::before {
       content: "";
       position: absolute;
       z-index: -1;
-      bottom: -20px;
+      bottom: -10px;
       height: var(--border-radius);
       width: 100%;
       background: inherit;
@@ -130,7 +132,7 @@
 
   @media (min-width: $width-tablet+px) {
     row-gap: 9px;
-    padding: 31px 21px 22px 33px;
+    padding: 28px 21px 25px 33px;
   }
 
   @media (min-width: $width-desktop+px) {

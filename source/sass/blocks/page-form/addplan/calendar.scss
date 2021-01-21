@@ -174,9 +174,27 @@
   background: #1d2e5b;
   color: #ffffff;
   font-weight: 500;
-
+  position: relative;
+  
   @media (min-width: $width-desktop+px) {
     font-weight: 400;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 0 1px #ff5c23;
+      z-index: 5;
+    }
+
+    &:hover:not(.calendar__number--current) {
+      box-shadow: inset 0 0 0 3px #ff5c23;
+      &::after {
+        content: "";
+      }
+    }
   }
 }
 

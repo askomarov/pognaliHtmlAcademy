@@ -1,19 +1,20 @@
 .promo {
   background-color: #161c34;
-  padding-bottom: 39px;
-  background-image: url("../img/traveller-illustration-mobile@1x.png"),
-    linear-gradient(180deg, rgba(22, 28, 53, 0) 41%, #161c35 41%, #161c35 70%, #192144 70%, #192144 100%),
+  padding-bottom: 37px;
+  background-image:
+  url("../img/traveller-illustration-mobile@1x.png"),
+    linear-gradient(180deg, rgba(22, 28, 53, 0) 42%, #161c35 42%, #161c35 70%, #192144 70%, #192144 100%),
     url("../img/globe-back-mobile@1x.jpg");
-  background-position: 80px 128px, 0 0, 0 -93px;
+  background-position: 80px 150px, 0 0, 0 -71px;
   background-size: auto, auto, auto;
   background-repeat: no-repeat;
 
   @media (min-width: $width-tablet+px) {
     padding-bottom: 96px;
-    padding-top: 46px;
+    padding-top: 43px;
     background: #182044;
     background-image: url("../img/traveller-illustration-tablet@1x.png"), url("../img/globe-back-tablet@1x.jpg");
-    background-position: 285px 311px, center 290px;
+    background-position: 285px 288px, center 266px;
     background-size: 372px 451px, 1479px 612px;
     background-repeat: no-repeat;
   }
@@ -31,7 +32,9 @@
 }
 
 .promo__container {
+  padding-top: 19px;
   @media (min-width: $width-tablet+px) {
+    padding-top: 0;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr min-content;
@@ -50,13 +53,13 @@
   line-height: 40px;
   color: #ffffff;
   text-align: center;
-  margin-bottom: 245px;
+  margin-bottom: 246px;
 
   @media (min-width: $width-tablet+px) {
     font-size: 60px;
     line-height: 70px;
     grid-column: span 2;
-    margin-bottom: 86px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: $width-desktop+px) {
@@ -70,11 +73,12 @@
 .promo__blockquote {
   position: relative;
   z-index: 2;
-  padding: 25px;
+  padding: 27px 25px 30px;
 
   @media (min-width: $width-tablet+px) {
     grid-column: 1/2;
-    margin-bottom: 211px;
+    margin-bottom: 183px;
+    padding-left: 33px;
   }
 
   @media (min-width: $width-desktop+px) {
@@ -91,10 +95,10 @@
 
   @media (min-width: $width-tablet+px) {
     max-width: 264px;
+    margin-bottom: 45px;
   }
 
   @media (min-width: $width-desktop+px) {
-    margin-bottom: 45px;
   }
 }
 

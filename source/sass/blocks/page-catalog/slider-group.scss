@@ -49,17 +49,11 @@
   letter-spacing: 0.04em;
   color: #1d2e5b;
   text-align: center;
-  -moz-appearance: textfield;
   position: relative;
 
   @media (min-width: $width-tablet+px) {
     font-size: 20px;
     line-height: 20px;
-  }
-
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    -webkit-appearance: none;
   }
 
   &:hover {

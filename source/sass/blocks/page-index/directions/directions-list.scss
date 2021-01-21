@@ -11,8 +11,8 @@
       height: 140px;
       background: #e2e5f2;
       border-radius: 20px;
-      top: -48px;
-      left: -36px;
+      top: -38px;
+      left: -34px;
 
       @media (min-width: $width-desktop+px) {
         top: -70px;
@@ -28,6 +28,11 @@
   &:last-child {
     margin-bottom: 0;
 
+    @media (max-width: $width-tablet+px) {
+      .directions-item__text-wrapper {
+        padding-bottom: 5px;
+      }
+    }
     @media (min-width: $width-desktop+px) {
       position: relative;
       z-index: 1;

@@ -7,10 +7,12 @@
   @media (min-width: $width-tablet+px) {
     border-radius: 20px;
     grid-template-columns: 1fr 186px;
+
     &:last-child {
       .directions-item__slogan {
         margin-bottom: 0;
       }
+
       .directions-item__text-wrapper {
         padding-bottom: 16px;
       }
@@ -29,7 +31,7 @@
   z-index: 2;
 
   @media (min-width: $width-tablet+px) {
-    padding: 28px 0px 26px 30px;
+    padding: 28px 0 26px 30px;
     grid-template-columns: 1fr;
     justify-content: start;
     gap: 5px;
@@ -38,7 +40,7 @@
   }
 
   @media (min-width: $width-desktop+px) {
-    padding: 24px 24px 21px;
+    padding: 22px 29px 31px;
   }
 }
 
@@ -80,6 +82,7 @@
   grid-column: 2/3;
   grid-row: 1/-1;
   align-self: end;
+
   @media (min-width: $width-tablet+px) {
     grid-column: initial;
     grid-row: initial;
@@ -121,6 +124,11 @@
     left: initial;
     right: -35px;
     top: 17px;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    right: -33px;
+    top: 23px;
   }
 }
 

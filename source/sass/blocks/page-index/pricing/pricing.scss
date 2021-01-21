@@ -15,7 +15,7 @@
   }
 
   @media (min-width: $width-desktop+px) {
-    padding-top: 107px;
+    padding-top: 102px;
     padding-bottom: 165px;
   }
 }
@@ -40,7 +40,7 @@
   @media (min-width: $width-desktop+px) {
     padding-left: 70px;
     padding-right: 70px;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr 198px;
     grid-template-rows: min-content 1fr min-content;
   }
 }
@@ -54,7 +54,7 @@
   }
 
   @media (min-width: $width-desktop+px) {
-    margin-bottom: 131px;
+    margin-bottom: 134px;
   }
 }
 
@@ -105,7 +105,7 @@
       height: 300px;
       bottom: 50%;
       transform: translateY(50%);
-      left: -359px;
+      left: -361px;
     }
   }
 }
@@ -222,11 +222,16 @@
     width: 100%;
     padding-right: 35px;
   }
+
+  @media (min-width: $width-desktop+px) {
+    padding-right: 77px;
+  }
 }
 
 .pricing__link-business-tarif {
   grid-column: span 2;
   margin-top: 2px;
+
   @media (min-width: $width-tablet+px) {
     margin-top: 0;
     grid-column: initial;
@@ -236,7 +241,7 @@
   @media (min-width: $width-desktop+px) {
     grid-template-columns: 1/-1;
     grid-row: -1/-2;
-    margin-top: 32px;
+    margin-top: 31px;
   }
 
   &:hover,

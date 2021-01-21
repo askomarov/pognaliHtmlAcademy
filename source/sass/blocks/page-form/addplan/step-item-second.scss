@@ -1,5 +1,9 @@
 .step-item-second {
   @media (min-width: $width-tablet+px) {
+    padding-top: 44px;
+    padding-left: 43px;
+    padding-bottom: 54px;
+    margin-bottom: 12px;
     display: grid;
     grid-template-columns: 284px 1fr;
     grid-template-areas:
@@ -10,6 +14,10 @@
   }
 
   @media (min-width: $width-desktop+px) {
+    padding-top: 94px;
+    padding-left: 159px;
+    padding-bottom: 104px;
+    margin-bottom: 0;
     grid-template-columns: 730px 1fr;
     column-gap: 38px;
     grid-template-areas:
@@ -35,15 +43,24 @@
     grid-area: text;
     margin-bottom: 21px;
 
+    br {
+      display: none;
+    }
+
     @media (min-width: $width-tablet+px) {
-      margin-bottom: 33px;
-      padding-right: 140px;
+      margin-bottom: 36px;
+      padding-right: 122px;
+
+      br {
+        display: block;
+      }
     }
 
     @media (min-width: $width-desktop+px) {
+      font-size: 16px;
       padding-right: 0;
       max-width: 474px;
-      margin-bottom: 55px;
+      margin-bottom: 58px;
     }
   }
 
@@ -53,7 +70,7 @@
 
   .step-item__next-step {
     grid-area: next-step;
-    margin-bottom: 13px;
+    margin-bottom: 17px;
 
     @media (min-width: $width-tablet+px) {
       margin-bottom: 0;
@@ -70,5 +87,11 @@
 
   .step-item__plan-points {
     grid-area: plan-points;
+
+    @media (min-width: $width-desktop+px) {
+      row-gap: 20px;
+      margin-left: 5px;
+      margin-top: 7px;
+    }
   }
 }

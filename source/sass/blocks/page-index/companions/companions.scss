@@ -7,14 +7,16 @@
 
   @include sectionRadiusBackground;
 
-  background-image: url("../img/about-back-mobile.png"), url("../img/smolov-back-desktop@1x.png"),
+  background-image: url("../img/about-back-mobile.png"),
+    url("../img/smolov-back-desktop@1x.png"),
     url("../img/rogovaya-back-mobile@1x.png");
   background-size: auto, 143px 143px, auto;
   background-repeat: no-repeat;
   background-position: left 34px, 86% 34px, -8px 307px;
 
   @media (min-width: $width-tablet+px) {
-    background-image: url("../img/about-back-desktop.png"), url("../img/smolov-back-desktop@1x.png"),
+    background-image: url("../img/about-back-desktop.png"),
+      url("../img/smolov-back-desktop@1x.png"),
       url("../img/rogovaya-back-desktop@1x.png");
     padding-top: 141px;
     padding-bottom: 87px;
@@ -23,9 +25,10 @@
   }
 
   @media (min-width: $width-desktop+px) {
-    background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-desktop@1x.png");
-    padding-top: 130px;
-    padding-bottom: 134px;
+    background-image: url("../img/smolov-back-desktop@1x.png"),
+      url("../img/rogovaya-back-desktop@1x.png");
+    padding-top: 126px;
+    padding-bottom: 135px;
     background-size: 143px 143px, 285px 285px;
     background-position: 42% 134px, 190px 386px;
   }
@@ -34,8 +37,7 @@
 .companions__container {
   @media (min-width: $width-desktop+px) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
+    grid-template-columns: 1fr 630px;
     padding-left: 70px;
     padding-right: 0;
   }
@@ -61,6 +63,7 @@
 
   @media (min-width: $width-desktop+px) {
     position: relative;
+    margin-bottom: 56px;
 
     &::after {
       content: "";
@@ -80,10 +83,18 @@
   margin-bottom: 21px;
   max-width: 217px;
 
+  br {
+    display: none;
+  }
+
   @media (min-width: $width-tablet+px) {
     margin-bottom: 39px;
     line-height: 34px;
     max-width: 430px;
+
+    br {
+      display: block;
+    }
   }
 }
 
@@ -111,8 +122,10 @@
 
 .companions__btn {
   min-height: 61px;
+
   @media (min-width: $width-desktop+px) {
     max-width: 280px;
     align-self: end;
+    margin-top: 33px;
   }
 }

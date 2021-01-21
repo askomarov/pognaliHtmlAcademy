@@ -43,6 +43,11 @@
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
   }
+
+  @media (min-width: $width-desktop+px) {
+    width: 285px;
+    height: 285px;
+  }
 }
 
 .companions-item__desc {
@@ -55,6 +60,12 @@
 .companions-item__country-flag-list {
   margin-bottom: 13px;
   z-index: 2;
+  margin-top: -11px;
+
+  @media (min-width: $width-desktop+px) {
+    margin-top: -13px;
+    margin-bottom: 17px;
+  }
 }
 
 .companions-item__name {
@@ -90,6 +101,12 @@
   &:active {
     color: rgba($color: #1d2e5b, $alpha: 0.3);
   }
+
+  @media (min-width: $width-desktop+px) {
+    align-self: flex-start;
+    padding-left: 68px;
+    margin-bottom: 24px;
+  }
 }
 
 .companions-item__name--online {
@@ -109,6 +126,10 @@
   @media (min-width: $width-tablet+px) {
     padding: 0 25px;
   }
+
+  @media (min-width: $width-desktop+px) {
+    margin-bottom: 24px;
+  }
 }
 
 .companions-item__travelmode-list {
@@ -124,4 +145,9 @@
   position: absolute;
   top: 19px;
   left: 17px;
+
+  @media (min-width: $width-desktop+px) {
+    top: 20px;
+    left: 22px;
+  }
 }

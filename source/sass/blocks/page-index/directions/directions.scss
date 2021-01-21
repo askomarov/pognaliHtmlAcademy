@@ -18,7 +18,7 @@
   @media (min-width: $width-desktop+px) {
     background-position: calc(100% - 60px) 88px;
     padding-top: 161px;
-    padding-bottom: 87px;
+    padding-bottom: 86px;
   }
 }
 
@@ -41,14 +41,14 @@
 .directions__title {
   margin-bottom: 20px;
   padding-left: 25px;
+
   @media (min-width: $width-tablet+px) {
     padding-left: 0;
     margin-bottom: 57px;
   }
 
   @media (min-width: $width-desktop+px) {
-    margin-bottom: 58px;
-    margin-top: 5px;
+    margin-bottom: 62px;
   }
 }
 
@@ -58,6 +58,7 @@
   margin-bottom: 61px;
   padding-left: 24px;
   padding-right: 50px;
+
   @media (min-width: $width-tablet+px) {
     padding-left: 0;
     padding-right: 28px;
@@ -65,6 +66,10 @@
     margin-bottom: 108px;
     position: relative;
     z-index: 1;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    margin-bottom: 104px;
   }
 }
 
@@ -84,6 +89,7 @@
 
 .directions__btn {
   min-height: 62px;
+
   @media (min-width: $width-desktop+px) {
     max-width: 275px;
   }

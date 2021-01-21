@@ -1,18 +1,19 @@
 .header {
   background-color: #161c34;
-  padding-top: 26px;
-  padding-bottom: 26px;
+  padding-top: 19px;
+  padding-bottom: 33px;
   transition: all 0.5s ease 0s;
 
   @media (min-width: $width-tablet+px) {
     padding-top: 40px;
+    padding-bottom: 26px;
     background-color: #182044;
   }
 
   @media (min-width: $width-desktop+px) {
     background-color: #161c34;
-    padding-top: 46px;
-    padding-bottom: 62px;
+    padding-top: 48px;
+    padding-bottom: 10px;
   }
 }
 
@@ -167,6 +168,7 @@
     .header__authr-btn-doble {
       display: none;
     }
+
     .header__logo-img--blue {
       display: block;
     }

@@ -31,10 +31,11 @@
   }
 
   @media (min-width: $width-desktop+px) {
-    padding-top: 132px;
+    padding-top: 128px;
     padding-bottom: 163px;
     background-image: url("../img/about-desktop@1x.png");
-    background-position: 750px bottom;
+    background-size: auto;
+    background-position: 750px 85px;
 
     @include sectionRadiusBackground;
   }
@@ -68,7 +69,7 @@
   }
 
   @media (min-width: $width-desktop+px) {
-    margin-bottom: 57px;
+    margin-bottom: 61px;
 
     &::after {
       content: "";
@@ -94,7 +95,7 @@
   }
 
   @media (min-width: $width-desktop+px) {
-    margin-bottom: 38px;
+    margin-bottom: 42px;
     max-width: 619px;
   }
 }
@@ -108,7 +109,7 @@
   }
 
   @media (min-width: $width-desktop+px) {
-    margin-bottom: 85px;
+    margin-bottom: 87px;
     max-width: 425px;
   }
 }

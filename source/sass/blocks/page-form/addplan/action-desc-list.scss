@@ -8,20 +8,20 @@
   }
 
   @media (min-width: $width-desktop+px) {
-    padding-top: 75px;
-    padding-right: 112px;
+    padding-top: 70px;
+    padding-right: 116px;
   }
 }
 
 .action-desc-list__item {
   position: relative;
   display: grid;
-  row-gap: 14px;
+  row-gap: 13px;
+  margin-bottom: 20px;
   grid-template-columns: 1fr min-content;
   grid-template-areas:
     "country-name country-flag"
     "textarea textarea";
-  margin-bottom: 23px;
 
   &:last-child {
     margin-bottom: 0;
@@ -32,12 +32,8 @@
   }
 
   @media (min-width: $width-tablet+px) {
-    row-gap: 30px;
-    margin-bottom: 44px;
-  }
-
-  @media (min-width: $width-desktop+px) {
-    margin-bottom: 47px;
+    row-gap: 24px;
+    margin-bottom: 39px;
   }
 }
 
@@ -60,7 +56,7 @@
   &::before {
     content: "";
     position: absolute;
-    left: 0;
+    left: -3px;
     top: 50%;
     transform: translateY(-50%);
     width: 6px;
@@ -108,6 +104,8 @@
   }
 
   @media (min-width: $width-desktop+px) {
+    margin-top: 5px;
+
     &::before {
       display: none;
     }
@@ -139,6 +137,7 @@
     font-size: 20px;
     line-height: 23px;
     min-height: 140px;
+    padding: 15px;
 
     &:hover {
       border-color: #959bb2;
@@ -154,6 +153,7 @@
   @media (min-width: $width-desktop+px) {
     max-width: 730px;
     min-height: 142px;
+    padding: 23px 20px 23px 23px;
   }
 
   &::placeholder {
@@ -208,7 +208,7 @@
 
 .action-desc-list__item-decor {
   position: absolute;
-  left: -11px;
+  left: -14px;
   top: 11px;
   width: 2px;
   height: 283px;
@@ -230,7 +230,7 @@
   @media (min-width: $width-tablet+px) {
     left: initial;
     top: 16px;
-    right: -25px;
+    right: -27px;
     height: 275px;
 
     &::before,
@@ -247,7 +247,7 @@
   }
 
   @media (min-width: $width-desktop+px) {
-    right: 111px;
-    height: 280px;
+    right: 109px;
+    height: 277px;
   }
 }

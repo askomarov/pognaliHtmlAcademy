@@ -23,6 +23,10 @@
     background: rgba($color: #1d2e5b, $alpha: 0.3);
   }
 
+  @media (min-width: $width-tablet+px) {
+    margin-right: 29px;
+  }
+
   @media (min-width: $width-desktop+px) {
     color: rgba($color: #000000, $alpha: 0.6);
     font-weight: normal;

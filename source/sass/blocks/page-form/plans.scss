@@ -1,6 +1,6 @@
 .plans {
   background: #dfe3f0;
-  padding-top: 28px;
+  padding-top: 26px;
   padding-bottom: 30px;
 
   @include sectionTopRadius;
@@ -10,13 +10,13 @@
   }
 
   @media (min-width: $width-tablet+px) {
-    padding-top: 57px;
+    padding-top: 54px;
     padding-bottom: 76px;
   }
 
   @media (min-width: $width-desktop+px) {
-    padding-top: 54px;
-    padding-bottom: 64px;
+    padding-top: 50px;
+    padding-bottom: 63px;
   }
 }
 
@@ -32,10 +32,14 @@
 }
 
 .plans__title {
-  margin-bottom: 29px;
+  margin-bottom: 31px;
 
   @media (min-width: $width-tablet+px) {
-    margin-bottom: 48px;
+    margin-bottom: 51px;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    margin-bottom: 53px;
   }
 }
 
@@ -62,6 +66,10 @@
       grid-area: number;
       justify-self: end;
     }
+  }
+
+  @media (min-width: $width-tablet+px) {
+    margin-bottom: 11px;
   }
 
   @media (min-width: $width-desktop+px) {

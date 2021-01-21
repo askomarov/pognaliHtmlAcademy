@@ -5,10 +5,11 @@
   grid-template-columns: min-content 1fr min-content;
   border: 1px solid #cbced9;
   border-radius: 4px;
-  padding: 14px;
+  padding: 11px;
 
   @media (min-width: $width-tablet+px) {
     padding: 14px 23px;
+    height: 70px;
   }
 
   &:hover {

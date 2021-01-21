@@ -9,6 +9,8 @@
     "prev-step prev-step";
 
   @media (min-width: $width-tablet+px) {
+    padding-top: 44px;
+    padding-left: 45px;
     padding-bottom: 53px;
     grid-template-areas:
       "title ."
@@ -18,7 +20,9 @@
   }
 
   @media (min-width: $width-desktop+px) {
-    padding-bottom: 104px;
+    padding-bottom: 102px;
+    padding-top: 96px;
+    padding-left: 160px;
     grid-template-columns: 730px 1fr;
     column-gap: 42px;
     grid-template-areas:
@@ -37,7 +41,7 @@
     }
 
     @media (min-width: $width-desktop+px) {
-      margin-bottom: 35px;
+      margin-bottom: 33px;
 
       br {
         display: none;
@@ -47,10 +51,10 @@
 
   .step-item__text {
     grid-area: text;
-    margin-bottom: 19px;
+    margin-bottom: 22px;
 
     @media (min-width: $width-tablet+px) {
-      margin-bottom: 34px;
+      margin-bottom: 36px;
       max-width: 500px;
     }
 
@@ -61,15 +65,15 @@
 
   .step-item__action-desc {
     grid-area: action-desc;
-    margin-bottom: 22px;
+    margin-bottom: 18px;
 
     @media (min-width: $width-tablet+px) {
-      margin-bottom: 49px;
+      margin-bottom: 46px;
     }
 
     @media (min-width: $width-desktop+px) {
-      margin-top: 55px;
-      margin-bottom: 58px;
+      margin-top: 56px;
+      margin-bottom: 57px;
     }
   }
 
@@ -88,5 +92,10 @@
 
   .step-item__plan-points {
     grid-area: plan-points;
+
+    @media (min-width: $width-desktop+px) {
+      row-gap: 20px;
+      margin-top: 7px;
+    }
   }
 }

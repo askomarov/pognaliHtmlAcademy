@@ -1,17 +1,17 @@
 .user-info {
   background: #edeff6;
-  padding-top: 20px;
+  padding-top: 25px;
   padding-bottom: 34px;
 
   @include sectionRadiusBackground;
 
   @media (min-width: $width-tablet+px) {
     padding-top: 66px;
-    padding-bottom: 58px;
+    padding-bottom: 59px;
   }
 
   @media (min-width: $width-desktop+px) {
-    padding-top: 0;
+    padding-top: 50px;
     padding-bottom: 65px;
   }
 }
@@ -37,7 +37,7 @@
   @media (min-width: $width-tablet+px) {
     grid-template-rows: auto;
     grid-template-columns: 1fr 2fr 1fr;
-    row-gap: 52px;
+    row-gap: 51px;
   }
 
   @media (min-width: $width-desktop+px) {
@@ -57,6 +57,7 @@
   }
 
   @media (min-width: $width-desktop+px) {
+    margin-top: -7px;
     grid-column-start: 4;
     justify-self: end;
   }
@@ -192,7 +193,11 @@
   }
 }
 
-.user-info__img-btn--text {
+.user-info__img-btn-text {
+  @media (min-width: $width-tablet+px) {
+    letter-spacing: 1.5px;
+  }
+
   span {
     @media (min-width: $width-desktop+px) {
       display: none;
@@ -207,6 +212,10 @@
 
   @media (min-width: $width-desktop+px) {
     grid-column: 1/4;
+
+    &.user-info__heading-wrapper {
+      width: 732px;
+    }
   }
 
   &:hover {
@@ -272,16 +281,17 @@
   color: rgba($color: #444444, $alpha: 0.6);
   resize: none;
   width: 100%;
-  height: 89px;
+  height: 83px;
 
   @media (min-width: $width-tablet+px) {
+    padding: 33px 38px 5px;
     font-size: 20px;
     line-height: 22px;
-    height: 95px;
+    height: 89px;
   }
 
   @media (min-width: $width-desktop+px) {
-    padding: 39px 35px 0;
+    padding: 33px 34px 0;
   }
 
   &:focus,
@@ -292,8 +302,10 @@
 
 .user-info__travelmode-wrapper {
   grid-column: 1/-1;
+  margin-top: 7px;
 
   @media (min-width: $width-tablet+px) {
+    margin-top: 0;
     grid-column: initial;
     grid-column-start: 2;
     grid-row-start: 1;
@@ -305,5 +317,18 @@
     justify-self: end;
     height: 100%;
     width: 384px;
+  }
+}
+
+.user-info__travelmode-list {
+  height: auto;
+  padding-top: 16px;
+  padding-bottom: 13px;
+  justify-content: center;
+  gap: 1px;
+
+  @media (min-width: $width-tablet+px) {
+    height: 100%;
+    gap: 0;
   }
 }

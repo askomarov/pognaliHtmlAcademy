@@ -90,6 +90,7 @@
 .item-plans__date {
   grid-area: date;
   margin-bottom: 24px;
+  letter-spacing: 1.5px;
 
   @media (min-width: $width-tablet+px) {
     margin-bottom: 0;

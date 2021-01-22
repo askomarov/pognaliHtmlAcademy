@@ -1,10 +1,10 @@
 .filter-sets {
   background: #ffd74b;
   border-radius: 20px;
-  padding: 20px;
+  padding: 24px 24px 21px;
 
   @media (min-width: $width-tablet+px) and (max-width: $width-desktop+px) {
-    padding: 36px;
+    padding: 36px 36px 37px 34px;
   }
 
   @media (min-width: $width-desktop+px) {
@@ -21,6 +21,7 @@
   margin-bottom: 23px;
 
   @media (min-width: $width-tablet+px) {
+    letter-spacing: 0px;
     font-size: 30px;
     line-height: 30px;
     margin-bottom: 38px;

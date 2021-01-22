@@ -2,7 +2,7 @@
   position: relative;
 
   @media (min-width: $width-tablet+px) {
-    padding-top: 27px;
+    padding-top: 26px;
     padding-right: 33px;
     border-top: 1px solid #e1e3e9;
   }
@@ -32,7 +32,7 @@
   }
 
   @media (min-width: $width-tablet+px) {
-    row-gap: 24px;
+    row-gap: 31px;
     margin-bottom: 39px;
   }
 }

@@ -14,23 +14,38 @@
   background-repeat: no-repeat;
   background-position: left 34px, 86% 34px, -8px 307px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/about-back-mobile.png"),
+      url("../img/smolov-back-desktop@2x.png"),
+      url("../img/rogovaya-back-mobile@2x.png");
+  }
+
   @media (min-width: $width-tablet+px) {
     background-image: url("../img/about-back-desktop.png"),
       url("../img/smolov-back-desktop@1x.png"),
       url("../img/rogovaya-back-desktop@1x.png");
-    padding-top: 141px;
+    padding-top: 138px;
     padding-bottom: 87px;
     background-size: 212px 212px, 143px 143px, 285px 285px;
     background-position: 40px 71px, 40px 426px, 84% 80px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/about-back-desktop.png"),
+        url("../img/smolov-back-desktop@2x.png"),
+        url("../img/rogovaya-back-desktop@2x.png");
+    }
   }
 
   @media (min-width: $width-desktop+px) {
-    background-image: url("../img/smolov-back-desktop@1x.png"),
-      url("../img/rogovaya-back-desktop@1x.png");
+    background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-desktop@1x.png");
     padding-top: 126px;
     padding-bottom: 135px;
     background-size: 143px 143px, 285px 285px;
     background-position: 42% 134px, 190px 386px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/smolov-back-desktop@2x.png"), url("../img/rogovaya-back-desktop@2x.png");
+    }
   }
 }
 
@@ -47,7 +62,13 @@
   padding: 0 25px;
   margin-bottom: 54px;
 
+  @media (min-width: $width-tablet+px) {
+    padding-left: 34px;
+    margin-bottom: 60px;
+  }
+
   @media (min-width: $width-desktop+px) {
+    margin: 0;
     padding: 0;
     position: relative;
     z-index: 1;
@@ -112,7 +133,7 @@
   margin-bottom: 21px;
 
   @media (min-width: $width-tablet+px) {
-    margin-bottom: 80px;
+    margin-bottom: 81px;
   }
 
   @media (min-width: $width-desktop+px) {
@@ -123,9 +144,15 @@
 .companions__btn {
   min-height: 61px;
 
+  @media (min-width: $width-tablet+px) {
+    max-width: 618px;
+    margin: 0 auto;
+  }
+
   @media (min-width: $width-desktop+px) {
-    max-width: 280px;
+    width: 280px;
     align-self: end;
+    margin: initial;
     margin-top: 33px;
   }
 }

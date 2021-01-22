@@ -2,7 +2,7 @@
   @media (min-width: $width-tablet+px) {
     padding-top: 44px;
     padding-left: 43px;
-    padding-bottom: 54px;
+    padding-bottom: 55px;
     margin-bottom: 12px;
     display: grid;
     grid-template-columns: 284px 1fr;
@@ -29,6 +29,11 @@
 
   .step-item__title {
     grid-area: title;
+    margin-bottom: 16px;
+
+    @media (min-width: $width-tablet+px) {
+      margin-bottom: 36px;
+    }
 
     @media (min-width: $width-desktop+px) {
       margin-bottom: 35px;
@@ -43,17 +48,9 @@
     grid-area: text;
     margin-bottom: 21px;
 
-    br {
-      display: none;
-    }
-
     @media (min-width: $width-tablet+px) {
-      margin-bottom: 36px;
+      margin-bottom: 34px;
       padding-right: 122px;
-
-      br {
-        display: block;
-      }
     }
 
     @media (min-width: $width-desktop+px) {
@@ -66,6 +63,15 @@
 
   .step-item__choose-country {
     grid-area: choose-country;
+    margin-bottom: 25px;
+
+    @media (min-width: $width-tablet+px) {
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: $width-desktop+px) {
+      margin-bottom: 59px;
+    }
   }
 
   .step-item__next-step {

@@ -32,19 +32,19 @@ function toggleMenu() {
 };
 
 // фиксируем главное меню при скролле
-window.onscroll = function () {            /*функция при прокручивании*/
-  if (mainMenu.classList.contains("header-menu__wrapper--shown")) {
+// window.onscroll = function () {            /*функция при прокручивании*/
+//   if (mainMenu.classList.contains("header-menu__wrapper--shown")) {
 
-  } else {
-    if (window.pageYOffset > 100) {				/* если прокрутил больше чем на 200px*/
-      header.classList.add("header--fixed");		/*добавялется класс нашему меню и оно затемняется*/
-      headerLogo.classList.add("header__logo--blue");
-    } else {
-      header.classList.remove("header--fixed"); /* если меньше то класс удаляется*/
-      headerLogo.classList.remove("header__logo--blue");
-    }
-  }
-};
+//   } else {
+//     if (window.pageYOffset > 100) {				/* если прокрутил больше чем на 200px*/
+//       header.classList.add("header--fixed");		/*добавялется класс нашему меню и оно затемняется*/
+//       headerLogo.classList.add("header__logo--blue");
+//     } else {
+//       header.classList.remove("header--fixed"); /* если меньше то класс удаляется*/
+//       headerLogo.classList.remove("header__logo--blue");
+//     }
+//   }
+// };
 //
 let tarifPopupSection = document.querySelector(".business-tarif");
 let showTarifPopupBtn = document.querySelector(".pricing__link-business-tarif");

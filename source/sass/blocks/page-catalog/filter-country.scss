@@ -6,8 +6,8 @@
   border-bottom-right-radius: var(--main-border-radius);
 
   @media (min-width: $width-tablet+px) {
-    padding-top: 63px;
-    padding-bottom: 59px;
+    padding-top: 60px;
+    padding-bottom: 56px;
   }
 
   @media (min-width: $width-desktop+px) {
@@ -30,7 +30,7 @@
       width: 100%;
       margin: 0;
       left: 0;
-      padding: 21px 50px 28px 50px;
+      padding: 22px 50px 28px 50px;
       border-bottom-left-radius: var(--main-border-radius);
       border-bottom-right-radius: var(--main-border-radius);
 
@@ -102,12 +102,12 @@
 }
 
 .filter-country__continents {
-  padding-top: 38px;
+  padding-top: 33px;
   padding-left: 25px;
   grid-area: continents;
   display: none;
   flex-direction: column;
-  gap: 6px;
+  gap: 9px;
 
   @media (min-width: $width-tablet+px) {
     display: flex;

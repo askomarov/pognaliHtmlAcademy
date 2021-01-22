@@ -21,6 +21,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $width-tablet+px) {
+    display: grid;
+    grid-template-columns: 188px 1fr 188px;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .header__logo {
@@ -145,6 +155,7 @@
     .header__body {
       position: relative;
       display: grid;
+      grid-template-columns: 1fr;
       justify-content: stretch;
       padding: 0;
     }

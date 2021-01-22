@@ -7,7 +7,7 @@
 
 .filter__container {
   background: #edeff6;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
 
   @media (min-width: $width-tablet+px) {
     margin-bottom: 43px;
@@ -100,10 +100,10 @@
 
 .filter__companions {
   grid-area: companions;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 
   @media (min-width: $width-tablet+px) {
-    margin-bottom: 46px;
+    margin-bottom: 34px;
   }
 }
 
@@ -113,7 +113,8 @@
   align-items: center;
   justify-content: center;
   width: max-content;
-  margin: 0 auto;
+  padding-left: 28px;
+  margin: 0 auto 16px;
   color: #1d2e5b;
   text-transform: uppercase;
   background: transparent;
@@ -122,14 +123,13 @@
   line-height: 30px;
   min-height: 40px;
   position: relative;
-  margin-bottom: 26px;
 
   &::after,
   &::before {
     content: "";
     position: absolute;
     top: 50%;
-    left: -33px;
+    left: -4px;
     width: 18px;
     height: 2px;
     background: #1d2e5b;
@@ -141,15 +141,16 @@
   }
 
   @media (min-width: $width-tablet+px) {
-    margin-bottom: 51px;
+    margin-bottom: 39px;
     font-size: 20px;
     line-height: 20px;
     min-height: 50px;
+    padding-left: 44px;
 
     &::after,
     &::before {
       width: 26px;
-      left: -51px;
+      left: -7px;
     }
 
     &:hover {

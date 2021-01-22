@@ -10,6 +10,7 @@
 
   @media (min-width: $width-tablet+px) {
     border-radius: 20px;
+    padding-bottom: 28px;
 
     &:hover {
       filter: drop-shadow(0 4px 9px rgba(0, 0, 0, 0.16));
@@ -42,9 +43,6 @@
   @media (min-width: $width-tablet+px) {
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-  }
-
-  @media (min-width: $width-desktop+px) {
     width: 285px;
     height: 285px;
   }
@@ -62,7 +60,7 @@
   z-index: 2;
   margin-top: -11px;
 
-  @media (min-width: $width-desktop+px) {
+  @media (min-width: $width-tablet+px) {
     margin-top: -13px;
     margin-bottom: 17px;
   }
@@ -92,6 +90,9 @@
   @media (min-width: $width-tablet+px) {
     font-size: 24px;
     line-height: 22px;
+    align-self: flex-start;
+    margin-left: 68px;
+    margin-bottom: 24px;
 
     &:hover {
       color: rgba($color: #1d2e5b, $alpha: 0.7);
@@ -100,12 +101,6 @@
 
   &:active {
     color: rgba($color: #1d2e5b, $alpha: 0.3);
-  }
-
-  @media (min-width: $width-desktop+px) {
-    align-self: flex-start;
-    padding-left: 68px;
-    margin-bottom: 24px;
   }
 }
 
@@ -125,9 +120,6 @@
 
   @media (min-width: $width-tablet+px) {
     padding: 0 25px;
-  }
-
-  @media (min-width: $width-desktop+px) {
     margin-bottom: 24px;
   }
 }
@@ -146,7 +138,7 @@
   top: 19px;
   left: 17px;
 
-  @media (min-width: $width-desktop+px) {
+  @media (min-width: $width-tablet+px) {
     top: 20px;
     left: 22px;
   }

@@ -1,10 +1,13 @@
 .sets-row {
-  padding-top: 12px;
-  padding-bottom: 14px;
+  padding-top: 11px;
+  padding-bottom: 10px;
   border-top: 1px solid #f3c72b;
 
   @media (min-width: $width-tablet+px) and (max-width: $width-desktop+px) {
     border-top: 0;
+    padding: 13px 0;
+    display: grid;
+    grid-template-columns: 127px 1fr;
 
     &:first-of-type {
       padding-top: 34px;
@@ -12,9 +15,14 @@
     }
 
     &:last-of-type {
+      padding-top: 9px;
       padding-bottom: 37px;
       margin-bottom: 36px;
       border-bottom: 1px solid #f3c72b;
+    }
+
+    &--travelmode {
+      padding: 9px 0 5px;
     }
   }
 
@@ -27,16 +35,16 @@
       margin-bottom: 43px;
     }
   }
-
-  @media (min-width: $width-tablet+px) and (max-width: $width-desktop+px) {
-    display: grid;
-    grid-template-columns: 127px 1fr;
-  }
 }
 
 .sets-row--active {
   > .sets-row__group {
     display: grid;
+    margin-bottom: 9px;
+
+    @media (min-width: $width-tablet+px) and (max-width: $width-desktop+px) {
+      margin-bottom: 0;
+    }
 
     @media (min-width: $width-desktop+px) {
       margin-bottom: 32px;
@@ -44,14 +52,14 @@
   }
 
   > .sets-row__name {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 
     @media (min-width: $width-tablet+px) and (max-width: $width-desktop+px) {
       margin-bottom: 0;
     }
 
     &::after {
-      border-top: 6px solid transparent;
+      border-top: 1px solid transparent;
       border-bottom: 6px solid #1d2e5b;
     }
   }
@@ -130,7 +138,7 @@
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
+    gap: 17px;
     justify-content: stretch;
     align-items: center;
   }
@@ -163,6 +171,8 @@
 
   @media (min-width: $width-tablet+px) and (max-width: $width-desktop+px) {
     gap: 2px;
+    padding-top: 0;
+    margin-left: -6px;
   }
 }
 

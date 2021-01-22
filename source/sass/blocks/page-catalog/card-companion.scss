@@ -1,6 +1,6 @@
 .card-companion {
   border-radius: 20px;
-  padding: 15px 20px 20px;
+  padding: 13px 25px 23px;
   background: #ffffff;
   position: relative;
   display: grid;
@@ -59,6 +59,17 @@
       transform: scale(1.1);
     }
   }
+
+  &:nth-child(2),
+  &:nth-child(4) {
+    .card-companion__wish-list {
+      padding-bottom: 15px;
+
+      @media (min-width: $width-tablet+px) {
+        padding-bottom: 0;
+      }
+    }
+  }
 }
 
 .card-companion__wrapper--wish {
@@ -68,7 +79,7 @@
     padding-top: 22px;
     position: relative;
     margin-left: -35px;
-    padding-left: 35px;
+    padding-left: 33px;
     margin-right: -25px;
     padding-right: 25px;
 
@@ -119,7 +130,7 @@
   text-align: center;
 
   .card-companion__title {
-    margin-left: 15px;
+    margin-left: 28px;
   }
 
   @media (min-width: $width-tablet+px) {
@@ -136,9 +147,10 @@
   height: 70px;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 13px;
+  margin-bottom: 14px;
   grid-area: avatar;
   position: relative;
+  margin-left: -8px;
 
   img {
     transition: transform 0.5s ease 0s;
@@ -219,8 +231,8 @@
 
   &::after {
     position: absolute;
-    right: 0;
-    top: 8px;
+    right: -3px;
+    top: 10px;
     content: "";
     width: 6px;
     height: 6px;
@@ -231,6 +243,8 @@
   @media (min-width: $width-tablet+px) {
     font-size: 30px;
     line-height: 30px;
+    margin-left: 4px;
+    margin-top: -3px;
 
     &::after {
       top: initial;
@@ -241,7 +255,7 @@
       height: 8px;
       border-radius: 50%;
       background: #f97676;
-      margin-left: 22px;
+      margin-left: 29px;
     }
 
     br {
@@ -277,11 +291,13 @@
 .card-companion__tags-list {
   grid-area: tags;
   max-width: 181px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 
   @media (min-width: $width-tablet+px) {
     margin-bottom: 0;
-    max-width: 220px;
+    margin-left: 6px;
+    margin-top: -19px;
+    max-width: 226px;
 
     .tags-list__item-text {
       color: #000000;
@@ -295,7 +311,7 @@
 
 .card-companion__wish-list {
   padding-top: 19px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
@@ -355,7 +371,7 @@
 }
 
 .card-companion__level-wrapper {
-  margin: 9px auto 0;
+  margin: 10px 0 0 auto;
 
   @media (min-width: $width-tablet+px) {
     margin-top: 0;
@@ -410,7 +426,7 @@
 }
 
 .card-companion__btn-call {
-  margin-top: 14px;
+  margin-top: 12px;
   grid-area: btn;
   display: flex;
   width: 100%;
@@ -453,6 +469,7 @@
   margin-top: 17px;
   height: auto;
   gap: 1px;
+  margin-left: -5px;
 
   @media (min-width: $width-tablet+px) {
     margin: 0;
@@ -466,6 +483,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  &.travelmode-list {
+    justify-content: start;
   }
 
   .travelmode-list__item {

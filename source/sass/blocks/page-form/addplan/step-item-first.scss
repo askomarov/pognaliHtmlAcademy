@@ -22,7 +22,11 @@
 
   .step-item__title {
     grid-area: title;
-    margin-bottom: 33px;
+    margin-bottom: 17px;
+
+    @media (min-width: $width-tablet+px) {
+      margin-bottom: 35px;
+    }
 
     @media (min-width: $width-desktop+px) {
       margin-bottom: 37px;
@@ -37,17 +41,9 @@
     grid-area: text;
     margin-bottom: 20px;
 
-    br {
-      display: none;
-    }
-
     @media (min-width: $width-tablet+px) {
       padding-right: 12px;
-      margin-bottom: 41px;
-
-      br {
-        display: block;
-      }
+      margin-bottom: 39px;
     }
 
     @media (min-width: $width-desktop+px) {

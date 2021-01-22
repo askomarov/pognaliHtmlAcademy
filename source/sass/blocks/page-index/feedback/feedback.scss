@@ -9,12 +9,12 @@
 
   @media (min-width: $width-tablet+px) {
     $main-border-radius: 60px;
-    padding-top: 76px;
-    padding-bottom: 60px;
+    padding-top: 72px;
+    padding-bottom: 61px;
   }
 
   @media (min-width: $width-desktop+px) {
-    padding-top: 107px;
+    padding-top: 105px;
     padding-bottom: 103px;
   }
 }
@@ -37,6 +37,10 @@
   @media (min-width: $width-tablet+px) {
     margin-bottom: 57px;
   }
+
+  @media (min-width: $width-desktop+px) {
+    margin-bottom: 59px;
+  }
 }
 
 .feedback__text {
@@ -46,7 +50,7 @@
     margin-bottom: 31px;
 
     @media (min-width: $width-tablet+px) {
-      margin-bottom: 65px;
+      margin-bottom: 69px;
     }
 
     @media (min-width: $width-desktop+px) {
@@ -93,7 +97,7 @@
   margin-bottom: 29px;
 
   @media (min-width: $width-tablet+px) {
-    margin-bottom: 60px;
+    margin-bottom: 56px;
     border-radius: 20px;
   }
 

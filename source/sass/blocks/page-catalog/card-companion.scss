@@ -38,7 +38,7 @@
       "avatar . . . .";
     padding: 0;
     padding-right: 43px;
-    column-gap: 52px;
+    column-gap: 55px;
   }
 
   &::after {
@@ -268,7 +268,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: -18px;
+      left: -23px;
       margin: 0;
     }
   }
@@ -306,6 +306,7 @@
 
   @media (min-width: $width-desktop+px) {
     padding-top: 20px;
+    margin-top: 0;
   }
 }
 
@@ -330,6 +331,8 @@
     grid-template-columns: 1fr;
     gap: 12px;
     padding: 0;
+    padding-top: 4px;
+    padding-left: 10px;
   }
 
   .wish-list__country {
@@ -480,9 +483,11 @@
   }
 
   @media (min-width: $width-desktop+px) {
+    gap: 6px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-left: 6px;
   }
 
   &.travelmode-list {

@@ -137,6 +137,7 @@
   border-radius: 50%;
   position: relative;
   transition: all 0.5s ease 0s;
+  margin: 5px 15px 5px auto;
 
   &::after,
   &::before {
@@ -160,6 +161,7 @@
   @media (min-width: $width-tablet+px) {
     width: 6px;
     height: 6px;
+    margin: initial;
     margin-right: 24px;
 
     &::after,
@@ -194,7 +196,7 @@
   &::after,
   &::before {
     content: "";
-    width: 16px;
+    width: 20px;
     height: 2px;
     border-radius: 0;
     left: 50%;

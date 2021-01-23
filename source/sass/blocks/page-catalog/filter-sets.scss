@@ -21,10 +21,14 @@
   margin-bottom: 23px;
 
   @media (min-width: $width-tablet+px) {
-    letter-spacing: 0px;
+    letter-spacing: 0;
     font-size: 30px;
     line-height: 30px;
     margin-bottom: 38px;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    margin-bottom: 36px;
   }
 }
 

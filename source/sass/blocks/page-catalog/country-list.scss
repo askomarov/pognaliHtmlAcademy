@@ -10,18 +10,20 @@
   @media (min-width: $width-tablet+px) {
     margin: 0;
     padding: 0;
-    row-gap: 36px;
+    row-gap: 24px;
     column-gap: 0;
     background: transparent;
-    margin-bottom: 78px;
+    margin-bottom: 63px;
     margin-left: 0;
-    margin-right: 280px;
+    margin-right: 268px;
   }
 
   @media (min-width: $width-desktop+px) {
     margin: 0 auto 49px;
-    padding: 0 0 0 37px;
+    padding: 0;
     max-width: 1320px;
+    row-gap: 51px;
+    column-gap: 10px;
   }
 }
 
@@ -34,7 +36,7 @@
       "main-letter"
       "submenu";
     justify-items: start;
-    gap: 28px;
+    gap: 32px;
   }
 }
 
@@ -107,10 +109,12 @@
   padding-top: 14px;
 
   @media (min-width: $width-tablet+px) {
-    top: 0;
+    width: 100%;
+    padding: 0;
+    top: -3px;
     left: 100%;
     right: initial;
-    transform: translateX(92px);
+    transform: translateX(78px);
   }
 
   @media (min-width: $width-desktop+px) {

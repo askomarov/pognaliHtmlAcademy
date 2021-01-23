@@ -12,11 +12,12 @@
     background-image: url("../img/traveller-illustration-mobile@2x.png"),
       linear-gradient(180deg, rgba(22, 28, 53, 0) 42%, #161c35 42%, #161c35 70%, #192144 70%, #192144 100%),
       url("../img/globe-back-mobile@2x.jpg");
+    background-size: 192px 255px, auto, 320px 569px;
   }
 
   @media (min-width: $width-tablet+px) {
     padding-bottom: 96px;
-    padding-top: 43px;
+    padding-top: 27px;
     background: #182044;
     background-image: url("../img/traveller-illustration-tablet@1x.png"), url("../img/globe-back-tablet@1x.jpg");
     background-position: 285px 288px, center 266px;

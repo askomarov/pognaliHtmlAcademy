@@ -19,14 +19,13 @@
   @media (min-width: $width-tablet + px) {
     padding-top: 38px;
     padding-bottom: 89px;
-    background-size: auto;
+    background-size: 720px 596px;
     background-image: url("../img/about-tablet@1x.png");
     background-position: right top;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/about-tablet@2x.png");
       background-position: 84% top;
-      background-size: 720px 596px;
     }
   }
 
@@ -34,7 +33,7 @@
     padding-top: 128px;
     padding-bottom: 163px;
     background-image: url("../img/about-desktop@1x.png");
-    background-size: auto;
+    background-size: 630px 665px;
     background-position: 750px 85px;
 
     @include sectionRadiusBackground;
@@ -93,14 +92,26 @@
   color: #ffffff;
   margin-bottom: 20px;
 
+  br {
+    display: none;
+  }
+
   @media (min-width: $width-tablet+px) {
     margin-bottom: 31px;
     max-width: 300px;
+
+    br {
+      display: block;
+    }
   }
 
   @media (min-width: $width-desktop+px) {
     margin-bottom: 42px;
     max-width: 619px;
+
+    br {
+      display: none;
+    }
   }
 }
 

@@ -6,6 +6,10 @@
     grid-template-columns: 275px 148px;
     justify-content: space-between;
   }
+
+  @media (min-width: $width-desktop+px) {
+    gap: 38px;
+  }
 }
 
 .slider-group__inputs {
@@ -116,6 +120,10 @@
 
   @media (min-width: $width-tablet+px) {
     width: 61%;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    width: 67%;
   }
 }
 

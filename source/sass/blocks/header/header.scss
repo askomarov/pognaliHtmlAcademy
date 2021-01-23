@@ -6,7 +6,8 @@
 
   @media (min-width: $width-tablet+px) {
     padding-top: 40px;
-    padding-bottom: 26px;
+    // padding-bottom: 26px;
+    padding-bottom: 42px;
     background-color: #182044;
   }
 
@@ -191,7 +192,7 @@
 }
 
 .header--fixed {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;

@@ -11,11 +11,13 @@
   height: 25px;
   position: relative;
 
-  &:hover {
-    & > .country-flag-list__item-tooltip {
-      opacity: 1;
-      visibility: visible;
-      height: 72px;
+  @media (min-width: $width-tablet+px) {
+    &:hover {
+      & > .country-flag-list__item-tooltip {
+        opacity: 1;
+        visibility: visible;
+        height: 72px;
+      }
     }
   }
 }

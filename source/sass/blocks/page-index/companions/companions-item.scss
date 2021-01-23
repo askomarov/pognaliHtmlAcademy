@@ -23,7 +23,9 @@
 }
 
 .companions-item__img-wrapper {
+  cursor: pointer;
   width: 100%;
+  display: block;
   min-height: 270px;
   position: relative;
   overflow: hidden;
@@ -43,7 +45,7 @@
   @media (min-width: $width-tablet+px) {
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-    width: 285px;
+    min-width: 285px;
     height: 285px;
   }
 }

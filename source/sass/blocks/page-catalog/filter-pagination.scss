@@ -7,6 +7,10 @@
     padding: 25px 28px 24px;
     grid-template-columns: 1fr 69px;
   }
+
+  @media (min-width: $width-desktop+px) {
+    grid-template-columns: 1fr 82px;
+  }
 }
 
 .filter-pagination__list {

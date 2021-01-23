@@ -10,9 +10,13 @@
   @media (min-width: $width-tablet+px) {
     background-image: url("../img/flags-back@1x.png");
     background-position: calc(100% - 40px) 80px;
-    background-size: auto;
+    background-size: 289px 575px;
     background-repeat: no-repeat;
     padding-bottom: 82px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/flags-back@2x.png");
+    }
   }
 
   @media (min-width: $width-desktop+px) {

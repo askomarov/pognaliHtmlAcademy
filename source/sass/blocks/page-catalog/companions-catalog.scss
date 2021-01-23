@@ -6,4 +6,14 @@
   @media (min-width: $width-tablet+px) {
     gap: 39px;
   }
+
+  @media (min-width: $width-desktop+px) {
+    gap: 30px;
+  }
+}
+
+.companions-catalog__card {
+  @media (min-width: $width-desktop+px) {
+    min-height: 286px;
+  }
 }

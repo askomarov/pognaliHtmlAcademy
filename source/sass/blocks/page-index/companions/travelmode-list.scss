@@ -14,11 +14,13 @@
   fill: rgba($color: #1d2e5b, $alpha: 0.15);
   position: relative;
 
-  &:hover {
-    & > .travelmode-list__item-tooltip {
-      opacity: 1;
-      visibility: visible;
-      height: 72px;
+  @media (min-width: $width-tablet+px) {
+    &:hover {
+      & > .travelmode-list__item-tooltip {
+        opacity: 1;
+        visibility: visible;
+        height: 72px;
+      }
     }
   }
 }

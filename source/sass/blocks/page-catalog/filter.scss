@@ -26,7 +26,7 @@
   }
 
   @media (min-width: $width-desktop+px) {
-    padding-bottom: 135px;
+    padding-bottom: 137px;
     display: grid;
     grid-template-columns: 1fr 285px;
     column-gap: 85px;
@@ -105,6 +105,10 @@
   @media (min-width: $width-tablet+px) {
     margin-bottom: 34px;
   }
+
+  @media (min-width: $width-desktop+px) {
+    margin-bottom: 50px;
+  }
 }
 
 .filter__companions-show-more {
@@ -158,6 +162,17 @@
       &::before {
         background: rgba($color: #1d2e5b, $alpha: 0.6);
       }
+    }
+  }
+
+  @media (min-width: $width-desktop+px) {
+    padding-left: 24px;
+    padding-right: 50px;
+    margin-bottom: 58px;
+
+    &::after,
+    &::before {
+      left: -24px;
     }
   }
 

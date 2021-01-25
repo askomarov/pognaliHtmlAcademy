@@ -73,6 +73,14 @@
 }
 
 .choose-country__item--current {
+  .choose-country__option-text {
+    letter-spacing: 1.4px;
+
+    @media (min-width: $width-tablet+px) {
+      letter-spacing: 2px;
+    }
+  }
+
   .icon-drop-close {
     display: none;
   }
@@ -228,11 +236,11 @@
 
 .choose-country__option-text {
   position: absolute;
-  left: 11px;
+  left: 10px;
   font-weight: 500;
   font-size: 14px;
   color: #1d2e5b;
-  letter-spacing: 0.09em;
+  letter-spacing: 1.1px;
   text-transform: uppercase;
   line-height: 40px;
 
@@ -243,6 +251,7 @@
     line-height: 70px;
     font-weight: 500;
     font-size: 20px;
+    letter-spacing: 2px;
   }
 }
 

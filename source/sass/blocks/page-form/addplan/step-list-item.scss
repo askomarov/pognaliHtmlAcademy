@@ -79,8 +79,8 @@
       "set-companions set-child"
       "set-days set-child";
     border-top: 1px solid #e1e3e9;
-    padding-top: 42px;
-    margin-bottom: 34px;
+    padding-top: 30px;
+    margin-bottom: 32px;
   }
 }
 
@@ -226,7 +226,7 @@ input[name="children-yes"] {
   }
 
   @media (min-width: $width-desktop+px) {
-    margin: 27px 0 0;
+    margin: 25px 0 0;
     justify-self: end;
     align-self: start;
   }
@@ -257,7 +257,7 @@ input[name="children-yes"] {
   }
 
   @media (min-width: $width-desktop+px) {
-    margin-bottom: 57px;
+    margin-bottom: 58px;
   }
 }
 

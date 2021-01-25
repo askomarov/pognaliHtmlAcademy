@@ -10,9 +10,9 @@
   background-image: url("../img/about-back-mobile.png"),
     url("../img/smolov-back-desktop@1x.png"),
     url("../img/rogovaya-back-mobile@1x.png");
-  background-size: auto, 143px 143px, auto;
+  background-size: auto, 143px 143px, 71px 71px;
   background-repeat: no-repeat;
-  background-position: left 34px, 86% 34px, -8px 307px;
+  background-position: left 34px, 86% 34px, -10px 307px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/about-back-mobile.png"),
@@ -37,14 +37,16 @@
   }
 
   @media (min-width: $width-desktop+px) {
-    background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-desktop@1x.png");
+    background-image: url("../img/smolov-back-desktop@1x.png"),
+      url("../img/rogovaya-back-desktop@1x.png");
     padding-top: 126px;
-    padding-bottom: 135px;
+    padding-bottom: 134px;
     background-size: 143px 143px, 285px 285px;
     background-position: 42% 134px, 190px 386px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/smolov-back-desktop@2x.png"), url("../img/rogovaya-back-desktop@2x.png");
+      background-image: url("../img/smolov-back-desktop@2x.png"),
+        url("../img/rogovaya-back-desktop@2x.png");
     }
   }
 }
@@ -60,7 +62,7 @@
 
 .companions__text-wrapper {
   padding: 0 25px;
-  margin-bottom: 54px;
+  margin-bottom: 55px;
 
   @media (min-width: $width-tablet+px) {
     padding-left: 34px;
@@ -93,7 +95,7 @@
       background: #141b3b;
       border-radius: 20px;
       position: absolute;
-      top: -62px;
+      top: -55px;
       left: -72px;
       z-index: -1;
     }
@@ -120,17 +122,19 @@
 }
 
 .companions__text-bottom {
-  br {
-    display: none;
+  max-width: 197px;
 
-    @media (min-width: $width-tablet+px) {
-      display: block;
+  @media (min-width: $width-tablet+px) {
+    max-width: 260px;
+
+    br {
+      display: none;
     }
   }
 }
 
 .companions__list {
-  margin-bottom: 21px;
+  margin-bottom: 20px;
 
   @media (min-width: $width-tablet+px) {
     margin-bottom: 81px;

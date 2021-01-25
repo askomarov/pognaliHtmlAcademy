@@ -10,7 +10,7 @@
 
   @media (min-width: $width-tablet+px) {
     padding-top: 44px;
-    padding-left: 45px;
+    padding-left: 44px;
     padding-bottom: 53px;
     grid-template-areas:
       "title ."
@@ -20,7 +20,7 @@
   }
 
   @media (min-width: $width-desktop+px) {
-    padding-bottom: 102px;
+    padding-bottom: 103px;
     padding-top: 96px;
     padding-left: 160px;
     grid-template-columns: 730px 1fr;
@@ -41,7 +41,7 @@
     }
 
     @media (min-width: $width-desktop+px) {
-      margin-bottom: 33px;
+      margin-bottom: 35px;
 
       br {
         display: none;
@@ -59,7 +59,7 @@
     }
 
     @media (min-width: $width-desktop+px) {
-      margin-bottom: 0;
+      margin-bottom: 56px;
     }
   }
 
@@ -68,12 +68,11 @@
     margin-bottom: 18px;
 
     @media (min-width: $width-tablet+px) {
-      margin-bottom: 45px;
+      margin-bottom: 43px;
     }
 
     @media (min-width: $width-desktop+px) {
-      margin-top: 56px;
-      margin-bottom: 57px;
+      margin-bottom: 54px;
     }
   }
 

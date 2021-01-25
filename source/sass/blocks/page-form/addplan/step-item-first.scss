@@ -7,7 +7,7 @@
   }
 
   @media (min-width: $width-desktop+px) {
-    padding-top: 96px;
+    padding-top: 98px;
     padding-bottom: 106px;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -29,7 +29,7 @@
     }
 
     @media (min-width: $width-desktop+px) {
-      margin-bottom: 37px;
+      margin-bottom: 34px;
 
       br {
         display: none;
@@ -48,8 +48,10 @@
 
     @media (min-width: $width-desktop+px) {
       padding-right: 0;
-      font-size: 16px;
+      font-size: 20px;
+      line-height: 24px;
       width: 581px;
+      margin-bottom: 56px;
     }
   }
 

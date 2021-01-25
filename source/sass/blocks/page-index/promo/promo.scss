@@ -1,5 +1,6 @@
 .promo {
   background-color: #161c34;
+  padding-top: 20px;
   padding-bottom: 37px;
   background-image: url("../img/traveller-illustration-mobile@1x.png"),
     linear-gradient(180deg, rgba(22, 28, 53, 0) 42%, #161c35 42%, #161c35 70%, #192144 70%, #192144 100%),
@@ -20,7 +21,7 @@
     padding-top: 27px;
     background: #182044;
     background-image: url("../img/traveller-illustration-tablet@1x.png"), url("../img/globe-back-tablet@1x.jpg");
-    background-position: 285px 288px, center 266px;
+    background-position: 285px 272px, center 250px;
     background-size: 372px 451px, 1479px 612px;
     background-repeat: no-repeat;
 
@@ -35,7 +36,7 @@
     padding-bottom: 123px;
     background-image: url("../img/traveller-illustration-desktop@1x.png"), url("../img/globe-back-desktop@1x.jpg");
     background-size: 431px 640px, 1790px 750px;
-    background-position: 604px top, -170px -100px;
+    background-position: 604px top, -175px -110px;
     border-bottom-left-radius: var(--main-border-top-radius);
     border-bottom-right-radius: var(--main-border-top-radius);
 
@@ -46,10 +47,7 @@
 }
 
 .promo__container {
-  padding-top: 19px;
-
   @media (min-width: $width-tablet+px) {
-    padding-top: 0;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr min-content;
@@ -102,6 +100,7 @@
     grid-column: -1/-2;
     margin-bottom: 0;
     padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -127,6 +126,10 @@
 
   @media (min-width: $width-tablet+px) {
     max-width: 264px;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    max-width: 100%;
   }
 }
 

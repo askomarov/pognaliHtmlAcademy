@@ -31,6 +31,7 @@ function toggleMenu() {
   });
 };
 
+let page = document.querySelector(".page");
 // фиксируем главное меню при скролле
 window.onscroll = function () {            /*функция при прокручивании*/
   if (mainMenu.classList.contains("header-menu__wrapper--shown")) {
@@ -39,9 +40,11 @@ window.onscroll = function () {            /*функция при прокру�
     if (window.pageYOffset > 100) {				/* если прокрутил больше чем на 100px*/
       header.classList.add("header--fixed");		/*добавялется класс нашему меню и оно фиксируется*/
       headerLogo.classList.add("header__logo--blue");
+      page.classList.add("page--padtop");
     } else {
       header.classList.remove("header--fixed"); /* если меньше то класс удаляется*/
       headerLogo.classList.remove("header__logo--blue");
+      page.classList.remove("page--padtop");
     }
   }
 };

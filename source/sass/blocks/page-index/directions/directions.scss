@@ -1,7 +1,7 @@
 .directions {
   background: #edeff6;
   padding-top: 69px;
-  padding-bottom: 34px;
+  padding-bottom: 35px;
   border-bottom-left-radius: var(--main-border-radius);
   border-bottom-right-radius: var(--main-border-radius);
 
@@ -12,7 +12,7 @@
     background-position: calc(100% - 40px) 80px;
     background-size: 289px 575px;
     background-repeat: no-repeat;
-    padding-bottom: 82px;
+    padding-bottom: 81px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/flags-back@2x.png");
@@ -36,7 +36,7 @@
     display: grid;
     grid-template-columns: 1fr 378px;
     grid-template-rows: min-content 2fr 1fr;
-    column-gap: 170px;
+    column-gap: 172px;
     padding-left: 70px;
     padding-right: 140px;
   }
@@ -83,7 +83,7 @@
   margin-bottom: 26px;
 
   @media (min-width: $width-tablet+px) {
-    margin-bottom: 46px;
+    margin-bottom: 47px;
   }
 
   @media (min-width: $width-desktop+px) {

@@ -1,12 +1,12 @@
 .user-info {
   background: #edeff6;
-  padding-top: 25px;
+  padding-top: 26px;
   padding-bottom: 34px;
 
   @include sectionRadiusBackground;
 
   @media (min-width: $width-tablet+px) {
-    padding-top: 66px;
+    padding-top: 67px;
     padding-bottom: 59px;
   }
 
@@ -96,9 +96,18 @@
       height: 1px;
       background: rgba($color: #444444, $alpha: 0.3);
 
+      @media (min-width: $width-tablet+px) {
+        bottom: 0;
+      }
+
       @media (min-width: $width-desktop+px) {
         background: rgba($color: #ffffff, $alpha: 0.3);
       }
+    }
+
+    @media (min-width: $width-tablet+px) {
+      margin-bottom: -2px;
+      top: -4px;
     }
   }
 
@@ -257,10 +266,12 @@
   background: #edeff6;
 
   @media (min-width: $width-tablet+px) {
+    font-weight: 500;
     font-size: 20px;
     line-height: 20px;
     top: initial;
     bottom: -10px;
+    letter-spacing: 2px;
   }
 }
 
@@ -290,7 +301,7 @@
   }
 
   @media (min-width: $width-desktop+px) {
-    padding: 33px 34px 0;
+    padding: 33px 38px 0;
   }
 
   &:focus,

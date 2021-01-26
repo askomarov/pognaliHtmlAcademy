@@ -23,7 +23,7 @@ const sprite = () => {
     ]))
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("docs/img"))
 };
 exports.sprite = sprite;
 
@@ -57,11 +57,11 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("docs/css"))
     .pipe(csso())
     .pipe(rename('style.min.css'))
     .pipe(sourcemap.write(".")) //положил файл с картами кодами в корневую папку
-    .pipe(gulp.dest("build/css")) //галп положи файлы в папку.
+    .pipe(gulp.dest("docs/css")) //галп положи файлы в папку.
     .pipe(sync.stream());
 };
 exports.styles = styles;
@@ -74,19 +74,19 @@ const html = () => {
       collapseWhitespace: true,
       removeComments: true
     }))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('docs'));
 };
 exports.html = html;
 
 //javascript
 const scripts = () => {
   return gulp.src('source/js/script.js')
-    .pipe(gulp.dest('build/js'))
+    .pipe(gulp.dest('docs/js'))
     .pipe(terser())
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(gulp.dest('build/js'))
+    .pipe(gulp.dest('docs/js'))
     .pipe(sync.stream());
 }
 exports.scripts = scripts;
@@ -100,13 +100,13 @@ const copy = () => {
   ], {
     base: "source"
   })
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("docs"));
 };
 exports.copy = copy;
 
 //clean
 const clean = () => {
-  return del("build");
+  return del("docs");
 };
 exports.clean = clean;
 
@@ -114,7 +114,7 @@ exports.clean = clean;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build/'
+      baseDir: 'docs/'
     },
     cors: true,
     notify: false,
